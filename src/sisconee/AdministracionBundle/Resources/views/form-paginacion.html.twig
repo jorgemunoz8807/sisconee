@@ -1,0 +1,23 @@
+<label id="admin-recordcount">Cantidad de registros: {{ count }}</label>
+
+{% if page_count > 1 %}
+    <div id="admin-paginator">
+        <label>P&aacute;gina seleccionada:</label>
+
+        <select id="admin-page-list" data-url="{{ path(url, { 'page': 'ppage' } ) }}">
+            {% for i in (1..page_count) %}
+                <option {% if i==page %} selected="selected" {% endif %} value="{{ i }}"><a href="">{{ i }}</a></option>
+            {% endfor %}
+        </select>
+
+        <label> de {{ page_count }}</label>
+
+        <div class="paginator-controls">
+            <a class="admin-list-navcontrol {% if page==1 %} disabled {% endif %}" title="Ir a la primera p&aacute;gina" href="{{ path(url, { 'page':'1' }) }}"><span class="glyphicon glyphicon-fast-backward"></span></a>
+            <a class="admin-list-navcontrol {% if page==1 %} disabled {% endif %}" title="Ir a la p&aacute;gina anterior" href="{{ path(url, { 'page':page-1 }) }}"><span class="glyphicon glyphicon-backward"></span></a>
+
+            <a class="admin-list-navcontrol {% if page==page_count %} disabled {% endif %}" title="Ir a la p&aacute;gina siguiente" href="{{ path(url, { 'page':page+1 }) }}"><span class="glyphicon glyphicon-forward"></span></a>
+            <a class="admin-list-navcontrol {% if page==page_count %} disabled {% endif %}" title="Ir a la &uacute;ltima p&aacute;gina" href="{{ path(url, { 'page':page_count }) }}"><span class="glyphicon glyphicon-fast-forward"></span></a>
+        </div>
+    </div>
+{% endif %}

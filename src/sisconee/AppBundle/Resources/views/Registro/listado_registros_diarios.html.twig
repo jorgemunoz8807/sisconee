@@ -1,0 +1,59 @@
+<br>
+<br>
+{% if (listado_registros) %}
+
+    {% include "sisconeeAdministracionBundle::flashmessages.html.twig" %}
+
+    <div><span>Consumo Acumulado General del Servicio: </span><span id="acumulado_servicio" class="label label-info">{{ consumoAcumulado[0]['cantidad'] }}</span></div>
+
+    {% if (hasPlanHorarioPico) %}
+    <div><span>Consumo Acumulado para el Horario Pico del Servicio: </span><span id="acumulado_hp_servicio" class="label label-info">{{ consumoAcumulado[0]['cantidadHP'] }}</span></div>
+   {% endif %}
+
+<h1>Listado de los registros de plan y consumo diario</h1>
+<TABLE class="table table-striped table-bordered table-hover">
+    <TR>
+        <TH>Fecha</TH>
+        <TH>Plan Diario</TH>
+        <TH>Consumo</TH>
+        {% if (hasPlanHorarioPico) %}
+        <TH>Plan de Horario Pico</TH>
+        <TH>Consumo de Horario Pico</TH>
+        {% endif %}
+        <TH>Acciones</TH>
+    </TR>
+            {% for r in listado_registros %}
+                <TR>
+                <TD>{{  r.getFecha|date("d/m/Y") }}</TD>
+                <TD>{{ r.getPlan }}</TD>
+                <TD {% if r.getConsumo > r.getPlan %} class="texto_alerta" {% endif %} > {{ r.getConsumo }} </TD>
+                {% if (hasPlanHorarioPico) %}
+                <TD>{{ r.getPlanHorariopico }}</TD>
+                <TD {% if r.getConsumoHorariopico > r.getPlanHorariopico %} class="texto_alerta" {% endif %} > {{ r.getConsumoHorariopico }} </TD>
+                {% endif %}
+                <TD>{% if (date(r.getFecha))>=date(diasPermitidos) and (date(r.getFecha)<=date()) %}<a id="editar" onclick=" $('#dialog').data('planDia',{{ r.getPlan  }});
+                    $('#dialog').data('planDiaHorarioPico',{{ r.getPlanHorariopico  }});
+                    $('#dialog').data('consumoDia',{{ r.getConsumo  }});
+                    $('#dialog').data('consumoDiaHorarioPico',{{ r.getConsumoHorariopico  }});
+                    $('#dialog').data('idRegistro',{{ r.getId  }});
+
+                    $('#dialog').dialog('open'); " {#href="{{ path('administracion_servicio_edit', { 'id': r.getId }) }}"#}><span class="glyphicon glyphicon-pencil"></span>Editar</a>{% endif %}
+                </TD>
+                </TR>
+
+            {% endfor %}
+
+</TABLE>
+{% else %}
+    <p>No existe planificaci&oacute;n para los datos seleccionados</p>
+{% endif %}
+
+
+
+
+
+
+
+
+
+

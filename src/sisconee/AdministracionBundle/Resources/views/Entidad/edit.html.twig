@@ -1,0 +1,31 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+
+{% block content %}
+
+    <h1>Editar Entidad: {{ entity.siglas }}</h1>
+
+    {% include "::flashmessages.html.twig" %}
+    {% include "::modal-delete.html.twig" %}
+
+    {{ form_start(edit_form) }}
+    {{ form_widget(edit_form) }}
+    <div class="form-actions">
+        <input type="submit" class="btn btn-primary" value="Aceptar" />
+        <a class="btn btn-default" href="{{ path('administracion_entidad') }}">Regresar al listado</a>
+
+        <a class="btn btn-danger link-eliminar" style="margin-left:50px;" href="javascript:void(0)"
+           data-url="{{ path('administracion_entidad_delete', { 'id': entity.id }) }}"
+           data-descripcion="{{ entity.siglas }}"
+           data-toggle="modal" data-target="#modal-delete">
+            <span class="glyphicon glyphicon-trash"></span>Eliminar
+        </a>
+    </div>
+    {{ form_end(edit_form) }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('layoutadmin/admin-list.js') }}"></script>
+{% endblock %}

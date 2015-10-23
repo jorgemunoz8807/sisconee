@@ -1,0 +1,81 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+
+
+{% block content %}
+    <h1>Adicionar Servicio </h1>
+
+    {% include "::flashmessages.html.twig" %}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="form-actions">
+        <input type="submit" class="btn btn-primary" value="Aceptar" />
+        <a class="btn btn-default" href="{{ path('administracion_servicio') }}">Regresar al listado</a>
+    </div>
+    {{ form_end(form) }}
+
+
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    {#<script>
+        $(function(){
+            $("#sisconee_appbundle_servicio_idProvincia").change(function(){
+                var data = {
+                    provincia_id: $(this).val()
+                };
+
+                $.ajax({
+                    type: 'post',
+                    url: '{{ path("select_provinces") }}',  //seria mi select municipios
+                    data: data,
+                    success: function(data) {
+                        var $municipio_selector = $('#sisconee_appbundle_servicio_idMunicipio');
+
+                        $municipio_selector.html('<option>Municipio</option>');
+
+                        for (var i=0, total = data.length; i < total; i++) {
+                            $municipio_selector.append('<option value="' + data[i].id + '">' + data[i].name + '</option>');
+                        }
+
+
+                    }
+                });
+            });
+
+
+        });
+    </script>#}
+
+    <script>
+        var $provincia = $('#sisconee_appbundle_servicio_provincia');
+        // When sport gets selected ...
+        $provincia.change(function() {
+// ... retrieve the corresponding form.
+            var $form = $(this).closest('form');
+// Simulate form data, but only include the selected sport value.
+            var data = {};
+            data[$provincia.attr('name')] = $provincia.val();
+// Submit data via AJAX to the form's action path.
+
+            $.ajax({
+                url : $form.attr('action'),
+                type: $form.attr('method'),
+                data : data,
+                success: function(html) {
+// Replace current position field ...
+                    $('#sisconee_appbundle_servicio_municipio').replaceWith(
+// ... with the returned one from the AJAX response.
+                            $(html).find('#sisconee_appbundle_servicio_municipio')
+                    );
+// Position field now displays the appropriate positions.
+                }
+            });
+        });
+    </script>
+
+{% endblock %}
+
+

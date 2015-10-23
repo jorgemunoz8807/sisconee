@@ -1,0 +1,88 @@
+<div class="footer">
+    {#<div class="wrap">
+        <div class="section group">
+            <div class="col_1_of_4 span_1_of_4">
+                <h4>Informaci&oacute;n</h4>
+                <ul>
+                    <li><a href="{{ path('system_propaganda_informaciongeneral', { 'nombre' : 'acercadenosotros' } ) }}">Acerca de nosotros</a></li>
+                    <li><a href="{{ path('system_propaganda_informaciongeneral', { 'nombre' : 'servicios' } ) }}">Servicios</a></li>
+                    <li><a href="{{ path('system_propaganda_informaciongeneral', { 'nombre' : 'tiposdeentrega' } ) }}">Tipos de entrega</a></li>
+                    <li><a href="{{ path('system_propaganda_informaciongeneral', { 'nombre' : 'preguntasfrecuentes' } ) }}">F.A.Q.</a></li>
+                    <li><a href="{{ path('system_propaganda_listarcarritocompras_contactos') }}">Contactos</a></li>
+                </ul>
+            </div>
+            <div class="col_1_of_4 span_1_of_4">
+                <h4>Por qué nosotros</h4>
+                <ul>
+                    <li><a href="{{ path('system_propaganda_informaciongeneral', { 'nombre' : 'politicasdeprivacidad' } ) }}">Pol&iacute;ticas de privacidad</a></li>
+                    <li><a href="{{ path('system_propaganda_informaciongeneral', { 'nombre' : 'terminosdebusqueda' } ) }}">T&eacute;rminos de b&uacute;squeda</a></li>
+                </ul>
+            </div>
+            <div class="col_1_of_4 span_1_of_4">
+                <h4>Mi cuenta</h4>
+                <ul>
+                    {% if app.user %}
+                        {% if is_granted('ROLE_ADMINISTRADOR') %}
+                            <li><a href="{{ path('system_administracion_homepage') }}">Administrar</a></li>
+                        {% endif %}
+
+                        <li><a href="{{ path('system_seguridad_logout') }}">Log out</a></li>
+                        <li><a href="{{ path('gestionar_usuarios_edit', { id:app.user.id } ) }}">Cuenta de usuario</a></li>
+                    {% else %}
+                        <li><a href="{{ path('gestionar_usuarios_new') }}">Registrarse</a></li>
+                        <li><a href="{{ path('system_seguridad_login') }}">Log in</a></li>
+                    {% endif %}
+
+                    <li><a href="index.html">Carrito de compras</a></li>
+                </ul>
+            </div>
+            <div class="col_1_of_4 span_1_of_4">
+                <h4>Contactos directos</h4>
+                <ul>
+                    <li><span>{{ contactos.telefono }}</span></li>
+                    <li><span>{{ contactos.fax }}</span></li>
+                </ul>
+                <div class="social-icons">
+                    <h4>S&iacute;guenos</h4>
+                    <ul>
+                        <li><a href="{{ contactos.facebook }}" target="_blank" title="Encuéntranos en Facebook"><img src="{{ asset('layout/images/facebook.png') }}" alt="" /></a></li>
+                        <li><a href="{{ contactos.twitter }}" target="_blank" title="Encuéntranos en Twitter"><img src="{{ asset('layout/images/twitter.png') }}" alt="" /></a></li>
+                        <li><a href="{{ contactos.skype }}" target="_blank" title="Encuéntranos en Skype"><img src="{{ asset('layout/images/skype.png') }}" alt="" /> </a></li>
+                        <li><a href="{{ contactos.linkedin }}" target="_blank" title="Encuéntranos en Linkedin"> <img src="{{ asset('layout/images/linkedin.png') }}" alt="" /></a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>#}
+
+{#FUNCIONALIDAD DEL CORREOOOOOOOOOOOOOOOOOOOOOO#}
+    {#<div id="contact">#}
+        {#<h2>Comente sobre el Sitio</h2>#}
+        {#<div id="contact-cont">#}
+            {#<form action="&#123;&#35;{{ path('') }}&#35;&#125;" method="post">#}
+                {#<div class="editor-full">#}
+                    {#<div class="editor-field">#}
+                        {#<input type="text" name="txtName" value="Su Nombre..." />#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="editor-full">#}
+                    {#<div class="editor-field">#}
+                        {#<input type="email" name="txtEmail" value="Su Correo..." />#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="editor-full">#}
+                    {#<div class="editor-field">#}
+                        {#<textarea name="txtMessage">Su Mensaje...</textarea>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="editor-full">#}
+                    {#<input type="submit" value="Enviar" />#}
+                {#</div>#}
+
+
+
+                <div class="copy_right">
+        <p>CITMATEL © Todos los derechos reservados | 2014 </p>
+    </div>
+</div>

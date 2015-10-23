@@ -1,0 +1,35 @@
+administracion_usuario:
+    path:     /
+    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:index" }
+
+administracion_usuario_show:
+    path:     /{id}/show
+    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:show" }
+
+administracion_usuario_new:
+    path:     /new
+    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:new" }
+
+administracion_usuario_create:
+    path:     /create
+    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:create" }
+    requirements: { _method: post }
+
+administracion_usuario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:edit" }
+
+#administracion_usuario_update:
+#    path:     /{id}/update
+#    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:update" }
+#    requirements: { _method: post|put }
+
+administracion_usuario_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:delete" }
+
+#administracion_usuario_edit_password:
+#    path:     /{id}/edit_password
+#    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:editPassword" }
+
+

@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+
+{% block body -%}
+    <div class="myhidden" id="addplan-form" >
+        {#{{ form(form , {attr: {'novalidate': 'false'}}) }}#}
+        {{ form(form ) }}
+    </div>
+{% endblock %}

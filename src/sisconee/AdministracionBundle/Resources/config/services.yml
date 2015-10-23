@@ -1,0 +1,7 @@
+parameters:
+#    sisconee_administracion.example.class: sisconee\AdministracionBundle\Example
+
+services:
+#    sisconee_administracion.example:
+#        class: %sisconee_administracion.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

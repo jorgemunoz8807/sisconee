@@ -1,0 +1,9 @@
+{% extends '::layout_general.html.twig' %}
+{% block content %}
+    <div class="row" style="margin-top: 10px; ">
+        <div class="col-sm-11" style="margin-left: 25px; margin-right: 100px;">
+            {% include "::flashmessages.html.twig" %}
+        </div>
+    </div>
+{#No existe ninguna configuración para el organismo {{ currentOrganism }}.#}
+{% endblock %}

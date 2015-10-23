@@ -1,0 +1,53 @@
+{% extends "::base.html.twig" %}
+
+{% block metadata %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet" type="text/css" />
+    {#href="{{ asset('layoutadmin/styles.css') }}" rel="stylesheet" type="text/css" />#}
+    {# <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />#}
+    {#<link href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet" type="text/css" />#}
+
+    {#<link href="{{ asset('bundles/sisconeeapp/css/style-general.css') }}" rel="stylesheet" type="text/css" media="all"/>#}
+    <link href="{{ asset('layout_general/css/style.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{{ asset('layout_general/css/layout.css') }}" rel="stylesheet" type="text/css" media="all"/>
+
+{% endblock %}
+
+{% block body %}
+    {% include 'layout_general-header.html.twig' %}
+    <div class="wrap container">
+        <div class="content">
+            {% block content %}
+             Sisconee Sistema para el control de la energía eléctrica
+            {% endblock %}
+        </div>
+    </div>
+
+    {% include 'layout_general-footer.html.twig' %}
+{% endblock %}
+
+    {% block javascripts %}
+        <script src="{{ asset('layout_general/js/jquery-1.7.2.min.js') }}"></script>
+        <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+       {# <script type="text/javascript" src="{{ asset('layout_general/js/move-top.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('layout_general/js/easing.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('layout_general/js/startstop-slider.js') }}"></script>#}
+
+        <script type="text/javascript">
+            /*$(document).ready(function() {
+                $().UItoTop({ easingType: 'easeOutQuart' });
+            });*/
+        </script>
+
+
+
+
+    {% endblock %}
+
+    {#<a href="#" id="toTop"><span id="toTopHover"> </span></a>#}
+

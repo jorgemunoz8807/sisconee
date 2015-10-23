@@ -1,0 +1,35 @@
+administracion_servicio:
+    path:     /
+    defaults: { _controller: "sisconeeAdministracionBundle:Servicio:index" }
+
+administracion_servicio_show:
+    path:     /{id}/show
+    defaults: { _controller: "sisconeeAdministracionBundle:Servicio:show" }
+
+administracion_servicio_new:
+    path:     /new
+    defaults: { _controller: "sisconeeAdministracionBundle:Servicio:new" }
+
+administracion_servicio_create:
+    path:     /create
+    defaults: { _controller: "sisconeeAdministracionBundle:Servicio:create" }
+#    requirements: { _method: post }
+
+administracion_servicio_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "sisconeeAdministracionBundle:Servicio:edit" }
+
+administracion_servicio_update:
+    path:     /{id}/update
+    defaults: { _controller: "sisconeeAdministracionBundle:Servicio:update" }
+    requirements: { _method: post|put }
+
+administracion_servicio_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "sisconeeAdministracionBundle:Servicio:delete" }
+
+administracion_servicio_municipios:
+    path:     /getMunicipios
+    defaults: { _controller: "sisconeeAdministracionBundle:Servicio:getMunicipios" }
+
+

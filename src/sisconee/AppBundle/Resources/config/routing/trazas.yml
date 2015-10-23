@@ -1,0 +1,30 @@
+trazas:
+    path:     /
+    defaults: { _controller: "sisconeeAppBundle:Trazas:index" }
+
+#trazas_show:
+#    path:     /{id}/show
+#    defaults: { _controller: "sisconeeAppBundle:Trazas:show" }
+#
+#trazas_new:
+#    path:     /new
+#    defaults: { _controller: "sisconeeAppBundle:Trazas:new" }
+#
+#trazas_create:
+#    path:     /create
+#    defaults: { _controller: "sisconeeAppBundle:Trazas:create" }
+#    requirements: { _method: post }
+#
+#trazas_edit:
+#    path:     /{id}/edit
+#    defaults: { _controller: "sisconeeAppBundle:Trazas:edit" }
+#
+#trazas_update:
+#    path:     /{id}/update
+#    defaults: { _controller: "sisconeeAppBundle:Trazas:update" }
+#    requirements: { _method: post|put }
+#
+#trazas_delete:
+#    path:     /{id}/delete
+#    defaults: { _controller: "sisconeeAppBundle:Trazas:delete" }
+#    requirements: { _method: post|delete }

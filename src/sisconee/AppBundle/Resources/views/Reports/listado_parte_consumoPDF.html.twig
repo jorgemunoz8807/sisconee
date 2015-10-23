@@ -1,0 +1,81 @@
+{% if Listado|length >0 %}
+        {% set NombreProvincia = '' %}
+        {% set NombreMunicipio = '' %}
+        {% set TotalPlanMes = 0 %}
+        {% set TotalPlanDia = 0 %}
+        {% set TotalConsumoDia = 0 %}
+        {% set TotalConsumoAcumulado = 0 %}
+
+        <h1>Organismo:{{ organismo }}</h1>
+        <br>
+        <p>Parte Diario OLPP<p>
+        <p>Consumo Energ&iacute;a El&eacute;ctrica (KWh)<p>
+        <p>Acumulado hasta: <strong> {{ fecha }}</strong><p>
+        <br>
+        <table class="table table-bordered table-hover table-striped" style="border: 1px solid #000000">
+
+            {% for e in Listado %}
+
+                {% if NombreProvincia != e['NombProv'] %}
+                     <tr style="border: 1px solid #000000">
+                        <th colspan="16" style="border: 1px solid #000000">{{ e['NombProv'] }}</th>
+                    </tr>
+                {% endif %}
+                {% if NombreMunicipio != e['NombMunicipio'] %}
+                    <tr style="border: 1px solid #000000">
+                        <th colspan="16" style="border: 1px solid #000000">Municipio: {{ e['NombMunicipio'] }}</th>
+                    </tr>
+                    <tr style="border: 1px solid #000000">
+                        <th style="border: 1px solid #000000">C&oacute;digo CEE</th>
+                        <th style="border: 1px solid #000000">CRF</th>
+                        <th style="border: 1px solid #000000">Nombre del Servicio</th>
+                        <th style="border: 1px solid #000000">Plan Mes</th>
+                        <th style="border: 1px solid #000000">Plan D&iacute;a</th>
+                        <th style="border: 1px solid #000000">Consumo D&iacute;a</th>
+                        <th style="border: 1px solid #000000">Consumo Acumulado</th>
+                        <th style="border: 1px solid #000000">Porciento Diario</th>
+                        <th style="border: 1px solid #000000">Porciento Acumulado</th>
+                    </tr>
+                {% endif %}
+
+                <tr style="border: 1px solid #000000">
+                    <td style="border: 1px solid #000000">{{ e['codcliente_EE'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['codRF'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['NombreServicio'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['PlanMensual'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['consumo'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['ConsumoAcumulado'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['PorcientoDiario']| number_format(2) }}</td>
+                    <td style="border: 1px solid #000000">{{ e['PorcientoAcumulado']| number_format(2) }}</td>
+                    {% set TotalPlanMes = TotalPlanMes +  e['PlanMensual'] %}
+                    {% set TotalPlanDia = TotalPlanDia +  e['plan'] %}
+                    {% set TotalConsumoDia = TotalConsumoDia +  e['consumo'] %}
+                    {% set TotalConsumoAcumulado = TotalConsumoAcumulado +  e['ConsumoAcumulado'] %}
+                    {% set NombreMunicipio =  e['NombMunicipio'] %}
+                    {% set NombreProvincia =  e['NombProv'] %}
+
+                </tr>
+
+
+            {% endfor %}
+
+            {%if  Listado|length >0 %}
+                <tr style="border: 1px solid #000000">
+                    <th colspan="3" align="right" style="border: 1px solid #000000">Totales </th>
+                    <td style="border: 1px solid #000000">{{ TotalPlanMes }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanDia }}</td>
+                    <td style="border: 1px solid #000000" >{{ TotalConsumoDia }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalConsumoAcumulado }}</td>
+                    <td style="border: 1px solid #000000">{{ (TotalConsumoDia / TotalPlanDia)| number_format(2) }}</td>
+                    <td style="border: 1px solid #000000">{{ (TotalConsumoAcumulado/ TotalPlanMes)| number_format(2) }}</td>
+
+                </tr>
+            {% endif %}
+        </table>
+{% else %}
+
+    <h1>No hay datos a mostrar</h1>
+
+
+{% endif %}

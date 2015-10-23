@@ -1,0 +1,23 @@
+
+Provincia(s):
+{% if Listado_provincia|length >0 %}
+    <select id="lista_provincia" style="width: 100%" class="form-control">
+        {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_SUPERVISOR_SUP')  %}
+        <option value="-1"><--Mostrar todas--></option>
+
+        {% endif %}
+
+        {% for p in Listado_provincia %}
+            <option value="{{ p.getId }}">
+                {{ p.getDescripcion }}
+            </option>
+        {% endfor %}
+    </select>
+{% else %}
+    <select id="lista_provincia" style="width: 100%" class="form-control">
+
+            <option value="0">No hay datos a mostrar</option>
+
+    </select>
+{% endif %}
+

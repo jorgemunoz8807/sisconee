@@ -1,0 +1,100 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}
+    Reportes
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('layoutadmin/styles.css') }}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('layout_reportes/jquery.jqplot.css') }}" />
+    {#<link href="{{ asset('layout_general/css/style.css') }}" rel="stylesheet" type="text/css"/>#}
+    {#<link href="{{ asset('bundles/sisconeeapp/css/style-general.css') }}" rel="stylesheet" type="text/css"/>#}
+{% endblock %}
+
+{% block body %}
+
+    <style>
+        @media (min-width: 768px) {
+            .table {
+                width: 50%;
+            }
+
+            .admin-list-actions.autosize {
+                width: 50%;
+            }
+        }
+    </style>
+
+    {% include "::modal-delete.html.twig" %}
+
+    <div>
+        <div class="row">
+            {% set href =   path('index_reportes') %}
+            {% set planMensualHref =   path('sisconee_app_reportes', { 'Nomb_Report': 'plan_mensual' })   %}
+            {% set compDiarioHref =   path('sisconee_app_reportes', { 'Nomb_Report': 'comportamiento_diario' })   %}
+            {% set parteDiarioHref =   path('sisconee_app_reportes', { 'Nomb_Report': 'parte_diario' })   %}
+            {#{% set consumoGralHref =   path('sisconee_app_reportes', { 'Nomb_Report': 'consumo_acumulado' })   %}
+            {% set consumoHpHref =   path('sisconee_app_reportes', { 'Nomb_Report': 'consumo_acumulado_hp' })   %}#}
+            {% set parteConsumo = path('sisconee_app_reportes', { 'Nomb_Report': 'parte_consumo' })   %}
+
+            {#{% include 'sisconeeAppBundle:Planificacion:planification_menu.html.twig' %}#}
+            {{ include('::layout_modules_menu.html.twig',
+            {
+            'submenuTitle':'Reportes',
+            'submenuHref': href,
+            'submenuOptions':
+            {
+            'Plan Mensual': planMensualHref,
+            'Comportamiento Diario':compDiarioHref,
+            'Parte Diario':parteDiarioHref,
+            'Parte del Consumo': parteConsumo,
+            'Consumo Acumulado' : '#'
+            }
+            }) }}
+
+            {#'Consumo Acumulado' : '#'#}
+            {#'Consumo Acumulado General' : consumoGralHref,
+            'Consumo Acumulado Horario Pico' : consumoHpHref,#}
+
+            {#<li><a class="vinculo-white" href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'plan_mensual' }) }}"><span></span>Plan Mensual</a></li>
+            <li><a class="vinculo-white" href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'comportamiento_diario' }) }}"><span></span>Comportamiento Diario</a></li>
+            <li><a class="vinculo-white" href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'parte_diario' }) }}"><span></span>Parte Diario</a></li>
+            <li><a class="vinculo-white" href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'consumo_acumulado' }) }}"><span></span>Consumo Acumulado General</a></li>
+            <li><a class="vinculo-white" href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'consumo_acumulado_hp' }) }}"><span></span>Consumo Acumulado Horario Pico</a></li>#}
+
+        </div>
+
+        <div class="row" style="margin-top: 51px; ">
+            <div class="col-sm-11" style="margin-left: 25px; margin-right: 100px;">
+                {% include "::flashmessages.html.twig" %}
+            </div>
+        </div>
+
+        <div id="container" style="margin-top: 10px;">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                Sisconee | Módulo de Reportes
+            </div>
+        </nav>
+    </div>
+
+{% endblock %}
+
+        {% block javascripts %}
+            <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+            <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+            <script language="javascript" type="text/javascript" src="{{ asset('layout_reportes/jquery.jqplot.min.js') }}"></script>
+            <script language="javascript" type="text/javascript"  src="{{ asset('layout_reportes/plugins/jqplot.canvasTextRenderer.js') }}"></script>
+            <script language="javascript" type="text/javascript"  src="{{ asset('layout_reportes/plugins/jqplot.canvasAxisLabelRenderer.js') }}"></script>
+            <script language="javascript" type="text/javascript"  src="{{ asset('layout_reportes/plugins/jqplot.canvasAxisTickRenderer.js') }}"></script>
+            <script language="javascript" type="text/javascript"  src="{{ asset('layout_reportes/plugins/jqplot.pointLabels.js') }}"></script>
+            <script language="javascript" type="text/javascript"  src="{{ asset('layout_reportes/plugins/jqplot.enhancedLegendRenderer.js') }}"></script>
+            <script language="javascript" type="text/javascript"  src="{{ asset('layout_reportes/plugins/jqplot.categoryAxisRenderer.js') }}"></script>
+            <script language="javascript" type="text/javascript"  src="{{ asset('layout_reportes/plugins/jqplot.barRenderer.min.js') }}"></script>
+        {% endblock %}

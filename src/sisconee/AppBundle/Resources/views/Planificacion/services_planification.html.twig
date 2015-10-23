@@ -1,0 +1,8 @@
+<label class="control-label" for="services">Servicio:</label>
+<select id="services">
+    {% for s in services %}
+        <option value={{s.getId}} {{ (s.id == selectedService.id) ? "selected='true'" : "" }}>
+            {{ s.getNombre }}
+        </option>
+    {% endfor %}
+</select>

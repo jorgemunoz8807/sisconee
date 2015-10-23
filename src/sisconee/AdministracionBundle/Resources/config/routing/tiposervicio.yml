@@ -1,0 +1,30 @@
+administracion_tiposervicio:
+    path:     /
+    defaults: { _controller: "sisconeeAdministracionBundle:TipoServicio:index" }
+
+administracion_tiposervicio_show:
+    path:     /{id}/show
+    defaults: { _controller: "sisconeeAdministracionBundle:TipoServicio:show" }
+
+administracion_tiposervicio_new:
+    path:     /new
+    defaults: { _controller: "sisconeeAdministracionBundle:TipoServicio:new" }
+
+administracion_tiposervicio_create:
+    path:     /create
+    defaults: { _controller: "sisconeeAdministracionBundle:TipoServicio:create" }
+    requirements: { _method: post }
+
+administracion_tiposervicio_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "sisconeeAdministracionBundle:TipoServicio:edit" }
+
+administracion_tiposervicio_update:
+    path:     /{id}/update
+    defaults: { _controller: "sisconeeAdministracionBundle:TipoServicio:update" }
+    requirements: { _method: post|put }
+
+administracion_tiposervicio_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "sisconeeAdministracionBundle:TipoServicio:delete" }
+

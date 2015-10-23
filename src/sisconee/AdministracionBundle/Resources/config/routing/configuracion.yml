@@ -1,0 +1,25 @@
+configuracion_edit:
+    path:     /
+    defaults: { _controller: "sisconeeAdministracionBundle:Configuracion:edit" }
+
+configuracion_update:
+    path:     /update
+    defaults: { _controller: "sisconeeAdministracionBundle:Configuracion:update" }
+    requirements: { _method: post|put }
+
+configuracion_create:
+    path:     /create
+    defaults: { _controller: "sisconeeAdministracionBundle:Configuracion:create" }
+    requirements: { _method: get|post }
+
+configuracion_changeStatus:
+    path:     /changeStatus
+    defaults: { _controller: "sisconeeAdministracionBundle:Configuracion:changeStatus" }
+    requirements: { _method: get|post }
+
+get_configuration:
+    path:    /getconfiguration
+    defaults: { _controller: "sisconeeAdministracionBundle:Configuracion:getConfiguration" }
+    requirements: { _method: get }
+
+

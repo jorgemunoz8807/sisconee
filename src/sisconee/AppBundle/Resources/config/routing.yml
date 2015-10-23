@@ -1,0 +1,32 @@
+sisconee_app_planificacion:
+    path:     /planificacion
+    defaults: { _controller: sisconeeAppBundle:Planificacion:indexPlanification }
+
+sisconee_app_plan_anual_entidad:
+    resource: "@sisconeeAppBundle/Resources/config/routing/plananualentidad.yml"
+    prefix:   /planificacion/plananualentidad
+    
+sisconee_app_plan_anual_servicio:
+    resource: "@sisconeeAppBundle/Resources/config/routing/plananualservicio.yml"
+    prefix:   /planificacion/plananualservicio
+
+sisconee_app_plan_mensual_servicio:
+    resource: "@sisconeeAppBundle/Resources/config/routing/planmensualservicio.yml"
+    prefix:   /planificacion/planmensualservicio
+
+sisconee_app_registro_lecturas:
+    resource: "@sisconeeAppBundle/Resources/config/routing/registrolecturas.yml"
+    prefix:   /registro_lecturas
+
+sisconee_app_plandiarioservicio:
+    resource: "@sisconeeAppBundle/Resources/config/routing/plandiarioservicio.yml"
+    prefix:   /planificacion/plandiarioservicio
+
+sisconee_app_reportes:
+    resource: "@sisconeeAppBundle/Resources/config/routing/reporte.yml"
+    prefix:   /reporte
+
+sisconee_app_trazas:
+    resource: "@sisconeeAppBundle/Resources/config/routing/trazas.yml"
+    prefix:   /trazas
+

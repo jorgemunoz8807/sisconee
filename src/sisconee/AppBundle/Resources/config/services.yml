@@ -1,0 +1,7 @@
+parameters:
+#    sisconee_app.example.class: sisconee\AppBundle\Example
+
+services:
+#    sisconee_app.example:
+#        class: %sisconee_app.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

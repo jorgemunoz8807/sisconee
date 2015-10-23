@@ -1,0 +1,55 @@
+registro_lecturas:
+    path:     /
+    defaults: { _controller: "sisconeeAppBundle:RegistroLecturas:index" }
+
+registro_lecturas_change_entidad:
+    path:     /getServicios/
+    defaults: { _controller: "sisconeeAppBundle:RegistroLecturas:getServicios" }
+    requirements: { _method: get }
+
+registro_lecturas_change_servicio:
+    path:     /getPlanAnualServicio/
+    defaults: { _controller: "sisconeeAppBundle:RegistroLecturas:getPlanAnualServicio" }
+    requirements: { _method: get }
+
+registro_lecturas_change_month_loadPlan:
+    path:     /getMonthPlanServicioAction/
+    defaults: { _controller: "sisconeeAppBundle:RegistroLecturas:getMonthPlanServicio" }
+    requirements: { _method: get }
+
+registro_lecturas_change_month:
+    path:     /getMonthInformationServicioAction/
+    defaults: { _controller: "sisconeeAppBundle:RegistroLecturas:getMonthInformationServicio" }
+    requirements: { _method: get }
+
+registro_lecturas_update:
+    path:     /updateLecturaServicioAction/
+    defaults: { _controller: "sisconeeAppBundle:RegistroLecturas:updateLecturaServicio" }
+    requirements: { _method: get|post }
+
+#plananualentidad_show:
+#    path:     /{id}/show
+#    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:show" }
+#
+#plananualentidad_new:
+#    path:     /new
+#    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:new" }
+#
+#plananualentidad_create:
+#    path:     /create
+#    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:create" }
+#    requirements: { _method: post }
+#
+#plananualentidad_edit:
+#    path:     /{id}/edit
+#    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:edit" }
+#
+#plananualentidad_update:
+#    path:     /{id}/update
+#    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:update" }
+#    requirements: { _method: post|put }
+#
+#plananualentidad_delete:
+#    path:     /{id}/delete
+#    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:delete" }
+#    requirements: { _method: post|delete }

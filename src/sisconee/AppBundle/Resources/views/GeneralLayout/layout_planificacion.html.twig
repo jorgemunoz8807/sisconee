@@ -1,0 +1,91 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}
+    Planificación
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('layoutadmin/styles.css') }}" rel="stylesheet" type="text/css"/>
+    {#<link href="{{ asset('layout_general/css/style.css') }}" rel="stylesheet" type="text/css"/>#}
+    <link href="{{ asset('bundles/sisconeeapp/css/style-planification.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('bundles/sisconeeapp/css/style-modules-menu.css') }}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+
+{% block body %}
+
+    <style>
+        @media (min-width: 768px) {
+            .table {
+                width: 50%;
+            }
+
+            .admin-list-actions.autosize {
+                width: 50%;
+            }
+        }
+    </style>
+
+    {% include "::modal-delete.html.twig" %}
+
+    <div>
+        <div class="row">
+            {% set href =   path('sisconee_app_planificacion') %}
+            {% set planAnualEntHref =   path('plananualentidad') %}
+            {% set planAnualSerHref =   path('plananualservicio') %}
+            {% set planMensualHref =   path('planmensualservicio') %}
+            {% set planDiarioHref =   path('plandiarioservicio') %}
+
+            {#{% include 'sisconeeAppBundle:Planificacion:planification_menu.html.twig' %}#}
+
+            {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') %}
+                {% set submenuOptions =  {
+                'Anual por entidad':planAnualEntHref,
+                'Anual por servicio':planAnualSerHref,
+                'Mensual por servicio':planMensualHref,
+                'Diario por servicio' : planDiarioHref,
+                } %}
+            {% else %}
+                {% set submenuOptions =  {
+                'Diario por servicio' : planDiarioHref,
+                } %}
+            {% endif %}
+
+
+            {{ include('::layout_modules_menu.html.twig',
+            {
+            'submenuTitle':'Planificación',
+            'submenuHref': href,
+            'submenuOptions':
+            submenuOptions
+            }) }}
+        </div>
+
+        <div class="row" style="margin-top: 51px; ">
+            <div class="col-sm-11" style="margin-left: 25px; margin-right: 100px;">
+                {% include "::flashmessages.html.twig" %}
+            </div>
+        </div>
+
+        <div id="container" style="margin-top: 10px;">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                Sisconee | Módulo de Planificación
+            </div>
+        </nav>
+    </div>
+
+{% endblock %}
+
+        {% block javascripts %}
+            <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+            <script src="{{ asset('jquery/jquery-validate/jquery.validate.js') }}"></script>
+            <script src="{{ asset('bundles/sisconeeapp/js/commonFieldsValidation.js') }}"></script>
+            <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+        {% endblock %}

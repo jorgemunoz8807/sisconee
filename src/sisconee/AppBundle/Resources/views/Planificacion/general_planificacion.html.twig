@@ -1,0 +1,58 @@
+{% extends 'sisconeeAppBundle:GeneralLayout:layout_planificacion.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="pull-right">
+                {% set planStyle = '' %}
+                <label class="control-label" style="font-weight: bold">Plan:</label>
+                {% if( generalPlan is null) %}
+                    {% set planStyle = 'color: red' %}
+                    {% set generalPlan = '--no definido--' %}
+                {% endif %}
+                <span class="label label-info" id="reference-plan"
+                      style="margin-right: 10px; {{ planStyle }}">{{ generalPlan }}</span>
+
+                <label class="control-label" style="font-weight: bold">Restante:</label>
+
+                {% if( generalPlan is null) %}
+                    <span class="label label-info" style="color: red">-</span>
+                {% else %}
+                    <span {#class="form-control-static"#} class="label label-info" id="remaining-plan">{{ remaining }}</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <label class="control-label" for="parent_entities">Entidad:</label>
+            {% if not(fixedEntity) %}
+                <select id="parent_entities" name="select_parent_entities">
+                    {% for e in entities %}
+                        <option value="{{ e.id }}" {{ (e.id == parentEntity.id) ? "selected='true'" : "" }}>
+                            {{ e }}
+                        </option>
+                    {% endfor %}
+                </select>
+            {% else %}
+                <label>
+                    {{ parentEntity }}
+                </label>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row">
+                {% block planification %}
+                {% endblock %}
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {#<script src="{{ asset('bundles/sisconeeapp/js/planification.js') }}"></script>#}
+    <script src="{{ asset('layoutadmin/admin-list.js') }}"></script>
+
+{% endblock %}

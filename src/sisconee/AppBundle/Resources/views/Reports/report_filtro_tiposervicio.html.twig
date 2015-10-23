@@ -1,0 +1,17 @@
+Tipo de Servicio:
+{% if Listado_TipoServicio|length >0 %}
+        <select id="lista_TipoServicio"  style="width: 100%" class="form-control">
+            <option value="-1"><--Mostrar todas--></option>
+            {% for t in Listado_TipoServicio %}
+                <option value="{{ t.getId }}">
+                    {{ t.getDescripcion }}
+                </option>
+            {% endfor %}
+        </select>
+{% else %}
+
+    <select id="lista_TipoServicio"  style="width: 100%" class="form-control">
+        <option value="0">No hay datos a mostrar</option>
+    </select>
+
+{% endif %}

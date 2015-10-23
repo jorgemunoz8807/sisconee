@@ -1,0 +1,21 @@
+{#{% extends '::layout_planificacion.html.twig' %}#}
+{% extends 'sisconeeAppBundle:Planificacion:general_planificacion.html.twig' %}
+
+{% block content%}
+    <h1>Editar plan anual de {{entity}}</h1>
+
+    {#{{ form(edit_form) }}#}
+    {{ form_start(edit_form) }}
+    {{ form_rest(edit_form) }}
+    <input value="Actualizar" type="submit" class="btn btn-default add-plan-btn">
+    {{ form_end(edit_form)}}
+
+    {# <ul class="record_actions">
+ <li>
+     <a href="{{ path('plananualservicio') }}">
+         Back to the list
+     </a>
+ </li>
+ <li>{{ form(delete_form) }}</li>
+</ul>#}
+{% endblock %}

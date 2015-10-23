@@ -1,0 +1,79 @@
+#security:
+#    encoders:
+#      sisconee\AppBundle\Entity\Usuario: plaintext
+#    firewalls:
+#     general:
+#       pattern: ^/
+#       anonymous: ~
+#       form_login:
+#         login_path: /login
+#         check_path: /login_check
+#         default_target_path: /test
+#         always_use_default_target_path: true
+#       remember_me:
+#         key: cupon1234
+#         lifetime: 3600
+#    access_control:
+#           - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+#           - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+#           - { path: ^/administracion/*, roles: [ROLE_ADMIN, ROLE_PLANIFICADOR_SUP, ROLE_PLANIFICADOR_ENT,ROLE_PLANIFICADOR_SER,ROLE_REGISTRADOR_SER, ROLE_SUPERVISOR_SUP, ROLE_SUPERVISOR_ENT ] }
+#    providers:
+#           usuarios:
+#             entity:
+#              class: sisconee\AppBundle\Entity\Usuario
+#              property: login
+#
+#    #{ algorithm: sha512, iterations: 10 }
+
+security:
+    firewalls:
+       general:
+         pattern: ^/
+         anonymous: ~
+         form_login:
+              login_path: /login
+              check_path: /login_check
+              default_target_path: /Inicio
+              always_use_default_target_path: true
+#              remember_me:
+#                  key: cupon1234
+#                  lifetime: 3600
+         #realm: "Secured Demo Area"
+         logout:
+             path: /logout
+             target: /login
+    access_control:
+#      - { path: ^/administracion/tiposervicio, roles: [ROLE_PLANIFICADOR_SUP] }
+       - { path: ^/administracion/usuario, roles: [ROLE_PLANIFICADOR_SUP,ROLE_ADMIN,ROLE_PLANIFICADOR_ENT] }
+       - { path: ^/administracion/entidad, roles: [ROLE_PLANIFICADOR_SUP,ROLE_ADMIN,ROLE_PLANIFICADOR_ENT] }
+       - { path: ^/administracion/servicio, roles: [ROLE_PLANIFICADOR_SUP,ROLE_ADMIN,ROLE_PLANIFICADOR_ENT] }
+
+       - { path: ^/administracion/configuracion, roles: [ROLE_PLANIFICADOR_SUP,ROLE_ADMIN] }
+       - { path: ^/administracion/, roles: [ROLE_ADMIN,ROLE_PLANIFICADOR_SUP] }
+       - { path: ^/trazas/, roles: [ROLE_ADMIN,ROLE_PLANIFICADOR_SUP] }
+       - { path: ^/planificacion/plandiarioservicio, roles: [ROLE_PLANIFICADOR_SUP,ROLE_PLANIFICADOR_ENT,ROLE_PLANIFICADOR_SER] }
+       - { path: ^/planificacion/, roles: [ROLE_PLANIFICADOR_SUP,ROLE_PLANIFICADOR_ENT] }
+       - { path: ^/registro_lecturas/, roles: [ROLE_PLANIFICADOR_SUP,ROLE_PLANIFICADOR_ENT,ROLE_PLANIFICADOR_SER,ROLE_REGISTRADOR_SER] }
+       - { path: ^/reporte/, roles: [ROLE_PLANIFICADOR_SUP,ROLE_PLANIFICADOR_ENT,ROLE_PLANIFICADOR_SER,ROLE_REGISTRADOR_SER,ROLE_SUPERVISOR_SUP,ROLE_SUPERVISOR_ENT] }
+       - { path: ^/([0-9]+)/edit_password, roles: [ROLE_ADMIN,ROLE_PLANIFICADOR_SUP,ROLE_PLANIFICADOR_ENT,ROLE_PLANIFICADOR_SER,ROLE_REGISTRADOR_SER,ROLE_SUPERVISOR_SUP,ROLE_SUPERVISOR_ENT] }
+       - { path: ^/([0-9]+)/edit, roles: [ROLE_ADMIN,ROLE_PLANIFICADOR_SUP,ROLE_PLANIFICADOR_ENT,ROLE_PLANIFICADOR_SER,ROLE_REGISTRADOR_SER,ROLE_SUPERVISOR_SUP,ROLE_SUPERVISOR_ENT] }
+       - { path: ^/([0-9]+)/([a-z]+)/update, roles: [ROLE_ADMIN,ROLE_PLANIFICADOR_SUP,ROLE_PLANIFICADOR_ENT,ROLE_PLANIFICADOR_SER,ROLE_REGISTRADOR_SER,ROLE_SUPERVISOR_SUP,ROLE_SUPERVISOR_ENT] }
+
+    role_hierarchy:
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+# Include the following line to also secure the /admin path itself
+#     - { path: ^/admin$, roles: ROLE_ADMIN }
+    providers:
+#      in_memory:
+#        memory:
+#          users:
+#            carlos: { password: carlos, roles: 'ROLE_USER' }
+#            admin: { password: 123, roles: 'ROLE_ADMIN' }
+       usuarios:
+             entity:
+               class: sisconee\AppBundle\Entity\Usuario
+               property: username
+    encoders:
+       #Symfony\Component\Security\Core\User\User: plaintext
+       sisconee\AppBundle\Entity\Usuario: sha512

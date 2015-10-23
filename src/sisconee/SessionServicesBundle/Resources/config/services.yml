@@ -1,0 +1,20 @@
+parameters:
+#    system_list_services.example.class: System\ListServicesBundle\Example
+    records_per_page: 8
+
+services:
+    prefixedsessionservice:
+        class: sisconee\SessionServicesBundle\Controller\PrefixedSessionService
+        arguments: [@session]
+
+    orderbyservice:
+        class: sisconee\SessionServicesBundle\Controller\SessionOrderByService
+        arguments: [@prefixedsessionservice]
+
+    filterservice:
+        class: sisconee\SessionServicesBundle\Controller\SessionFilterService
+        arguments: [@prefixedsessionservice]
+
+    pagerservice:
+        class: sisconee\SessionServicesBundle\Controller\SessionPagerService
+        arguments: [@prefixedsessionservice, %records_per_page%]

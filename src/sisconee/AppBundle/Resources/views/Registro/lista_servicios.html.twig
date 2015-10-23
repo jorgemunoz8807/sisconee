@@ -1,0 +1,20 @@
+Servicio(s):
+        <select id="servicios">
+            <option value="-1"><--Seleccione un servicio--></option>
+            {% for s in servicios %}
+                <option value=" {{ s.getId }} ">
+                    {{ s.getNombre }}
+                </option>
+            {% endfor %}
+        </select>
+
+
+
+
+
+
+
+
+
+
+

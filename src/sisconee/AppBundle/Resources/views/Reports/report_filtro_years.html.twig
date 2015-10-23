@@ -1,0 +1,17 @@
+Periodo:
+{% if Listado_Years|length >0 %}
+        <select id="Years"  style="width: 100%" class="form-control">
+
+            {% for t in Listado_Years %}
+                <option value="{{ t.periodoTrabajo }}">
+                    {{ t.periodoTrabajo }}
+                </option>
+            {% endfor %}
+        </select>
+{% else %}
+
+    <select id="Years"  style="width: 100%" class="form-control">
+        <option value="0">No hay datos a mostrar</option>
+    </select>
+
+{% endif %}

@@ -1,0 +1,35 @@
+plananualentidad_show:
+    path:     /{id}/show
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:show" }
+
+plananualentidad_new:
+    path:     /new
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:new" }
+
+plananualentidad_create:
+    path:     /create
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:create" }
+    requirements: { _method: post }
+
+plananualentidad_edit:
+    path:     /{id}/{parentEntityId}/edit
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:edit" }
+
+plananualentidad_update:
+    path:      /{id}/{parentEntityId}/update
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:update" }
+    requirements: { _method: post|put }
+
+plananualentidad_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:delete" }
+#    requirements: { _method: post|delete }
+
+plananualentidad_load_data:
+    path:     /load_newData
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:loadRelatedData" }
+    requirements: { _method: get }
+
+plananualentidad:
+    path:     /{id}
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualEntidad:index", id:null }

@@ -1,0 +1,136 @@
+{% extends 'sisconeeAppBundle:Planificacion:general_planificacion.html.twig' %}
+
+{% block planification %}
+    {% set months = ['Enero',
+    'Febrero',
+    'Marzo',
+    'Abril',
+    'Mayo',
+    'Junio',
+    'Julio',
+    'Agosto',
+    'Septiembre',
+    'Octubre',
+    'Noviembre',
+    'Diciembre'] %}
+
+    {% set weeks = ['Semana 1 (1-7)', 'Semana 2 (8-14)', 'Semana 3 (15-21)', 'Semana 4 (22-28)', 'Semana 5 (29-31)'] %}
+
+    <div class="col-sm-12">
+        {#render services select#}
+        <div class="row">
+            <div class="col-sm-6">
+                {{ include ('sisconeeAppBundle:Planificacion:services_planification.html.twig', {'services':services}) }}
+            </div>
+        </div>
+
+        <div class="form-inline row">
+            {#render months select#}
+            <div class="form-group col-lg-4">
+                <label class="control-label" for="month_selected">Mes:</label>
+                <select id="month_selected">
+                    {% for month_name in months %}
+                        <option value={{ loop.index }} {{ (loop.index == selectedMonth ) ? "selected='true'" : "" }}>{{ month_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            {#render weeks select#}
+            <div class="form-group col-lg-4">
+                <label class="control-label" for="week_selected">Semana:</label>
+                <select id="week_selected">
+                    {% for week_name in weeks %}
+                        <option id="week{{ loop.index }}" {{ (loop.index == selectedWeek ) ? "selected='true'" : "" }}
+                                value={{ loop.index }}>{{ week_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        {#Planes diarios#}
+        <div class="row" style="align-content: center">
+            <h4 class="header_top">Planes diarios asignados al servicio {{ selectedService }}</h4>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                {{ form_start(plans_form, {'attr' : {'class' : 'form-horizontal' } }) }}
+
+                {#Planes#}
+                <div class="row">
+                    <div class="col-sm-12">
+                        {% for i in 1..31 %}
+                            {% if i%7==1 %}
+                                {% set weekIndex = i/7+1 - 1/7 %}
+                                {% set visible =  (weekIndex > 1 ) ? "none" : "block" %}
+                                <div class="week{{ weekIndex }}" style="display: {{ visible }}">
+                            {% endif %}
+                            <div class="col-lg-3">
+                                {% set planField = plans_form.plans[i] %}
+                                <div class="row" id="plan_day{{ i }}">
+                                    <div &#123;&#35; id="plans_{{ loop.index }}"&#35;&#125;>
+                                        {{ form_label(planField) }}
+                                    </div>
+
+                                    {{ form_label(plans_form.plans) }}
+                                    {{ form_widget(planField ) }}
+
+                                    {{ form_label(plans_form.hpPlans) }}
+                                    {{ form_widget(plans_form.hpPlans[i]) }}
+
+                                </div>
+                            </div>
+                            {% if i%7==0 %}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+
+                        {# {% set ini = 7*(selectedWeek-1)+1 %}
+                         {% set end = 7*(selectedWeek-1)+7 %}
+                         {% if selectedWeek==5 %}
+                             {% set end = 31 %}
+                         {% endif %}
+
+                         {% for i in ini..end %}
+                             <div class="col-lg-3">
+                                 {% set planField = plans_form.plans[i] %}
+                                 <div class="row" id="plan_day{{ i }}">
+                                     <div &#123;&#35;id="plans_{{ loop.index }}"&#35;&#125;>
+                                         {{ form_label(planField) }}
+                                     </div>
+
+                                     {{ form_label(plans_form.plans) }}
+                                     {{ form_widget(planField ) }}
+
+                                     {{ form_label(plans_form.plan_pico) }}
+                                     {{ form_widget(plans_form.plan_pico[i]) }}
+
+                                 </div>
+                             </div>
+                         {% endfor %}#}
+
+                    </div>
+                </div>
+
+                {{ form_end(plans_form) }}
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+    {% block javascripts %}
+        {{ parent() }}
+        <script>
+            var redirectTo = '{{path("plandiarioservicio")}}';
+            var planFieldsCommonName = 'sisconee_appbundle_lecturadiariaservicio[plans]';
+            var hpPlanFieldsCommonName = 'sisconee_appbundle_lecturadiariaservicio[hpPlans]';
+            var fieldsCount = 7;
+            var formId = 'form_plans_day';
+        </script>
+        <script src="{{ asset('bundles/sisconeeapp/js/dayPlanification.js') }}"></script>
+        <script src="{{ asset('bundles/sisconeeapp/js/servicePlanification.js') }}"></script>
+    {% endblock %}

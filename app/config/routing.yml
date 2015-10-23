@@ -1,0 +1,39 @@
+sisconee_app:
+    resource: "@sisconeeAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+sisconee_administracion:
+    resource: "@sisconeeAdministracionBundle/Resources/config/routing.yml"
+    prefix:   /administracion
+
+inicio:
+   path: /Inicio
+   defaults: { _controller: sisconeeAppBundle:Default:index }
+
+usuario_login:
+   path: /login
+   defaults: { _controller: sisconeeAppBundle:Default:login }
+
+usuario_login_check:
+   path: /login_check
+
+usuario_logout:
+   path: /logout
+
+prueba:
+   path: /prueba
+   defaults: { _controller: sisconeeAppBundle:Default:prueba }
+
+usuario_edit_password:
+    path:     /{id}/edit_password
+    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:editPassword" }
+
+usuario_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:editCommonUser" }
+
+usuario_update:
+    path:     /{id}/{fromPage}/update
+    defaults: { _controller: "sisconeeAdministracionBundle:Usuario:update" }
+    requirements: { _method: post|put }
+

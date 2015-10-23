@@ -1,0 +1,111 @@
+<div class="container">
+
+{# row for the welcome menu to the user with the options (cerrar sesion,administrar,editar cuenta)#}
+
+    <div class="row">  {#account_desc#}
+        <div class="col-sm-12  col-sm-12 col-lg-12">
+            {% if app.user %}
+            {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') %}
+
+
+               {# <a style="color: #fff" href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span> {{ app.user.nombre }} <b class="caret"></b></a>#}
+
+                <ul class="nav nav-pills navbar-right account_desc">
+                    <li><a  href="{{ path('administracion_usuario_edit', { 'id': app.user.id })}}" >{{ app.user.nombre }}</a></li>
+                    <li><a href="{{ path('administracion') }}">Administrar</a></li>
+                    <li><a  href="{{ path('usuario_logout') }}"> Cerrar sesión</a></li>
+                </ul>
+            {% endif %}
+
+            {% endif %}
+        </div>
+        <div class="col-md-12">
+
+            <a class="logo" href="#"><img src="{{ asset('layout_general/images/logoSisconee.png') }}" alt="" /></a>
+        </div>
+    </div>
+
+    {% if app.user %}
+    <div class="row ">
+        <div class="row {#header_bottom #}" >
+            {#<div class="col-md-12 menu">#}
+            {% include 'layout_general_menu.html.twig' %}
+            {#</div>#}
+
+        </div>
+    </div>
+    {% endif %}
+
+
+
+
+</div>
+
+
+
+
+{#agregar un container con 3 filas con una col de 12 cada una#}
+ {#primera col de la primera fila meter el menu del cerrar sesion ,administrar etc.#}
+ {#primera col de la segun fila meter la imagen#}
+  {#primera col de la 3era fila meter el menu#}
+
+{#<div class="wrap">#}
+    {#<div class="header">#}
+        {#<div class="headertop_desc">#}
+            {#<div class="call">#}
+                {#{<p><span>Necesita ayuda?</span> Ll&aacute;manos <span class="number">{{ telefono }}</span></p>#}
+            {#</div>#}
+            {#<div class="account_desc">#}
+                {#<ul>#}
+                    {#{% if app.user %}#}
+                        {#<img alt="Foto" style="width: 50px; height: 50px;" src="{{ asset('uploads/usuarios/' ~ app.user.foto) }}" />#}
+
+                        {#{% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') %}#}
+                           {#<ul class="nav navbar-nav navbar-right">#}
+                                {#<li><a  href="{{ path('administracion_usuario_edit', { 'id': app.user.id }) }}">Editar cuenta</a></li>#}
+                                {#<li><a href="{{ path('administracion') }}">Administrar</a></li>#}
+                                {#<li><a  href="{{ path('usuario_logout') }}"> Cerrar sesión</a></li>#}
+                            {#</ul>#}
+
+                            {#<li><a class="vinculo-white" href="{{ path('administracion') }}"><span class="glyphicon glyphicon-user"></span>Editar cuenta</a></li>#}
+                        {#{% endif %}#}
+                        {#<li><a class="vinculo-white" href="{{ path('administracion') }}"><span class="glyphicon glyphicon-user"></span>Editar cuenta</a></li>#}
+
+                        {#<li><a href="{{ path('gestionar_usuarios_edit', { id:app.user.id } ) }}">Cuenta de usuario</a></li>#}
+                    {#{% else %}#}
+                        {#<li><a href="{{ path('gestionar_usuarios_new') }}">Registrarse</a></li>#}
+                        {#<li><a href="{{ path('system_seguridad_login') }}">Log in</a></li>#}
+                    {#{% endif %}#}
+                {#</ul>#}
+            {#</div>#}
+             {#<div class="clear"></div>#}
+        {#</div>#}
+        {#<div class="header_top">#}
+            {#<div class="logo">#}
+                {#<a href="..."><img src="{{ asset('layout_general/images/logoSisconee.png') }}" alt="" /></a>#}
+            {#</div>#}
+            {#<div class="cart">#}
+
+                {#{% if app.user %}#}
+                    {#&#123;&#35;Bienvenido (a)!: {{  app.user.nombre }}#}
+                {#{% endif %#}
+
+            {#</div>#}
+            {#<div class="clear"></div>#}
+        {#</div>#}
+        {#<div class="header_bottom">#}
+            {#<div class="menu">#}
+                {#{% include 'layout_general_menu.html.twig' %}#}
+                {#<div class="clear"></div>#}
+            {#</div>#}
+            {#<div class="search_box">#}
+                {#<form>#}
+                    {#<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">#}
+                {#</form>#}
+            {#</div>#}
+            {#<div class="clear"></div>#}
+        {#</div>#}
+    {#</div>#}
+{#</div>#}
+

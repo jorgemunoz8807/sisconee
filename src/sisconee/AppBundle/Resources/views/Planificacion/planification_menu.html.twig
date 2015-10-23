@@ -1,0 +1,82 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a style="color: #fff" href="~/Order/Index" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-home"></span> <b class="caret"></b></a>
+                {# <ul class="nav navbar-nav dropdown-menu">
+                 </ul>#}
+
+                <ul class="dropdown-menu">
+                    <li><a href="{{ path('configuracion_edit') }}">Planificacion</a></li>
+                    <li><a href="{{ path('configuracion_edit') }}">Consumo </a></li>
+                    <li><a href="{{ path('configuracion_edit') }}">Reportes</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                {#<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span>Administraci&oacute;n</a>#}
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="~/Order/Index" class="dropdown-toggle" data-toggle="dropdown">Planes<b
+                                    class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('plananualentidad') }}">Plan Anual por Entidades</a></li>
+                            <li><a href="{{ path('plananualservicio') }}">Plan Anual por Servicios</a></li>
+                            <li><a href="{{ path('planmensualservicio') }}">Plan Mensual por Servicios</a></li>
+                            <li><a href="{{ path('plandiarioservicio') }}">Plan Diario por Servicios</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="~/Order/Index" class="dropdown-toggle" data-toggle="dropdown">Gráficos<b
+                                    class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path('configuracion_edit') }}">Planificacion</a></li>
+                            <li><a href="{{ path('configuracion_edit') }}">Consumo</a></li>
+                            <li><a href="{{ path('configuracion_edit') }}">Reportes</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="vinculo-white"
+                           href="{{ path('administracion_usuario_edit', { 'id': app.user.id }) }}"><span
+                                    class="glyphicon glyphicon-user"></span>editar cuenta</a></li>
+                    <li><a class="vinculo-white" href="{{ path('inicio') }}"><span
+                                    class="glyphicon glyphicon-remove"></span>Salir</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,48 @@
+{% extends 'sisconeeAppBundle:Planificacion:annual_planificacion.html.twig' %}
+
+{% set emptyInfo =  'No existen planes anuales creados para los servicios de ' %}
+{% set plansInfo =  'Planes anuales de los servicios de '%}
+{% set firstColumnHead = 'Servicio' %}
+
+{% block creationForm %}
+    {% include 'sisconeeAppBundle:PlanAnualServicio:new.html.twig' %}
+{% endblock %}
+
+{% block tableFirstColumn %}
+    {{ ap.servicio }}
+{% endblock %}
+
+    {% block javascripts %}
+        <script>
+            var loadDataUrl = '{{path("plananualservicio_load_data")}}';
+            var formSubmit = '{{path("plananualservicio_create")}}';
+            var emptyInfo = '{{emptyInfo}}';
+            var plansInfo = '{{plansInfo}}';
+            var formPlanFieldName = 'sisconee_appbundle_plananualservicio[plan]';
+            var formId = 'annualPlanificationForm';
+        </script>
+        {{ parent() }}
+
+        {#&#123;&#35;validation&#35;&#125;
+        <script>
+            $().ready(function () {
+
+                $(".form_planification").validate({
+                    rules: {
+                        "sisconee_appbundle_plananualservicio[plan]": {
+                            min: 0
+                        }
+                    },
+                    messages: {
+                        "sisconee_appbundle_plananualservicio[plan]": {
+                            min: 'El plan debe ser un valor positivo.'
+                        }
+
+                    }
+                })
+                ;
+            })
+            ;
+        </script>#}
+
+    {% endblock %}

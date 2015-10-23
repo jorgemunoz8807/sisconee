@@ -1,0 +1,569 @@
+{% extends 'sisconeeAppBundle:GeneralLayout:layout_reportes.html.twig' %}
+{# Lo 1ro que se hace es identificar cual es el reporte que se va a visualizar:
+   se recibe el nombre del reporte: plan_mensual          (historia de usuario 12)
+                                    comportamiento_diario (historia de usuario 13)
+                                    parte_diario          (historia de usuario 14)
+                                    consumo_acumulado     (historia de usuario 15)
+                                    consumo_acumulado_hp  (historia de usuario 16)
+                                    parte_consumo         (historia de usuario nueva#}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('jquery/jquery-ui-1.11.2/jquery-ui.min.css') }}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Seleccione los datos a mostrar </h3>
+                </div>
+                <div class="panel-body">
+                    <form>
+
+
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div id="lista_prov">{% include 'sisconeeAppBundle:Reports:report_filtro.html.twig' %}</div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div id="lista_Entidad">{% include 'sisconeeAppBundle:Reports:report_filtro_entidad.html.twig' %}</div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                {% if (Nombre_Reporte != 'parte_diario') and (Nombre_Reporte != 'plan_mensual') and (Nombre_Reporte != 'parte_consumo')%}
+                                    Mes:
+                                    <select id="meses" class="month"  style="width: 100%" class="form-control">
+                                        <option value=""><--Seleccione un mes--></option>
+                                        <option value="01">Enero</option>
+                                        <option value="02">Febrero</option>
+                                        <option value="03">Marzo</option>
+                                        <option value="04">Abril</option>
+                                        <option value="05">Mayo</option>
+                                        <option value="06">Junio</option>
+                                        <option value="07">Julio</option>
+                                        <option value="08">Agosto</option>
+                                        <option value="09">Septiembre</option>
+                                        <option value="10">Octubre</option>
+                                        <option value="11">Noviembre</option>
+                                        <option value="12">Diciembre</option>
+                                    </select>
+
+                                {% elseif ((Nombre_Reporte == 'parte_diario') or (Nombre_Reporte == 'parte_consumo')) %}
+
+                                    Fecha: <input id="datepicker" type="text" readonly="true"  style="width: 100%" >
+
+                                {% endif %}
+                                {% if Nombre_Reporte == 'plan_mensual' %}
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="checkEntidad" type="checkbox" value="" align="left">
+                                            Mostrar Entidad
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="checkServicio" type="checkbox" value="">
+                                            Mostrar Servicio
+                                        </label>
+                                    </div>
+
+                                {% endif %}
+                            </div>
+                            <div class="col-xs-6" >
+                                {% if (Nombre_Reporte != 'parte_diario') and (Nombre_Reporte != 'parte_consumo')  %}
+                                    <div id="LYears">{% include 'sisconeeAppBundle:Reports:report_filtro_years.html.twig' %}</div>
+                                {% endif %}
+
+                            </div>
+
+                        </div>
+
+
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <input id="btnlistar" class="btn btn-lg btn-success btn-block" type="button" name="btnlistar" value="Listar" />
+
+                                <input id="nombre_reporte"  type="hidden" name="nombre_reporte" value="{{ Nombre_Reporte }}" />
+                            </div>
+                            <div class="col-xs-2">
+                                <input id="btnPDF" class="btn btn-lg btn-primary btn-block" type="button" name="btnPDF" value="PDF" disabled />
+
+
+                            </div>
+                            <div class="col-xs-3">
+
+                                <input id="btnGraph" class="btn btn-lg btn-primary btn-block" type="button" name="btnGraph" value="Gráfico"  disabled/>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div  id="resultado"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div >
+            <div id="chartdiv" style="width: 50%"></div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('jquery/jquery-ui-1.11.2/jquery-ui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('jquery/jquery-ui-1.11.2/datepicker-es.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('jquery/jquery-validate/jquery.validate.js') }}"></script>
+    <script>
+
+        $(document).ready()
+        {
+
+            function deMayorAMenor(elem1, elem2) {return elem2-elem1;}
+
+            $('#lista_provincia').change(function()
+            {
+
+
+                $('#meses').val('');
+                $( "#datepicker" ).datepicker( "setDate", new Date() );
+
+                var data = {};
+                data['id_provincia'] = $(this).val();
+
+                $.ajax({
+                    url: '{{ path("registro_entidades") }}',
+                    type: 'GET',
+                    data: data,
+                    success: function(html) {
+                        $('#lista_Entidad').html(html);
+                        $('#lista_TipoServicio').html(html);
+
+                    }
+                });
+
+
+
+            });
+            //Para Mostrar el calendario con formato de fecha 'dd-mm-yy' y en español
+            $( "#datepicker" ).datepicker({ dateFormat: 'dd-mm-yy',
+                regional: 'es'
+            });
+            $( "#datepicker" ).datepicker( "setDate", new Date() );
+
+            //Implementacion del evento onclic del boton Listar del formulario
+            $('#btnlistar').click(function() {
+                    var data = {};
+                    data['id_provincia'] = ($("#lista_provincia").val()==-1)? null:$("#lista_provincia").val() ;
+                    data['id_entidad'] = ($("#lista_entidad").val()==-1)? null:$("#lista_entidad").val() ;
+                    data['periodo'] = $("#Years").val() ;
+                    data['mostrar_entidad'] = $("#checkEntidad").prop('checked') ;
+                    data['mostrar_servicio'] = $("#checkServicio").prop('checked') ;
+                    data['pdf'] = false;
+                     $('#chartdiv').html('');
+
+                      //alert( data['mostrar_entidad']);
+
+                    if ($('#nombre_reporte').val() == "plan_mensual") {
+                        $.ajax({
+
+                            url: '{{ path("reporte_plan_mensual") }}',
+                            type: 'GET',
+                            data: data,
+                            success: function (html) {
+                                $('#resultado').html(html);
+                                if (html.indexOf('No hay datos a mostrar')!=-1){
+                                    $('#btnPDF').attr('disabled',true);
+                                    $('#btnGraph').attr('disabled',true);
+
+                                }
+                                else {
+                                    $('#btnPDF').attr('disabled',false);
+                                    $('#btnGraph').attr('disabled',false);
+                                }
+
+                            }
+                        });
+                        }
+
+
+                    if ($('#nombre_reporte').val() == "comportamiento_diario") {
+
+                        if ($('#meses').val()!=''){
+
+                            data['mes'] = $("#meses").val() ;
+                             $.ajax({
+
+                                url: '{{ path("reporte_comportamiento_diario") }}',
+                                type: 'GET',
+                                data: data,
+                                success: function (html) {
+                                    $('#resultado').html(html);
+                                    if (html.indexOf('No hay datos a mostrar')!=-1){
+                                        $('#btnPDF').attr('disabled',true);
+                                        $('#btnGraph').attr('disabled',true);
+
+                                    }
+                                    else {
+                                        $('#btnPDF').attr('disabled',false);
+                                        $('#btnGraph').attr('disabled',false);
+                                    }
+
+                                }
+                            });
+                        }
+                        else {  alert ('Debe seleccionar un mes ');}
+                    }
+
+                    if ($('#nombre_reporte').val() == "parte_diario") {
+
+                        $('#btnGraph').hide();
+                        data['fecha'] = $("#datepicker").val() ;
+                        $.ajax({
+
+                            url: '{{ path("reporte_parte_diario") }}',
+                            type: 'GET',
+                            data: data,
+                            success: function (html) {
+                                $('#resultado').html(html);
+                                if (html.indexOf('No hay datos a mostrar')!=-1){
+                                    $('#btnPDF').attr('disabled',true);
+
+                                }
+                                else {
+                                    $('#btnPDF').attr('disabled',false);
+                                }
+
+                            }
+                        });
+                    }
+
+                        if ($('#nombre_reporte').val() == "parte_consumo") {
+
+                            $('#btnGraph').hide();
+                            data['fecha'] = $("#datepicker").val() ;
+                            $.ajax({
+
+                                url: '{{ path("reporte_parte_consumo") }}',
+                                type: 'GET',
+                                data: data,
+                                success: function (html) {
+                                    $('#resultado').html(html);
+                                    if (html.indexOf('No hay datos a mostrar')!=-1){
+                                        $('#btnPDF').attr('disabled',true);
+
+                                    }
+                                    else {
+                                        $('#btnPDF').attr('disabled',false);
+                                    }
+
+                                }
+                            });
+                        }
+
+                    if ($('#nombre_reporte').val() == "consumo_acumulado") {
+
+                        if ($('#meses').val()!=''){
+
+                            $('#btnGraph').hide();
+                            data['mes'] = $("#meses").val() ;
+                            $.ajax({
+
+                                url: '{{ path("reporte_consumo_acumulado") }}',
+                                type: 'GET',
+                                data: data,
+                                success: function (html) {
+                                    $('#resultado').html(html);
+                                    if (html.indexOf('No hay datos a mostrar')!=-1){
+                                        $('#btnPDF').attr('disabled',true);
+
+                                    }
+                                    else {
+                                        $('#btnPDF').attr('disabled',false);
+                                    }
+
+                                }
+                            });
+                        }
+                        else {  alert ('Debe seleccionar un mes ');}
+
+                    }
+                    if ($('#nombre_reporte').val() == "consumo_acumulado_hp") {
+                        if ($('#meses').val()!=''){
+
+                            $('#btnGraph').hide();
+                            data['mes'] = $("#meses").val() ;
+                            $.ajax({
+
+                                url: '{{ path("reporte_consumo_acumulado_hp") }}',
+                                type: 'GET',
+                                data: data,
+                                success: function (html) {
+                                    $('#resultado').html(html);
+                                    if (html.indexOf('No hay datos a mostrar')!=-1){
+                                    $('#btnPDF').attr('disabled',true);
+
+                                    }
+                                    else {
+                                        $('#btnPDF').attr('disabled',false);
+                                    }
+
+                                }
+                            });
+                        }
+                        else {  alert ('Debe seleccionar un mes ');}
+                    }
+
+        }
+
+            );
+
+            $('#btnPDF').click(function() {
+
+                window.open('{{ path("reporte_pdf") }}', '_blank');
+
+
+            });
+
+           /* var ticks = ['a', 'b', 'c', 'd'];
+            var line1 = [14, 32, 41, 44];
+            var line2 = [15, 67, 22, 29];
+            $.jqplot('chartdiv', [line1,line2], {
+                title: 'Chart with Point Labels',
+                seriesDefaults: {
+                    showMarker: true,
+                    pointLabels: {show: true}
+                },
+                axes: {
+                    xaxis: {
+                        label: "X Axis",
+                        renderer: $.jqplot.CategoryAxisRenderer,
+                        ticks: ticks
+                    }
+                },
+                legend: {
+                    show: true,
+                    location: 'se'
+                    //placement: 'outside'
+                    //marginLeft: "300px"
+                }
+
+            });*/
+
+            $('#btnGraph').click(function() {
+
+                $('#chartdiv').html('');
+
+                if ($('#nombre_reporte').val() == "plan_mensual"){
+
+                    //alert('gggggg');
+
+                    $.ajax({
+
+                            url: '{{ path("reporte_grafico") }}',
+                            type: 'GET',
+                            dataType: 'json',
+                            success: function (data) {
+
+
+                                var Series = [];
+                                var labels = [];
+                                var TempArray = [];
+                                var HigherValues = [];
+
+                                var ticks = ['Enero','Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+                                $.each(data, function(index, element) {
+
+                                    var line = [];
+                                    if ($("#checkServicio").prop('checked')) {
+                                        labels.push(element.nombreServicio);
+                                    }
+                                        else if (!$("#checkServicio").prop('checked') && ($("#checkEntidad").prop('checked'))){
+                                            labels.push(element.nombreEntidad);
+                                        }
+                                            else {
+                                                labels.push(element.descripcion);
+                                            }
+                                    line.push(element.planEnero);
+                                    line.push(element.planFebrero);
+                                    line.push(element.planMarzo);
+                                    line.push(element.planAbril);
+                                    line.push(element.planMayo);
+                                    line.push(element.planJunio);
+                                    line.push(element.planJulio);
+                                    line.push(element.planAgosto);
+                                    line.push(element.planSeptiembre);
+                                    line.push(element.planOctubre);
+                                    line.push(element.planNoviembre);
+                                    line.push(element.planDiciembre);
+                                    Series.push(line);
+                                    //buscando el mayor valor del arreglo para configurar la escala
+                                    TempArray = line;
+                                    TempArray.sort(deMayorAMenor);
+                                    HigherValues.push(TempArray[0]);
+
+
+                                });
+
+                                HigherValues.sort(deMayorAMenor);
+
+
+
+                                $.jqplot('chartdiv', Series, {
+                                    title: 'Distribución de Planes',
+                                    seriesDefaults: {
+                                        //renderer:$.jqplot.BarRenderer,
+                                        showMarker: true,
+                                        pointLabels: {show: true}
+                                    },
+                                    axes: {
+                                        xaxis: {
+                                            label: "Meses",
+                                            renderer: $.jqplot.CategoryAxisRenderer,
+                                            ticks: ticks
+                                        },
+                                        yaxis: {
+                                            min: 0,
+                                            max: HigherValues[0]
+
+                                        }
+                                    },
+                                    legend: {
+                                        //renderer: jQuery.jqplot.EnhancedLegendRenderer,
+                                        show: true,
+                                        labels: labels,
+                                        showLabels: true,
+                                        showSwatch: true,
+                                        //border:2,
+                                        location: 's',
+                                        //background:'#FF9900',
+                                        placement: 'outsideGrid',
+                                        marginTop: "20px"
+                                    }
+
+                                });
+
+                            }
+                        });
+                }
+
+                 if ($('#nombre_reporte').val() == "comportamiento_diario"){
+                    $.ajax({
+
+                        url: '{{ path("reporte_grafico") }}',
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function (data) {
+
+
+                            var Series = [];
+                            var labels = [];
+                            var line = [];
+                            var ticks = [];
+                            var TempArray = [];
+
+                            /*var ticks = ['1','2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
+                                         '13','14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
+                                         '25','26', '27', '28', '29', '30', '31'];*/
+
+                            $.each(data, function(index, element) {
+
+                                line.push(element.Consumo);
+                                ticks.push(element.fecha+'--'+element.DiaSemana)
+                                //labels.push(element.Consumo);
+
+
+
+                            });
+
+                            Series.push(line);
+
+
+
+                            //buscando el mayor valor del arreglo para configurar la escala
+                            TempArray = line;
+                            TempArray.sort(deMayorAMenor);
+                            //alert(TempArray);
+                            MaxValue = TempArray[0];
+
+                            $.jqplot('chartdiv', Series, {
+                                title: 'Consumo por dias',
+                                seriesDefaults: {
+                                    renderer:$.jqplot.BarRenderer,
+                                    rendererOptions: {
+                                        //barPadding: 4,
+                                        //barMargin: 5,
+                                        barWidth: 10
+                                    },
+                                    showMarker: true,
+                                    pointLabels: {show: true}
+                                },
+                                axes: {
+                                    xaxis: {
+                                        label: "Dias del Mes",
+                                        renderer: $.jqplot.CategoryAxisRenderer,
+                                        labelRenderer: $.jqplot.CanvasAxisLabelRenderer,
+                                        tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                                        tickOptions: {
+                                            angle: -90
+                                        },
+                                        ticks: ticks
+                                    },
+                                    yaxis: {
+                                        min: 0,
+                                        max: MaxValue
+
+                                    }
+                                },
+                                legend: {
+                                    //renderer: jQuery.jqplot.EnhancedLegendRenderer,
+                                    show: false
+                                    //labels: labels,
+                                    //showLabels: true,
+                                    //showSwatch: true,
+                                    //border:2,
+                                    //location: 's',
+                                    //background:'#FF9900',
+                                    //placement: 'outsideGrid',
+                                    //marginTop: "20px"
+                                }
+
+                            });
+
+                        }
+                    });
+                }
+
+            });
+
+            //$.jqplot('chartdiv',  [[["Enero", 2],['Febrero',5.12],['Marzo',13.1],['Abril',33.6],['Mayo',85.9],['Junio',219.9]]]);
+        }
+
+
+    </script>
+{% endblock %}
+
+
+

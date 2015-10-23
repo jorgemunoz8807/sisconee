@@ -1,0 +1,114 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    {#Home menu#}
+    <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a style="color: #fff" href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                        class="glyphicon glyphicon-home"></span> <b class="caret"></b></a>
+
+            <ul class="dropdown-menu">
+                <li><a href="{{ path('inicio') }}"> Inicio </a></li>
+                <li class="divider"></li>
+                {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') %}
+                    <li><a href="{{ path( 'administracion' ) }} ">Administración</a></li>
+                    <li><a href="{{ path('sisconee_app_planificacion') }}">Planificación</a></li>
+                    <li><a href="{{ path('registro_lecturas') }}">Consumo </a></li>
+                    <li><a href="{{ path('index_reportes') }}">Reportes</a></li>
+                {% endif %}
+                {% if is_granted('ROLE_PLANIFICADOR_SER') %}
+                    <li><a href="{{ path('sisconee_app_planificacion') }}">Planificación</a></li>
+                    <li><a href="{{ path('registro_lecturas') }}">Consumo </a></li>
+                {% endif %}
+                {% if is_granted('ROLE_REGISTRADOR_SER') %}
+                    <li><a href="{{ path('registro_lecturas') }}">Consumo </a></li>
+                {% endif %}
+                {% if is_granted('ROLE_SUPERVISOR_SUP') or is_granted('ROLE_SUPERVISOR_ENT') %}
+                    <li><a href="{{ path('index_reportes') }}">Reportes </a></li>
+                {% endif %}
+            </ul>
+        </li>
+    </ul>
+
+    {#Submenu title#}
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        {#<a class="navbar-brand" href="{{ path(submenuHref) }}">{{ submenuTitle }}</a>#}
+        <a class="navbar-brand" href="{{ submenuHref }}">{{ submenuTitle }}</a>
+
+    </div>
+
+    {#{%set routeName =  app.request.attributes.get('_route')  %}#}
+    {#{%set routeParams =  app.request.attributes.get('_route_params')  %}#}
+    {#{{ dump(routeName) }}#}
+    {#{{ dump(routeParams) }}#}
+    {#{{ dump(app.request.attributes) }}#}
+    {#{% set params = '' %}#}
+    {#{% set path =  path(routeName, {params}) %}#}
+
+    {#Submenu options#}
+    <div class="nav navbar-nav">
+        <ul class="nav navbar-nav">
+            {% for opt in submenuOptions|keys %}
+                {#parche para juntar los dos submenus de los reportes de consumo acumulado en uno...#}
+                {% if(opt=='Consumo Acumulado') %}
+                    {% set consumoGralHref =   path('sisconee_app_reportes', { 'Nomb_Report': 'consumo_acumulado' }) %}
+                    {% set consumoHpHref =   path('sisconee_app_reportes', { 'Nomb_Report': 'consumo_acumulado_hp' }) %}
+                    <li class="divider-vertical"></li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consumo Acumulado <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="menu_option {#{{ selectedOptionId == idValue ? 'selected' : 'unselected' }}#}"
+                                   id={{ idValue }} href="{{ consumoGralHref }} "> Acumulado General </a>
+                            </li>
+                            <li>
+                                <a class="menu_option {#{{ selectedOptionId == idValue ? 'selected' : 'unselected' }}#}"
+                                   id={{ idValue }} href="{{ consumoHpHref }} "> Acumuado Horario Pico </a>
+                            </li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="divider-vertical"></li>
+                    {#<li><a href="{{ path(submenuOptions[opt]) }}">{{ opt }}</a></li>#}
+                    {% set optValue = opt | replace(" ","_") %}
+                    {% set idValue =  'option_' ~ optValue %}
+                    <li><a class="menu_option {#{{ selectedOptionId == idValue ? 'selected' : 'unselected' }}#}"
+                           id={{ idValue }} href="{{ submenuOptions[opt] }} ">{{ opt }}</a></li>
+                    {#<li><a class="menu_option {{ path == submenuOptions[opt] ? 'selected' : 'unselected' }}" id={{ idValue }} href="{{ submenuOptions[opt] }} ">{{ opt }}</a></li>#}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    {#Active user and close option#}
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a {#style="color: #fff"#} href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span> {{ app.user.nombre }} <b class="caret"></b></a>
+
+                <ul class="dropdown-menu">
+                    {#{% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') %}#}
+
+                    <li><a href="{{ path('usuario_edit', { 'id': app.user.id }) }}">Editar cuenta</a>
+                    </li>
+                    {#{% endif %}#}
+                    {#<li class="divider"></li>#}
+                    <li><a href="{{ path('usuario_edit_password', { 'id': app.user.id }) }}">Cambiar contraseña</a>
+                        {#<li><a href="{{ path('administracion_usuario_edit_password', { 'id': app.user.id }) }}">Cambiar contraseña</a>#}
+
+                    </li>
+                </ul>
+
+            </li>
+            <li><a class="vinculo-white" href="{{ path('inicio') }}"><span
+                            class="glyphicon glyphicon-remove"></span>Salir</a></li>
+        </ul>
+    </div>
+</nav>

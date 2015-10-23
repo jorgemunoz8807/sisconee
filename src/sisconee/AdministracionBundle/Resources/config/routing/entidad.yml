@@ -1,0 +1,29 @@
+administracion_entidad:
+    path:     /
+    defaults: { _controller: "sisconeeAdministracionBundle:Entidad:index" }
+
+administracion_entidad_show:
+    path:     /{id}/show
+    defaults: { _controller: "sisconeeAdministracionBundle:Entidad:show" }
+
+administracion_entidad_new:
+    path:     /new
+    defaults: { _controller: "sisconeeAdministracionBundle:Entidad:new" }
+
+administracion_entidad_create:
+    path:     /create
+    defaults: { _controller: "sisconeeAdministracionBundle:Entidad:create" }
+    requirements: { _method: post }
+
+administracion_entidad_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "sisconeeAdministracionBundle:Entidad:edit" }
+
+administracion_entidad_update:
+    path:     /{id}/update
+    defaults: { _controller: "sisconeeAdministracionBundle:Entidad:update" }
+    requirements: { _method: post|put }
+
+administracion_entidad_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "sisconeeAdministracionBundle:Entidad:delete" }

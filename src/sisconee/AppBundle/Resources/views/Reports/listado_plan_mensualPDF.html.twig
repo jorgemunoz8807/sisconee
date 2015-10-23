@@ -1,0 +1,150 @@
+{% if Listado|length >0 %}
+        {% set NombreProvincia = '' %}
+        {% set NombreEntidad = '' %}
+        {% set TotalPlanEnero = 0 %}
+        {% set TotalPlanFebrero = 0 %}
+        {% set TotalPlanMarzo = 0 %}
+        {% set TotalPlanAbril = 0 %}
+        {% set TotalPlanMayo = 0 %}
+        {% set TotalPlanJunio = 0 %}
+        {% set TotalPlanJulio = 0 %}
+        {% set TotalPlanAgosto = 0 %}
+        {% set TotalPlanSeptiembre = 0 %}
+        {% set TotalPlanOctubre = 0 %}
+        {% set TotalPlanNoviembre = 0 %}
+        {% set TotalPlanDiciembre = 0 %}
+
+        <h1>Organismo:{{ organismo }}</h1>
+        <br>
+         <h1>Plan de Energ&iacute;a El&eacute;ctrica  {{ periodo }} (KWh)</h1>
+        <br>
+        <br>
+        <table class="table table-bordered table-hover table-striped" style="border: 1px solid #000000">
+
+            {% for e in Listado %}
+
+                {% if NombreProvincia != e['descripcion'] %}
+                    {% if NombreProvincia != '' %}
+                        <tr style="border: 1px solid #000000">
+                            <th colspan="3" align="right" style="border: 1px solid #000000">Total Mensual por Provincia </th>
+                            <td style="border: 1px solid #000000">{{ TotalPlanEnero }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanFebrero }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanMarzo }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanAbril }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanMayo }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanJunio }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanJulio }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanAgosto }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanSeptiembre }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanOctubre }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanNoviembre }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanDiciembre }}</td>
+                            <td style="border: 1px solid #000000">{{ TotalPlanEnero+TotalPlanFebrero+TotalPlanMarzo+TotalPlanAbril+TotalPlanMayo+TotalPlanJunio+TotalPlanJulio+TotalPlanAgosto+TotalPlanSeptiembre+TotalPlanOctubre+TotalPlanNoviembre+TotalPlanDiciembre }}</td>
+                        </tr>
+                    {% endif %}
+                    <tr style="border: 1px solid #000000">
+                        <th colspan="16" style="border: 1px solid #000000">{{ e['descripcion'] }}</th>
+                    </tr>
+                    {% set TotalPlanEnero = 0 %}
+                    {% set TotalPlanFebrero = 0 %}
+                    {% set TotalPlanMarzo = 0 %}
+                    {% set TotalPlanAbril = 0 %}
+                    {% set TotalPlanMayo = 0 %}
+                    {% set TotalPlanJunio = 0 %}
+                    {% set TotalPlanJulio = 0 %}
+                    {% set TotalPlanAgosto = 0 %}
+                    {% set TotalPlanSeptiembre = 0 %}
+                    {% set TotalPlanOctubre = 0 %}
+                    {% set TotalPlanNoviembre = 0 %}
+                    {% set TotalPlanDiciembre = 0 %}
+                {% endif %}
+                {% if NombreEntidad != e['nombreEntidad'] %}
+                    <tr style="border: 1px solid #000000">
+                        <th colspan="16" style="border: 1px solid #000000">{{ e['codreeup'] }}:{{ e['nombreEntidad'] }}</th>
+                    </tr>
+                    <tr style="border: 1 px solid #ddd">
+                        <th style="border: 1px solid #000000">Código CEE</th>
+                        <th style="border: 1px solid #000000">CRF</th>
+                        <th style="border: 1px solid #000000">Nombre del Servicio</th>
+                        <th style="border: 1px solid #000000">Ene</th>
+                        <th style="border: 1px solid #000000">Feb</th>
+                        <th style="border: 1px solid #000000">Mar</th>
+                        <th style="border: 1px solid #000000">Abr</th>
+                        <th style="border: 1px solid #000000">May</th>
+                        <th style="border: 1px solid #000000">Jun</th>
+                        <th style="border: 1px solid #000000">Jul</th>
+                        <th style="border: 1px solid #000000">Ago</th>
+                        <th style="border: 1px solid #000000">Sep</th>
+                        <th style="border: 1px solid #000000">Oct</th>
+                        <th style="border: 1px solid #000000">Nov</th>
+                        <th style="border: 1px solid #000000">Dic</th>
+                        <th style="border: 1px solid #000000">Total</th>
+                    </tr>
+                {% endif %}
+
+                <tr style="border: 1px solid #000000">
+                    <td style="border: 1px solid #000000">{{ e['codcliente_EE'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['codRF'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['nombreServicio'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planEnero'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planFebrero'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planMarzo'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planAbril'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planMayo'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planJunio'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planJulio'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planAgosto'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planSeptiembre'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planOctubre'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planNoviembre'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['planDiciembre'] }}</td>
+                    <td style="border: 1px solid #000000"> {{  e['planEnero']+ e['planFebrero']+ e['planMarzo']+ e['planAbril']+ e['planMayo']+ e['planJunio']+e['planJulio']+ e['planAgosto']+ e['planSeptiembre']+ e['planOctubre']+ e['planNoviembre']+ e['planDiciembre'] }}</td>
+                    {% set TotalPlanEnero = TotalPlanEnero +  e['planEnero'] %}
+                    {% set TotalPlanFebrero = TotalPlanFebrero +  e['planFebrero'] %}
+                    {% set TotalPlanMarzo = TotalPlanMarzo +  e['planMarzo'] %}
+                    {% set TotalPlanAbril = TotalPlanAbril +  e['planAbril'] %}
+                    {% set TotalPlanMayo = TotalPlanMayo +  e['planMayo'] %}
+                    {% set TotalPlanJunio = TotalPlanJunio +  e['planJunio'] %}
+                    {% set TotalPlanJulio = TotalPlanJulio +  e['planJulio'] %}
+                    {% set TotalPlanAgosto = TotalPlanAgosto +  e['planAgosto'] %}
+                    {% set TotalPlanSeptiembre = TotalPlanSeptiembre +  e['planSeptiembre'] %}
+                    {% set TotalPlanOctubre = TotalPlanOctubre +  e['planOctubre'] %}
+                    {% set TotalPlanNoviembre = TotalPlanNoviembre +  e['planNoviembre'] %}
+                    {% set TotalPlanDiciembre = TotalPlanDiciembre +  e['planDiciembre'] %}
+                    {% set NombreEntidad =  e['nombreEntidad'] %}
+                    {% set NombreProvincia =  e['descripcion'] %}
+
+                </tr>
+
+
+            {% endfor %}
+
+            {%if  Listado|length >0 %}
+                <tr style="border: 1px solid #000000">
+                    <th colspan="3" align="right" style="border: 1px solid #000000">Total Mensual por Provincia </th>
+                    <td style="border: 1px solid #000000">{{ TotalPlanEnero }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanFebrero }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanMarzo }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanAbril }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanMayo }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanJunio }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanJulio }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanAgosto }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanSeptiembre }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanOctubre }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanNoviembre }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanDiciembre }}</td>
+                    <td style="border: 1px solid #000000">{{ TotalPlanEnero+TotalPlanFebrero+TotalPlanMarzo+TotalPlanAbril+TotalPlanMayo+TotalPlanJunio+TotalPlanJulio+TotalPlanAgosto+TotalPlanSeptiembre+TotalPlanOctubre+TotalPlanNoviembre+TotalPlanDiciembre }}</td>
+                </tr>
+            {% endif %}
+        </table>
+
+
+{% else %}
+
+    <h1>No hay datos a mostrar</h1>
+
+
+{% endif %}
+
+

@@ -1,0 +1,144 @@
+
+{% if Listado|length >0 %}
+            {% set NombreProvincia = '' %}
+             {% set NombreEntidad = '' %}
+        <h1>Organismo:{{ organismo }}</h1>
+        <br>
+        <h1>Consumo acumulado general</h1>
+        <br>
+        <table class="table table-bordered table-hover table-striped" style="border: 1px solid #000000">
+
+            {% for e in Listado %}
+
+                {% if NombreProvincia != e['nombProvincia'] %}
+
+                    <tr style="border: 1px solid #000000">
+                        <th colspan="34" style="border: 1px solid #000000">{{ e['nombProvincia'] }}</th>
+                    </tr>
+
+                {% endif %}
+                {% if NombreEntidad != e['NombEntidad'] %}
+                    <tr style="border: 1px solid #000000">
+                        <th colspan="34" style="border: 1px solid #000000">{{ e['NombEntidad'] }}</th>
+                    </tr>
+                    <tr style="border: 1px solid #000000">
+                        <th style="border: 1px solid #000000">Código CEE</th>
+                        <th style="border: 1px solid #000000">CRF</th>
+                        <th style="border: 1px solid #000000">Nombre del Servicio</th>
+                        <th style="border: 1px solid #000000">Dia 1</th>
+                        <th style="border: 1px solid #000000">Dia 2</th>
+                        <th style="border: 1px solid #000000">Dia 3</th>
+                        <th style="border: 1px solid #000000">Dia 4</th>
+                        <th style="border: 1px solid #000000">Dia 5</th>
+                        <th style="border: 1px solid #000000">Dia 6</th>
+                        <th style="border: 1px solid #000000">Dia 7</th>
+                        <th style="border: 1px solid #000000">Dia 8</th>
+                        <th style="border: 1px solid #000000">Dia 9</th>
+                        <th style="border: 1px solid #000000">Dia 10</th>
+                        <th style="border: 1px solid #000000">Dia 11</th>
+                        <th style="border: 1px solid #000000">Dia 12</th>
+                        <th style="border: 1px solid #000000">Dia 13</th>
+                        <th style="border: 1px solid #000000">Dia 14</th>
+                        <th style="border: 1px solid #000000">Dia 15</th>
+                        <th style="border: 1px solid #000000">Dia 16</th>
+                        <th style="border: 1px solid #000000">Dia 17</th>
+                        <th style="border: 1px solid #000000">Dia 18</th>
+                        <th style="border: 1px solid #000000">Dia 19</th>
+                        <th style="border: 1px solid #000000">Dia 20</th>
+                        <th style="border: 1px solid #000000">Dia 21</th>
+                        <th style="border: 1px solid #000000">Dia 22</th>
+                        <th style="border: 1px solid #000000">Dia 23</th>
+                        <th style="border: 1px solid #000000">Dia 24</th>
+                        <th style="border: 1px solid #000000">Dia 25</th>
+                        <th style="border: 1px solid #000000">Dia 26</th>
+                        <th style="border: 1px solid #000000">Dia 27</th>
+                        <th style="border: 1px solid #000000">Dia 28</th>
+                        <th style="border: 1px solid #000000">Dia 29</th>
+                        <th style="border: 1px solid #000000">Dia 30</th>
+                        <th style="border: 1px solid #000000">Dia 31</th>
+                    </tr>
+                {% endif %}
+
+                <tr style="border: 1px solid #000000">
+                    <td style="border: 1px solid #000000">{{ e['codcliente_EE'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['codRF'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['nombServicio'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['1'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['2'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['3'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['4'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['5'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['6'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['7'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['8'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['9'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['10'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['11'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['12'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['13'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['14'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['15'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['16'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['17'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['18'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['19'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['20'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['21'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['22'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['23'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['24'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['25'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['26'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['27'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['28'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['29'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['30'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['31'] }}</td>
+                </tr>
+                <tr class="text-success" style="border: 1px solid #000000">
+                    <td colspan="3" style="border: 1px solid #000000">Resta por consumir</td>
+
+                    <td style="border: 1px solid #000000">{{  e['plan']-e['1'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['2'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['3'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['4'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['5'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['6'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['7'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['8'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['9'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['10'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['11'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['12'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['13'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['14'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['15'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['16'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['17'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['18'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['19'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['20'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['21'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['22'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['23'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['24'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['25'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['26'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['27'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['28'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['29'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['30'] }}</td>
+                    <td style="border: 1px solid #000000">{{ e['plan']-e['31'] }}</td>
+                </tr>
+
+
+            {% endfor %}
+
+
+        </table>
+{% else %}
+
+    <h1>No hay datos a mostrar</h1>
+
+
+{% endif %}

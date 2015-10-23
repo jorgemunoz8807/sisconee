@@ -1,0 +1,15 @@
+{#<td>#}
+    {#<ul>
+        <li>#}
+            <a href="{{ path('plananualservicio_edit', { 'id': ap.id}) }}"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+     {#   </li>
+        <li>#}
+            <a class="link-eliminar" href="javascript:void(0);"
+               data-url = "{{ path('plananualservicio_delete', { 'id': ap.id }) }}"
+               data-descripcion="{{ ap.servicio }}"
+               data-toggle="modal" data-target="#modal-delete">
+                <span class="glyphicon glyphicon-trash"></span>Eliminar
+            </a>
+     {#   </li>
+    </ul>#}
+{#</td>#}

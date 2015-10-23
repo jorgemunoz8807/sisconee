@@ -1,0 +1,48 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Trazas</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Operacion</th>
+                <td>{{ entity.operacion }}</td>
+            </tr>
+            <tr>
+                <th>Tabla</th>
+                <td>{{ entity.tabla }}</td>
+            </tr>
+            <tr>
+                <th>Registro</th>
+                <td>{{ entity.registro }}</td>
+            </tr>
+            <tr>
+                <th>Datos</th>
+                <td>{{ entity.datos }}</td>
+            </tr>
+            <tr>
+                <th>Fechahora</th>
+                <td>{{ entity.fechaHora|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('trazas') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('trazas_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

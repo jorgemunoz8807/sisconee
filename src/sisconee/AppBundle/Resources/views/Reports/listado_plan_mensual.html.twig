@@ -1,0 +1,150 @@
+{% if Listado|length >0 %}
+        {% set NombreProvincia = '' %}
+        {% set NombreEntidad = '' %}
+        {% set TotalPlanEnero = 0 %}
+        {% set TotalPlanFebrero = 0 %}
+        {% set TotalPlanMarzo = 0 %}
+        {% set TotalPlanAbril = 0 %}
+        {% set TotalPlanMayo = 0 %}
+        {% set TotalPlanJunio = 0 %}
+        {% set TotalPlanJulio = 0 %}
+        {% set TotalPlanAgosto = 0 %}
+        {% set TotalPlanSeptiembre = 0 %}
+        {% set TotalPlanOctubre = 0 %}
+        {% set TotalPlanNoviembre = 0 %}
+        {% set TotalPlanDiciembre = 0 %}
+
+        <h1>Organismo:{{ organismo }}</h1>
+        <br>
+         <h1>Plan de Energ&iacute;a El&eacute;ctrica  {{ periodo }} (KWh)</h1>
+        <br>
+        <br>
+        <table class="table table-bordered table-hover table-striped" >
+
+            {% for e in Listado %}
+
+                {% if NombreProvincia != e['descripcion'] %}
+                    {% if NombreProvincia != '' %}
+                        <tr >
+                            <th colspan="3" align="right" >Total Mensual por Provincia </th>
+                            <td >{{ TotalPlanEnero }}</td>
+                            <td >{{ TotalPlanFebrero }}</td>
+                            <td >{{ TotalPlanMarzo }}</td>
+                            <td >{{ TotalPlanAbril }}</td>
+                            <td >{{ TotalPlanMayo }}</td>
+                            <td >{{ TotalPlanJunio }}</td>
+                            <td >{{ TotalPlanJulio }}</td>
+                            <td >{{ TotalPlanAgosto }}</td>
+                            <td >{{ TotalPlanSeptiembre }}</td>
+                            <td >{{ TotalPlanOctubre }}</td>
+                            <td >{{ TotalPlanNoviembre }}</td>
+                            <td >{{ TotalPlanDiciembre }}</td>
+                            <td >{{ TotalPlanEnero+TotalPlanFebrero+TotalPlanMarzo+TotalPlanAbril+TotalPlanMayo+TotalPlanJunio+TotalPlanJulio+TotalPlanAgosto+TotalPlanSeptiembre+TotalPlanOctubre+TotalPlanNoviembre+TotalPlanDiciembre }}</td>
+                        </tr>
+                    {% endif %}
+                    <tr >
+                        <th colspan="16" >{{ e['descripcion'] }}</th>
+                    </tr>
+                    {% set TotalPlanEnero = 0 %}
+                    {% set TotalPlanFebrero = 0 %}
+                    {% set TotalPlanMarzo = 0 %}
+                    {% set TotalPlanAbril = 0 %}
+                    {% set TotalPlanMayo = 0 %}
+                    {% set TotalPlanJunio = 0 %}
+                    {% set TotalPlanJulio = 0 %}
+                    {% set TotalPlanAgosto = 0 %}
+                    {% set TotalPlanSeptiembre = 0 %}
+                    {% set TotalPlanOctubre = 0 %}
+                    {% set TotalPlanNoviembre = 0 %}
+                    {% set TotalPlanDiciembre = 0 %}
+                {% endif %}
+                {% if NombreEntidad != e['nombreEntidad'] %}
+                    <tr >
+                        <th colspan="16" >{{ e['codreeup'] }}:{{ e['nombreEntidad'] }}</th>
+                    </tr>
+                    <tr >
+                        <th >Código CEE</th>
+                        <th >CRF</th>
+                        <th >Nombre del Servicio</th>
+                        <th >Ene</th>
+                        <th >Feb</th>
+                        <th >Mar</th>
+                        <th >Abr</th>
+                        <th >May</th>
+                        <th >Jun</th>
+                        <th >Jul</th>
+                        <th >Ago</th>
+                        <th >Sep</th>
+                        <th >Oct</th>
+                        <th >Nov</th>
+                        <th >Dic</th>
+                        <th >Total</th>
+                    </tr>
+                {% endif %}
+
+                <tr >
+                    <td >{{ e['codcliente_EE'] }}</td>
+                    <td >{{ e['codRF'] }}</td>
+                    <td >{{ e['nombreServicio'] }}</td>
+                    <td >{{ e['planEnero'] }}</td>
+                    <td>{{ e['planFebrero'] }}</td>
+                    <td >{{ e['planMarzo'] }}</td>
+                    <td >{{ e['planAbril'] }}</td>
+                    <td >{{ e['planMayo'] }}</td>
+                    <td >{{ e['planJunio'] }}</td>
+                    <td >{{ e['planJulio'] }}</td>
+                    <td>{{ e['planAgosto'] }}</td>
+                    <td >{{ e['planSeptiembre'] }}</td>
+                    <td >{{ e['planOctubre'] }}</td>
+                    <td >{{ e['planNoviembre'] }}</td>
+                    <td >{{ e['planDiciembre'] }}</td>
+                    <td > {{  e['planEnero']+ e['planFebrero']+ e['planMarzo']+ e['planAbril']+ e['planMayo']+ e['planJunio']+e['planJulio']+ e['planAgosto']+ e['planSeptiembre']+ e['planOctubre']+ e['planNoviembre']+ e['planDiciembre'] }}</td>
+                    {% set TotalPlanEnero = TotalPlanEnero +  e['planEnero'] %}
+                    {% set TotalPlanFebrero = TotalPlanFebrero +  e['planFebrero'] %}
+                    {% set TotalPlanMarzo = TotalPlanMarzo +  e['planMarzo'] %}
+                    {% set TotalPlanAbril = TotalPlanAbril +  e['planAbril'] %}
+                    {% set TotalPlanMayo = TotalPlanMayo +  e['planMayo'] %}
+                    {% set TotalPlanJunio = TotalPlanJunio +  e['planJunio'] %}
+                    {% set TotalPlanJulio = TotalPlanJulio +  e['planJulio'] %}
+                    {% set TotalPlanAgosto = TotalPlanAgosto +  e['planAgosto'] %}
+                    {% set TotalPlanSeptiembre = TotalPlanSeptiembre +  e['planSeptiembre'] %}
+                    {% set TotalPlanOctubre = TotalPlanOctubre +  e['planOctubre'] %}
+                    {% set TotalPlanNoviembre = TotalPlanNoviembre +  e['planNoviembre'] %}
+                    {% set TotalPlanDiciembre = TotalPlanDiciembre +  e['planDiciembre'] %}
+                    {% set NombreEntidad =  e['nombreEntidad'] %}
+                    {% set NombreProvincia =  e['descripcion'] %}
+
+                </tr>
+
+
+            {% endfor %}
+
+            {%if  Listado|length >0 %}
+                <tr >
+                    <th colspan="3" align="right" >Total Mensual por Provincia </th>
+                    <td >{{ TotalPlanEnero }}</td>
+                    <td >{{ TotalPlanFebrero }}</td>
+                    <td >{{ TotalPlanMarzo }}</td>
+                    <td >{{ TotalPlanAbril }}</td>
+                    <td >{{ TotalPlanMayo }}</td>
+                    <td >{{ TotalPlanJunio }}</td>
+                    <td >{{ TotalPlanJulio }}</td>
+                    <td >{{ TotalPlanAgosto }}</td>
+                    <td >{{ TotalPlanSeptiembre }}</td>
+                    <td >{{ TotalPlanOctubre }}</td>
+                    <td >{{ TotalPlanNoviembre }}</td>
+                    <td >{{ TotalPlanDiciembre }}</td>
+                    <td >{{ TotalPlanEnero+TotalPlanFebrero+TotalPlanMarzo+TotalPlanAbril+TotalPlanMayo+TotalPlanJunio+TotalPlanJulio+TotalPlanAgosto+TotalPlanSeptiembre+TotalPlanOctubre+TotalPlanNoviembre+TotalPlanDiciembre }}</td>
+                </tr>
+            {% endif %}
+        </table>
+
+
+{% else %}
+
+    <h1>No hay datos a mostrar</h1>
+
+
+{% endif %}
+
+

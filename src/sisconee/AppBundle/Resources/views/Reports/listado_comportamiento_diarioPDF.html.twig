@@ -1,0 +1,94 @@
+
+{% if Listado|length >0 %}
+
+        {% set NombreProvincia = '' %}
+
+        {% set TotalPlanMes = 0 %}
+        {% set ConsumoAcumulado = 0 %}
+        {% set PromedioDiarioConsumo = 0 %}
+        {% set TotalPorConsumir = 0 %}
+        {% set TotalPorConsumirPorciento = 0 %}
+        {% set CantidadDias = 0 %}
+
+        <h1>Organismo:{{ organismo }}</h1>
+        <br>
+        <br>
+        <table class="table table-bordered table-hover table-striped" style="width: 30% ; border: 1px solid #000000">
+
+            {% if provinciaSeleccionada != '' %}
+                    {% for e in Listado %}
+                        {% if NombreProvincia != e['descripcion'] %}
+                            <th colspan="3" style="border: 1px solid #000000">
+                                {{ e['descripcion'] }} </th>
+                            <tr style="border: 1px solid #000000">
+                                <th style="border: 1px solid #000000">Fecha</th>
+                                <th style="border: 1px solid #000000">Dia de la semana</th>
+                                <th style="border: 1px solid #000000">Consumo</th>
+
+                            </tr>
+                        {% endif %}
+                        <tr style="border: 1px solid #000000">
+                            <td style="border: 1px solid #000000">{{ e['fecha'] }}</td>
+                            <td style="border: 1px solid #000000">{{ e['DiaSemana'] }}</td>
+                            <td style="border: 1px solid #000000">{{ e['Consumo'] }}</td>
+
+                            {% set ConsumoAcumulado = ConsumoAcumulado +  e['Consumo'] %}
+                            {% set TotalPlanMes = TotalPlanMes +  e['Plan'] %}
+                            {% set CantidadDias = CantidadDias + 1 %}
+
+                        </tr>
+                        {% set NombreProvincia =  e['descripcion'] %}
+                    {% endfor %}
+            {% else %}
+
+                             <th colspan="3" style="border: 1px solid #000000">
+                             Todas las provincias </th>
+                            <tr style="border: 1px solid #000000">
+                                <th style="border: 1px solid #000000">Fecha</th>
+                                <th style="border: 1px solid #000000">Dia de la semana</th>
+                                <th style="border: 1px solid #000000">Consumo</th>
+
+                            </tr>
+                    {% for e in Listado %}
+                         <tr style="border: 1px solid #000000">
+                             <td style="border: 1px solid #000000">{{ e['fecha'] }}</td>
+                             <td style="border: 1px solid #000000">{{ e['DiaSemana'] }}</td>
+                             <td style="border: 1px solid #000000">{{ e['Consumo'] }}</td>
+
+                             {% set ConsumoAcumulado = ConsumoAcumulado +  e['Consumo'] %}
+                             {% set TotalPlanMes = TotalPlanMes +  e['Plan'] %}
+                             {% set CantidadDias = CantidadDias + 1 %}
+
+                          </tr>
+
+                    {% endfor %}
+            {% endif %}
+        </table>
+        <table class="table table-bordered table-hover table-striped" style="width: 20%">
+            <tr>
+                <th>Plan para el Mes:</th>
+                <td>{{ TotalPlanMes  }}</td>
+            </tr>
+            <tr>
+                <th>Consumo Acumulado:</th>
+                <td>{{ ConsumoAcumulado  }}</td>
+            </tr>
+            <tr>
+                <th>Porciento de consumo:</th>
+                <td>{{ ((ConsumoAcumulado*100)/TotalPlanMes)|number_format(1)  }}</td>
+            </tr>
+            <tr>
+                <th>Resta por consumir:</th>
+                <td>{{ TotalPlanMes-ConsumoAcumulado  }}</td>
+            </tr>
+            <tr>
+                <th>Promedio diario de consumo:</th>
+                <td>{{ (ConsumoAcumulado/CantidadDias)| number_format(2)  }}</td>
+            </tr>
+        </table>
+{% else %}
+
+    <h1>No hay datos a mostrar</h1>
+
+
+{% endif %}

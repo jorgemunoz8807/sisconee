@@ -1,0 +1,10 @@
+plandiarioservicio_create:
+    path:     /create
+    defaults: { _controller: "sisconeeAppBundle:PlanDiarioServicio:create" }
+    requirements: { _method: post }
+
+plandiarioservicio:
+    path:     /{entityId}/{serviceId}/{month}/{week}
+    defaults: { _controller: "sisconeeAppBundle:PlanDiarioServicio:index" , entityId:null, serviceId:null, month:null, week:null   }
+
+

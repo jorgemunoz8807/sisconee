@@ -1,0 +1,20 @@
+{#<td>#}
+    {#<ul>
+        <li>#}
+{% set deleteDir = dir~'_delete' %}
+{% set editDir = dir~'_edit' %}
+
+            <a id='edit-plans'  href="{{ path(editDir, { 'id': apId, 'parentEntityId':parentEntityId}) }}"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+     {#   </li>
+        <li>#}
+            <a class="link-eliminar" href="javascript:void(0);"
+               data-url = "{{ path(deleteDir, { 'id': apId }) }}"
+               data-descripcion="{{ apDescription }}"
+               data-toggle="modal" data-target="#modal-delete">
+               <span class="glyphicon glyphicon-trash"></span>
+               Eliminar
+            </a>
+     {#   </li>
+    </ul>#}
+{#
+</td>#}

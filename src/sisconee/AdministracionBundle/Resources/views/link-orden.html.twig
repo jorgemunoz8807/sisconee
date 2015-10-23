@@ -1,0 +1,42 @@
+{%if column!= column_name%}
+    <a href="{{ path( url, { 'column' : column_name, 'order': 'ASC'} ) }}">
+        {% autoescape false %} {{ caption }} {% endautoescape %}
+        {% if column == column_name %}
+            {% if order == 'ASC' %}
+                <span class="admin-order-arrow glyphicon glyphicon-arrow-down"></span>
+            {% else %}
+                <span class="admin-order-arrow glyphicon glyphicon-arrow-up"></span>
+            {% endif %}
+        {% endif %}
+    </a>
+
+
+{% else %}
+    {%if order != 'ASC'%}
+        {#{%if column== column_name%}#}
+        <a href="{{ path( url, { 'column' : column_name, 'order': 'ASC'} ) }}">
+            {% autoescape false %} {{ caption }} {% endautoescape %}
+            {% if column == column_name %}
+                {% if order == 'ASC' %}
+                    <span class="admin-order-arrow glyphicon glyphicon-arrow-down"></span>
+                {% else %}
+                    <span class="admin-order-arrow glyphicon glyphicon-arrow-up"></span>
+                {% endif %}
+            {% endif %}
+        </a>
+        {#{% endif %}#}
+    {% else %}
+        {#{%if column== column_name%}#}
+        <a href="{{ path( url, { 'column' : column_name, 'order': 'DESC'} ) }}">
+            {% autoescape false %} {{ caption }} {% endautoescape %}
+            {% if column == column_name %}
+            {% if order == 'ASC' %}
+                <span class="admin-order-arrow glyphicon glyphicon-arrow-down"></span>
+            {% else %}
+                <span class="admin-order-arrow glyphicon glyphicon-arrow-up"></span>
+            {% endif %}
+        {% endif %}
+        </a>
+        {#{% endif %}#}
+    {% endif %}
+{% endif %}

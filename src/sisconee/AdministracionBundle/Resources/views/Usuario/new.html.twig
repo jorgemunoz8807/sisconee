@@ -1,0 +1,42 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+{% block content %}
+    <style>
+        @media (min-width: 768px) {
+            .table {
+                width: 50%;
+            }
+
+            .admin-list-actions.autosize {
+                width: 50%;
+            }
+        }
+    </style>
+    <h1>Adicionar Usuario</h1>
+
+    {% include "::flashmessages.html.twig" %}
+
+    {{ form_start(form) }}
+    {#{{ form_widget(form._token)}}#}
+    {{ form_row(form.nombre) }}
+    {{ form_row(form.rol) }}
+    {{ form_row(form.username) }}
+    {{ form_row(form.entidad) }}
+    {{ form_row(form.correo) }}
+    {{ form_row(form._token)}}
+    {#{% if (app.user==entity)  %}#}
+        {#{{ form_row(form.password) }}#}
+    {#{% endif %}#}
+
+
+
+    <div class="form-actions">
+        <input type="submit" class="btn btn-primary" value="Aceptar" />
+        <a class="btn btn-default" href="{{ path('administracion_usuario') }}">Regresar al listado</a>
+    </div>
+    {{ form_end(form, {'render_rest':false}) }}
+
+
+
+{% endblock %}
+

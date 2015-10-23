@@ -1,0 +1,76 @@
+{% extends 'sisconeeAppBundle:Planificacion:general_planificacion.html.twig' %}
+
+{% block planification %}
+
+    <div class="col-sm-12">
+
+        {#render services select#}
+        <div class="row">
+            <div class="col-sm-6">
+                {{ include ('sisconeeAppBundle:Planificacion:services_planification.html.twig', {'services':services}) }}
+            </div>
+        </div>
+
+        {#render mensual plans form#}
+        <div class="row" style="align-content: center">
+            <h4 class="header_top">Planes mensuales asignados al servicio {{ selectedService }}</h4>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                {{ form_start(plans_form, {'attr' : {'class' : 'form-horizontal' } }) }}
+
+                <div class="row mensual-plans-container">
+                    {% set plansPerColumn = 4 %}
+
+                    {% for planField in plans_form.plans %}
+
+                        {% if (loop.index) % plansPerColumn == 1 %} {#loop.index is not zero-indexed#}
+                            <div class="col-md-3">
+                        {% endif %}
+
+                        <div class="form-group mensual-plan-container">
+                            <div class="col-lg-6" style="text-align: right;">
+                                {{ form_label(planField) }}
+                            </div>
+                            <div class="col-lg-6">
+                                {#genral plans#}
+                                {{ form_widget(planField, {'attr' : {'style' : 'width: 100%' } }) }}
+                                {{ form_errors(planField) }}
+
+                                {#hp plans#}
+                                {% if (selectedService.getHorarioPico) %}
+                                {{ form_widget(plans_form.hpPlans[loop.index], {'attr' : {'style' : 'width: 100%' } }) }}
+                                {{ form_errors(plans_form.hpPlans[loop.index]) }}
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        {% if (loop.index) % plansPerColumn == 0 %}
+                            </div>
+                        {% endif %}
+
+                    {% endfor %}
+                </div>
+
+                {{ form_end(plans_form) }}
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        var redirectTo = '{{path("planmensualservicio")}}';
+        var planFieldsCommonName = 'sisconee_appbundle_planesmensuales[plans]';
+        var hpPlanFieldsCommonName = 'sisconee_appbundle_planesmensuales[hpPlans]';
+        var fieldsCount = 12;
+        var formId = 'mensualPlanificationForm';
+    </script>
+    <script src="{{ asset('bundles/sisconeeapp/js/servicePlanification_monthly.js') }}"></script>
+    <script src="{{ asset('bundles/sisconeeapp/js/servicePlanification.js') }}"></script>
+{% endblock %}
+

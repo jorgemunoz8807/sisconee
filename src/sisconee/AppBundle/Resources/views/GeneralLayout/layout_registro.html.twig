@@ -1,0 +1,62 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}
+    Consumo
+{% endblock %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('layoutadmin/styles.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('layout_general/css/style.css') }}" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block body %}
+
+    <style>
+        @media (min-width: 768px) {
+            .table {
+                width: 50%;
+            }
+
+            .admin-list-actions.autosize {
+                width: 50%;
+            }
+        }
+    </style>
+
+    {% include "::modal-delete.html.twig" %}
+
+    <div>
+        <div class="row">
+            {#{% include 'sisconeeAppBundle:GeneralLayout:layout_menu.html.twig' %}#}
+            {% set href =   path('registro_lecturas') %}
+            {{ include('::layout_modules_menu.html.twig', {'submenuTitle':'Consumo', 'submenuHref': href, 'submenuOptions':{} }) }}
+
+        </div>
+
+        <div class="row" style="margin-top: 51px; ">
+            <div class="col-sm-11" style="margin-left: 25px; margin-right: 100px;">
+                {% include "::flashmessages.html.twig" %}
+            </div>
+        </div>
+
+        <div id="container" style="margin-top: 10px;">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                Sisconee | Módulo de Consumo
+            </div>
+        </nav>
+    </div>
+
+{% endblock %}
+
+        {% block javascripts %}
+            <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+            <script src="{{ asset('jquery/jquery-validate/jquery.validate.js') }}"></script>
+            <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+        {% endblock %}

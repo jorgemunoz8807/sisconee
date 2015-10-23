@@ -1,0 +1,26 @@
+
+{% set disabled = '' %}
+
+{% if id_provincia == null %}
+      {%  set disabled = 'disabled' %}
+   {%  endif  %}
+
+Entidad(es):
+{% if Listado_Entidad|length >0 %}
+        <select id="lista_entidad" style="width: 100%;" {{ disabled }}  class="form-control" >
+            {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_SUPERVISOR_SUP')  %}
+                <option value="-1"><--Mostrar todas--></option>
+
+            {% endif %}
+            {% for e in Listado_Entidad %}
+                <option value="{{ e.getId }}">
+                    {{ e.getNombre }}
+                </option>
+            {% endfor %}
+        </select>
+
+{% else %}
+        <select id="lista_entidad" style="width: 100%;" {{ disabled }}  class="form-control" >
+            <option value="0">No hay datos a mostrar</option>
+        </select>
+{% endif %}

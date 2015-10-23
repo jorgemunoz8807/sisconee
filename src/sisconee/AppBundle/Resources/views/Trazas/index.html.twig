@@ -1,0 +1,166 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+{% block content %}
+
+    <style>
+        @media (min-width: 768px) {
+            .table {
+                width: 50%;
+            }
+
+            .admin-list-actions.autosize {
+                width: 50%;
+            }
+        }
+    </style>
+    {% if  entities is empty %}
+        <h1>El Historial de Operaciones esta en blanco</h1>
+    {% else %}
+
+        <h1>Listado de Trazas</h1>
+
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                {#<th>Id</th>#}
+                <th>Operación</th>
+                <th>Tabla</th>
+                <th>Registro</th>
+                <th>Datos</th>
+                <th>Fecha</th>
+                <th>Usuario</th>
+                {#<th>Acciones</th>#}
+            </tr>
+            </thead>
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    {#<td><a href="{{ path('trazas_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>#}
+                    <td>{{ entity.operacion }}</td>
+                    <td>{{ entity.tabla }}</td>
+                    <td>{{ entity.registro }}</td>
+
+
+                    {% if entity.tabla == 'plan_anual_entidad' %}
+                        {% set data=( entity.datos|split(',') ) %}
+                        <td>
+                            <strong>{{ 'Plan: ' }}</strong> {{ data[0] }}
+                            <br>
+                            <strong>{{ 'Entidad: ' }} </strong>{{ data[1] }}
+                            <br>
+                            <strong>{{ 'Año: ' }} </strong> {{ data[2] }}
+
+                        </td>
+                    {% endif %}
+
+                    {% if entity.tabla == 'plan_anual_servicio' %}
+                        {% set data=( entity.datos|split(',') ) %}
+                        <td>
+                            <strong>{{ 'Plan: ' }}</strong> {{ data[0] }}
+                            <br>
+                            <strong>{{ 'Servicio: ' }} </strong>{{ data[1] }}
+                            <br>
+                            <strong>{{ 'Año: ' }} </strong> {{ data[2] }}
+
+                        </td>
+                    {% endif %}
+
+
+                    {% if entity.tabla == 'plan_mensual_servicio' %}
+                        {% set data=( entity.datos|split(',') ) %}
+                        <td>
+                            <strong>{{ 'Plan: ' }}</strong> {{ data[0] }}
+                            <br>
+                            <strong>{{ 'Plan HP: ' }} </strong>{{ data[1] }}
+                            <br>
+                            <strong>{{ 'Servicio: ' }} </strong> {{ data[2] }}
+                            <br>
+                            <strong>{{ 'Mes: ' }} </strong> {{ data[3] }}
+                            <br>
+                            <strong>{{ 'Año: ' }} </strong> {{ data[4] }}
+
+
+                        </td>
+                    {% endif %}
+
+                    {% if entity.tabla == 'plan_diario_servicio' %}
+                        {% set data=( entity.datos|split(',') ) %}
+                        <td>
+                            <strong>{{ 'Plan: ' }}</strong> {{ data[0] }}
+                            <br>
+                            <strong>{{ 'Plan HP: ' }} </strong>{{ data[1] }}
+                            <br>
+                            <strong>{{ 'Servicio: ' }} </strong> {{ data[2] }}
+                            <br>
+                            <strong>{{ 'Fecha: ' }} </strong> {{ data[3] }}
+
+
+                        </td>
+                    {% endif %}
+
+                    {% if entity.tabla == 'lectura_diaria_servicio' %}
+                        {% set data=( entity.datos|split(',') ) %}
+                        <td>
+                            <strong>{{ 'Consumo: ' }}</strong> {{ data[0] }}
+                            <br>
+                            <strong>{{ 'Consumo HP: ' }} </strong>{{ data[1] }}
+                            <br>
+                            <strong>{{ 'Servicio: ' }} </strong> {{ data[2] }}
+                            <br>
+                            <strong>{{ 'Fecha: ' }} </strong> {{ data[3] }}
+
+
+                        </td>
+                    {% endif %}
+
+                    {% if entity.tabla == 'user' %}
+                        {% set data=( entity.datos|split(',') ) %}
+                        <td>
+                            <strong>{{ 'Correo: ' }}</strong> {{ data[0] }}
+                            <br>
+                            <strong>{{ 'Nombre: ' }} </strong>{{ data[1] }}
+                            <br>
+                            <strong>{{ 'Rol: ' }} </strong> {{ data[2] }}
+                            <br>
+                            <strong>{{ 'Usuario: ' }} </strong> {{ data[3] }}
+                            <br>
+                            <strong>{{ 'Entidad: ' }} </strong> {{ data[4] }}
+
+                        </td>
+                    {% endif %}
+
+                    <td>{% if entity.fechaHora %}
+                            {{ entity.fechaHora|date('Y-m-d H:i:s') }}
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{{ path('administracion_usuario_show', { 'id': entity.idUsuario.id }) }}">{{ entity.idUsuario.id }}</a>
+                    </td>
+
+
+                    {# <td>
+                         <ul>
+                             <li>
+                                 <a href="{{ path('trazas_show', { 'id': entity.id }) }}">show</a>
+                             </li>
+                             &#123;&#35; <li>
+                                  <a href="{{ path('trazas_edit', { 'id': entity.id }) }}">edit</a>
+                              </li>&#35;&#125;
+                         </ul>
+                     </td>#}
+                </tr>
+            {% endfor %}
+            </tbody>
+
+
+        </table>
+
+        <ul>
+            {# <li>
+                 <a href="{{ path('trazas_new') }}">
+                     Create a new entry
+                 </a>
+             </li>#}
+        </ul>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+
+{% block content %}
+
+    <h1>Adicionar Tipo de Servicio</h1>
+
+        {% include "::flashmessages.html.twig" %}
+
+    {{ form_start(form) }}
+      {{ form_widget(form) }}
+        <div class="form-actions">
+            <input type="submit" class="btn btn-primary" value="Aceptar" />
+            <a class="btn btn-default" href="{{ path('administracion_tiposervicio') }}">Regresar al listado</a>
+        </div>
+    {{ form_end(form) }}
+
+{% endblock %}
+

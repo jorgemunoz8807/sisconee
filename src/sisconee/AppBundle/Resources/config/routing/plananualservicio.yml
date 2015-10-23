@@ -1,0 +1,35 @@
+plananualservicio_show:
+    path:     /{id}/show
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualServicio:show" }
+
+plananualservicio_new:
+    path:     /new
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualServicio:new" }
+
+plananualservicio_create:
+    path:     /create
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualServicio:create" }
+    requirements: { _method: post }
+
+plananualservicio_edit:
+    path:     /{id}/{parentEntityId}/edit
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualServicio:edit" }
+
+plananualservicio_update:
+    path:     /{id}/{parentEntityId}/update
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualServicio:update" }
+    requirements: { _method: post|put }
+
+plananualservicio_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualServicio:delete" }
+
+plananualservicio_load_data:
+    path:     /load_newData
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualServicio:loadRelatedData" }
+    requirements: { _method: get }
+
+plananualservicio:
+    path:     /{id}
+    defaults: { _controller: "sisconeeAppBundle:PlanAnualServicio:index", id:null }
+

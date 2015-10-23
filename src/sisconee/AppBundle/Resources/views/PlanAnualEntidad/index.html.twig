@@ -1,0 +1,34 @@
+{% extends 'sisconeeAppBundle:Planificacion:annual_planificacion.html.twig' %}
+
+{% set emptyInfo =  'No existen planes anuales creados para las entidades subordinadas a ' %}
+{% set plansInfo =  'Planes anuales de las entidades subordinadas a ' %}
+{% set firstColumnHead = 'Entidad' %}
+
+{% block creationForm %}
+    {% include 'sisconeeAppBundle:PlanAnualEntidad:new.html.twig' %}
+{% endblock %}
+
+{% block tableFirstColumn %}
+    {{ ap.entidad }}
+{% endblock %}
+
+    {% block javascripts %}
+        <script>
+            var loadDataUrl = '{{path("plananualentidad_load_data")}}';
+            var formSubmit = '{{path("plananualentidad_create")}}';
+            var emptyInfo = '{{emptyInfo}}';
+            var plansInfo = '{{plansInfo}}';
+            var formPlanFieldName = 'sisconee_appbundle_plananualentidad[plan]';
+            var formId = 'annualPlanificationForm';
+        </script>
+        {{ parent() }}
+
+        {#<script>
+        </script>#}
+
+    {% endblock %}
+
+
+
+
+

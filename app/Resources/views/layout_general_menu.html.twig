@@ -1,0 +1,89 @@
+<nav class="navbar navbar-inverse" role="navigation">
+    {#Main Menu#}
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+
+            {#Planificación submenu#}
+            {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') or is_granted('ROLE_PLANIFICADOR_SER') %}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Planificación <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') %}
+                            <li><a href="{{ path('plananualentidad') }}">Plan Anual por Entidades</a></li>
+                            <li><a href="{{ path('plananualservicio') }}">Plan Anual por Servicios</a></li>
+                            <li><a href="{{ path('planmensualservicio') }}">Plan Mensual por Servicios</a></li>
+                        {% endif %}
+                        <li><a href="{{ path('plandiarioservicio') }}">Plan Diario por Servicios</a></li>
+                    </ul>
+                </li>
+            {% endif %}
+
+            {#Consumo submenu#}
+            {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') or is_granted('ROLE_PLANIFICADOR_SER') or is_granted('ROLE_REGISTRADOR_SER') %}
+                <li>
+                    <a href="{{ path('registro_lecturas') }}"> Consumo </a>
+                </li>
+            {% endif %}
+
+            {#Reportes submenu#}
+            {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') or is_granted('ROLE_SUPERVISOR_SUP') or is_granted('ROLE_SUPERVISOR_ENT') %}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reportes <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'plan_mensual' }) }}"><span></span>Plan
+                                Mensual</a></li>
+                        <li>
+                            <a href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'comportamiento_diario' }) }}"><span></span>Comportamiento
+                                Diario</a></li>
+                        <li>
+                            <a href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'parte_diario' }) }}"><span></span>Parte
+                                Diario</a></li>
+                        <li>
+                            <a href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'consumo_acumulado' }) }}"><span></span>Consumo
+                                Acumulado General</a></li>
+                        <li>
+                            <a href="{{ path('sisconee_app_reportes', { 'Nomb_Report': 'consumo_acumulado_hp' }) }}"><span></span>Consumo
+                                Acumulado Horario Pico</a></li>
+                    </ul>
+                </li>
+            {% endif %}
+
+
+        </ul>
+        {#Buscador#}
+        {#<form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>#}
+
+        {#Administración submenu#}
+        {% if is_granted('ROLE_PLANIFICADOR_SUP') or is_granted('ROLE_PLANIFICADOR_ENT') %}
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administración <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        {% if is_granted('ROLE_PLANIFICADOR_SUP') %}
+                            <li><a href="{{ path('configuracion_edit') }}">Configuración General</a></li>
+                        {% endif %}
+                        <li><a href="{{ path('administracion_usuario') }}">Gestionar Usuarios</a></li>
+                        <li><a href="{{ path('administracion_entidad') }}">Gestionar Entidades</a></li>
+                        {% if is_granted('ROLE_PLANIFICADOR_SUP') %}
+                            <li><a href={{ path('administracion_tiposervicio') }}>Gestionar Tipos de Servicio</a></li>
+                        {% endif %}
+                        <li><a href="{{ path('administracion_servicio') }}">Gestionar Servicios</a></li>
+                        {% if is_granted('ROLE_PLANIFICADOR_SUP') %}
+                            <li><a href="#">Historial de Operaciones</a></li>
+                        {% endif %}
+
+                    </ul>
+                </li>
+            </ul>
+        {% endif %}
+
+    </div>
+</nav>
+
+

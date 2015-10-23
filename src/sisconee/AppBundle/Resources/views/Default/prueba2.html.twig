@@ -1,0 +1,65 @@
+<html>
+<body>
+<script type="text/javascript" src="{{ asset('jquery/jquery.js') }}"></script>
+<script type="text/javascript" src="{{ asset('jquery/dist/jquery.validate.js') }}"></script>
+{#<script type="text/javascript" src="http://localhost/sisconee/web/jquery/jquery.js"></script>
+<script type="text/javascript" src="http://localhost/sisconee/web/jquery/dist/jquery.validate.js"></script#}>
+<script>
+
+
+    $().ready(function() {
+
+        $("#commentForm").validate({
+                    rules: {
+                        firstname: {required: true},
+                        minlength: 2
+                    }
+
+                }
+        );
+
+
+    });
+</script>
+
+
+
+
+
+<form class="cmxform" id="commentForm" >
+    <fieldset>
+        <legend>Please provide your name, email address (won't be published) and a comment</legend>
+        <p>
+            <label for="firstname">Name (required, at least 2 characters)</label>
+            <input id="firstname" name="firstname" type="text" >
+        </p>
+        {#<p>
+            <label for="cemail">E-Mail (required)</label>
+            <input id="cemail" type="email" name="email" >
+        </p>
+        <p>
+            <label for="curl">URL (optional)</label>
+            <input id="curl" type="url" name="url">
+        </p>#}
+        <p>
+            <label for="ccomment">Your comment (required)</label>
+            <textarea id="ccomment" name="comment" ></textarea>
+        </p>
+        <p>
+            <input class="submit" type="submit" value="Submit">
+        </p>
+    </fieldset>
+</form>
+
+       
+  </body>
+</html>
+
+
+
+
+
+
+
+
+

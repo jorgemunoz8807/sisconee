@@ -1,0 +1,27 @@
+planmensualservicio_create:
+    path:     /create
+    defaults: { _controller: "sisconeeAppBundle:PlanMensualServicio:create" }
+    requirements: { _method: post }
+
+planmensualservicio_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "sisconeeAppBundle:PlanMensualServicio:edit" }
+
+planmensualservicio_update:
+    path:     /{id}/update
+    defaults: { _controller: "sisconeeAppBundle:PlanMensualServicio:update" }
+    requirements: { _method: post|put }
+
+planmensualservicio_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "sisconeeAppBundle:PlanMensualServicio:delete" }
+    requirements: { _method: post|delete }
+
+planmensualservicio:
+    path:     /{entityId}/{serviceId}
+    defaults: { _controller: sisconeeAppBundle:PlanMensualServicio:index, entityId:null, serviceId:null }
+
+planmensualservicio_load_data:
+    path: /load_newData
+    defaults: {_controller:"sisconeeAppBundle:PlanMensualServicio:loadRelatedData"}
+    requirements: { _method: get}

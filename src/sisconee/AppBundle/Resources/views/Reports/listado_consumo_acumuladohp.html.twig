@@ -1,0 +1,179 @@
+{% if Listado|length >0 %}
+        {% set NombreProvincia = '' %}
+        {% set NombreEntidad = '' %}
+        <h1>Organismo:{{ organismo }}</h1>
+        <br>
+        <h1>Consumo acumulado general y del horario pico</h1>
+        <br>
+        <table class="table table-bordered table-hover table-striped">
+
+            {% for e in Listado %}
+
+                {% if NombreProvincia != e['nombProvincia'] %}
+
+                    <tr>
+                        <th colspan="34">{{ e['nombProvincia'] }}</th>
+                    </tr>
+
+                {% endif %}
+                {% if NombreEntidad != e['NombEntidad'] %}
+                    <tr>
+                        <th colspan="34">{{ e['NombEntidad'] }}</th>
+                    </tr>
+                    <tr>
+                        <th>Código CEE</th>
+                        <th>CRF</th>
+                        <th>Nombre del Servicio</th>
+                        <th>Dia 1</th>
+                        <th>Dia 2</th>
+                        <th>Dia 3</th>
+                        <th>Dia 4</th>
+                        <th>Dia 5</th>
+                        <th>Dia 6</th>
+                        <th>Dia 7</th>
+                        <th>Dia 8</th>
+                        <th>Dia 9</th>
+                        <th>Dia 10</th>
+                        <th>Dia 11</th>
+                        <th>Dia 12</th>
+                        <th>Dia 13</th>
+                        <th>Dia 14</th>
+                        <th>Dia 15</th>
+                        <th>Dia 16</th>
+                        <th>Dia 17</th>
+                        <th>Dia 18</th>
+                        <th>Dia 19</th>
+                        <th>Dia 20</th>
+                        <th>Dia 21</th>
+                        <th>Dia 22</th>
+                        <th>Dia 23</th>
+                        <th>Dia 24</th>
+                        <th>Dia 25</th>
+                        <th>Dia 26</th>
+                        <th>Dia 27</th>
+                        <th>Dia 28</th>
+                        <th>Dia 29</th>
+                        <th>Dia 30</th>
+                        <th>Dia 31</th>
+                    </tr>
+                {% endif %}
+
+                <tr>
+                    <td>{{ e['codcliente_EE'] }}</td>
+                    <td>{{ e['codRF'] }}</td>
+                    <td>{{ e['nombServicio'] }}</td>
+                    <td>{{ e['1'] }}</td>
+                    <td>{{ e['2'] }}</td>
+                    <td>{{ e['3'] }}</td>
+                    <td>{{ e['4'] }}</td>
+                    <td>{{ e['5'] }}</td>
+                    <td>{{ e['6'] }}</td>
+                    <td>{{ e['7'] }}</td>
+                    <td>{{ e['8'] }}</td>
+                    <td>{{ e['9'] }}</td>
+                    <td>{{ e['10'] }}</td>
+                    <td>{{ e['11'] }}</td>
+                    <td>{{ e['12'] }}</td>
+                    <td>{{ e['13'] }}</td>
+                    <td>{{ e['14'] }}</td>
+                    <td>{{ e['15'] }}</td>
+                    <td>{{ e['16'] }}</td>
+                    <td>{{ e['17'] }}</td>
+                    <td>{{ e['18'] }}</td>
+                    <td>{{ e['19'] }}</td>
+                    <td>{{ e['20'] }}</td>
+                    <td>{{ e['21'] }}</td>
+                    <td>{{ e['22'] }}</td>
+                    <td>{{ e['23'] }}</td>
+                    <td>{{ e['24'] }}</td>
+                    <td>{{ e['25'] }}</td>
+                    <td>{{ e['26'] }}</td>
+                    <td>{{ e['27'] }}</td>
+                    <td>{{ e['28'] }}</td>
+                    <td>{{ e['29'] }}</td>
+                    <td>{{ e['30'] }}</td>
+                    <td>{{ e['31'] }}</td>
+                </tr>
+                <tr class="text-success">
+                    <td colspan="3">Horario Pico</td>
+
+                    <td>{{ e['1hp'] }}</td>
+                    <td>{{ e['2hp'] }}</td>
+                    <td>{{ e['3hp'] }}</td>
+                    <td>{{ e['4hp'] }}</td>
+                    <td>{{ e['5hp'] }}</td>
+                    <td>{{ e['6hp'] }}</td>
+                    <td>{{ e['7hp'] }}</td>
+                    <td>{{ e['8hp'] }}</td>
+                    <td>{{ e['9hp'] }}</td>
+                    <td>{{ e['10hp'] }}</td>
+                    <td>{{ e['11hp'] }}</td>
+                    <td>{{ e['12hp'] }}</td>
+                    <td>{{ e['13hp'] }}</td>
+                    <td>{{ e['14hp'] }}</td>
+                    <td>{{ e['15hp'] }}</td>
+                    <td>{{ e['16hp'] }}</td>
+                    <td>{{ e['17hp'] }}</td>
+                    <td>{{ e['18hp'] }}</td>
+                    <td>{{ e['19hp'] }}</td>
+                    <td>{{ e['20hp'] }}</td>
+                    <td>{{ e['21hp'] }}</td>
+                    <td>{{ e['22hp'] }}</td>
+                    <td>{{ e['23hp'] }}</td>
+                    <td>{{ e['24hp'] }}</td>
+                    <td>{{ e['25hp'] }}</td>
+                    <td>{{ e['26hp'] }}</td>
+                    <td>{{ e['27hp'] }}</td>
+                    <td>{{ e['28hp'] }}</td>
+                    <td>{{ e['29hp'] }}</td>
+                    <td>{{ e['30hp'] }}</td>
+                    <td>{{ e['31hp'] }}</td>
+                </tr>
+
+                <tr class="text-success">
+                    <td colspan="3">Porciento consumido con respecto al plan</td>
+
+                    <td>{{  (e['1']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['2']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['3']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['4']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['5']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['6']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['7']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['8']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['9']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['10']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['11']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['12']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['13']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['14']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['15']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['16']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['17']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['18']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['19']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['20']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['21']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['22']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['23']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['24']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['25']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['26']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['27']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['28']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['29']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['30']*100/e['plan'])|number_format(1) }}</td>
+                    <td>{{ (e['31']*100/e['plan'])|number_format(1) }}</td>
+                </tr>
+
+
+            {% endfor %}
+
+
+        </table>
+{% else %}
+
+    <h1>No hay datos a mostrar</h1>
+
+
+{% endif %}

@@ -1,0 +1,33 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+{% block content %}
+    {% include "::flashmessages.html.twig" %}
+
+    <h1>Configuración General</h1>
+
+    {{ form_start(edit_form) }}
+    {{ form_widget(edit_form) }}
+
+
+    {% if is_granted('ROLE_PLANIFICADOR_SUP')%}
+    <div class="form-actions">
+        <input type="submit" class="btn btn-primary " value="Cambiar" />
+        <a id="closeOpenConfig" class="btn btn-default" href="{{ path('configuracion_changeStatus') }}">{{ statusText }}</a>
+        <a style="margin-left: 100px" class="btn btn-default" href="{{ path('configuracion_create') }}">Nueva Configuración</a>
+    </div>
+    {% endif %}
+
+    {{ form_end(edit_form) }}
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {{ parent() }}
+    <script>
+        var getConfigurationUrl = '{{path("get_configuration")}}';
+    </script>
+    <script src="{{ asset('bundles/sisconeeadministracion/js/configurations.js') }}"></script>
+
+
+{% endblock %}

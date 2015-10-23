@@ -1,0 +1,59 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+
+{% block content %}
+
+
+    <h1>Editar servicio: {{ entity.nombre }} </h1>
+
+    {% include "::flashmessages.html.twig" %}
+    {% include "::modal-delete.html.twig" %}
+
+
+    {{ form_start(edit_form) }}
+    {{ form_widget(edit_form) }}
+    <div class="form-actions">
+        <input type="submit" class="btn btn-primary" value="Aceptar" />
+        <a class="btn btn-default" href="{{ path('administracion_servicio') }}">Regresar al listado</a>
+
+        <a class="btn btn-danger link-eliminar" style="margin-left:50px;" href="javascript:void(0)"
+           data-url="{{ path('administracion_servicio_delete', { 'id': entity.id }) }}"
+           data-descripcion="{{ entity.nombre }}"
+           data-toggle="modal" data-target="#modal-delete">
+            <span class="glyphicon glyphicon-trash"></span>Eliminar
+        </a>
+    </div>
+    {{ form_end(edit_form) }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('layoutadmin/admin-list.js') }}"></script>
+    <script>
+        var $provincia = $('#sisconee_appbundle_servicio_provincia');
+        // When sport gets selected ...
+        $provincia.change(function() {
+// ... retrieve the corresponding form.
+            var $form = $(this).closest('form');
+// Simulate form data, but only include the selected sport value.
+            var data = {};
+            data[$provincia.attr('name')] = $provincia.val();
+            //alert('okokokokokokokokokokokokokokokokoko');
+// Submit data via AJAX to the form's action path.
+            $.ajax({
+                url : $form.attr('action'),
+                type: 'POST',
+                data : data,
+                success: function(html) {
+// Replace current position field ...
+                    $('#sisconee_appbundle_servicio_municipio').replaceWith(
+// ... with the returned one from the AJAX response.
+                            $(html).find('#sisconee_appbundle_servicio_municipio')
+                    );
+// Position field now displays the appropriate positions.
+                }
+            });
+        });
+    </script>
+{% endblock %}

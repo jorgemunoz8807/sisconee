@@ -1,0 +1,53 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+
+{% block body -%}
+    <h1>Entidad</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.getId }}</td>
+            </tr>
+            <tr>
+                <th>CodReeup</th>
+                <td>{{ entity.getCodReeup }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ entity.getNombre }}</td>
+            </tr>
+            <tr>
+                <th>Siglas</th>
+                <td>{{ entity.getSiglas }}</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>{{ entity.getDireccion }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ entity.getTelefono }}</td>
+            </tr>
+            <tr>
+                <th>Correo</th>
+                <td>{{ entity.getCorreo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('administracion_entidad') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('administracion_entidad_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,959 @@
+a:8:{s:5:"token";s:6:"cd2c92";s:6:"parent";N;s:8:"children";a:0:{}s:4:"data";a:12:{s:6:"config";C:62:"Symfony\Component\HttpKernel\DataCollector\ConfigDataCollector":2115:{a:16:{s:8:"app_name";N;s:11:"app_version";N;s:5:"token";s:6:"cd2c92";s:15:"symfony_version";s:5:"2.5.4";s:4:"name";s:3:"app";s:3:"env";s:3:"dev";s:5:"debug";b:1;s:11:"php_version";s:6:"5.5.12";s:14:"xdebug_enabled";b:1;s:14:"eaccel_enabled";b:0;s:11:"apc_enabled";b:0;s:14:"xcache_enabled";b:0;s:16:"wincache_enabled";b:0;s:20:"zend_opcache_enabled";b:0;s:7:"bundles";a:16:{s:15:"FrameworkBundle";s:78:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Bundle\FrameworkBundle";s:14:"SecurityBundle";s:77:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Bundle\SecurityBundle";s:10:"TwigBundle";s:73:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Bundle\TwigBundle";s:13:"MonologBundle";s:50:"C:\wamp\www\sisconee\vendor\symfony\monolog-bundle";s:17:"SwiftmailerBundle";s:87:"C:\wamp\www\sisconee\vendor\symfony\swiftmailer-bundle\Symfony\Bundle\SwiftmailerBundle";s:13:"AsseticBundle";s:79:"C:\wamp\www\sisconee\vendor\symfony\assetic-bundle\Symfony\Bundle\AsseticBundle";s:14:"DoctrineBundle";s:83:"C:\wamp\www\sisconee\vendor\doctrine\doctrine-bundle\Doctrine\Bundle\DoctrineBundle";s:26:"SensioFrameworkExtraBundle";s:92:"C:\wamp\www\sisconee\vendor\sensio\framework-extra-bundle\Sensio\Bundle\FrameworkExtraBundle";s:17:"sisconeeAppBundle";s:43:"C:\wamp\www\sisconee\src\sisconee\AppBundle";s:28:"sisconeeAdministracionBundle";s:54:"C:\wamp\www\sisconee\src\sisconee\AdministracionBundle";s:22:"DoctrineFixturesBundle";s:92:"C:\wamp\www\sisconee\vendor\doctrine\doctrine-fixtures-bundle\Doctrine\Bundle\FixturesBundle";s:29:"sisconeeSessionServicesBundle";s:55:"C:\wamp\www\sisconee\src\sisconee\SessionServicesBundle";s:14:"AcmeDemoBundle";s:40:"C:\wamp\www\sisconee\src\Acme\DemoBundle";s:17:"WebProfilerBundle";s:80:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle";s:24:"SensioDistributionBundle";s:87:"C:\wamp\www\sisconee\vendor\sensio\distribution-bundle\Sensio\Bundle\DistributionBundle";s:21:"SensioGeneratorBundle";s:81:"C:\wamp\www\sisconee\vendor\sensio\generator-bundle\Sensio\Bundle\GeneratorBundle";}s:9:"sapi_name";s:14:"apache2handler";}}s:7:"request";C:63:"Symfony\Component\HttpKernel\DataCollector\RequestDataCollector":82465:{a:18:{s:6:"format";s:4:"html";s:7:"content";s:0:"";s:12:"content_type";s:24:"text/html; charset=UTF-8";s:11:"status_text";s:2:"OK";s:11:"status_code";i:200;s:13:"request_query";a:6:{s:12:"id_provincia";s:1:"4";s:10:"id_entidad";s:0:"";s:7:"periodo";s:4:"2013";s:15:"mostrar_entidad";s:4:"true";s:16:"mostrar_servicio";s:5:"false";s:3:"pdf";s:5:"false";}s:15:"request_request";a:0:{}s:15:"request_headers";a:10:{s:4:"host";a:1:{i:0;s:14:"localhost:8080";}s:10:"user-agent";a:1:{i:0;s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0";}s:6:"accept";a:1:{i:0;s:3:"*/*";}s:15:"accept-language";a:1:{i:0;s:14:"en-US,en;q=0.5";}s:15:"accept-encoding";a:1:{i:0;s:13:"gzip, deflate";}s:16:"x-requested-with";a:1:{i:0;s:14:"XMLHttpRequest";}s:7:"referer";a:1:{i:0;s:74:"http://localhost:8080/sisconee/web/app_dev.php/reporte/inicio/plan_mensual";}s:6:"cookie";a:1:{i:0;s:1011:"crud_page_ff8643db3e238d3b985b205a71c25581=1; per_page_ff8643db3e238d3b985b205a71c25581=15; hidden_ordering_ff8643db3e238d3b985b205a71c25581=; hidden_sorting_ff8643db3e238d3b985b205a71c25581=; search_text_ff8643db3e238d3b985b205a71c25581=; search_field_ff8643db3e238d3b985b205a71c25581=; ci_session=ersduR17JwRIGPiYR53P4V3dNBjXXa7YSUmYf%2F2UUFWa4cgoNWUrd2SgYIpOymDdTjJ%2FqykfE5ytiLUspu%2Bc40hTru3qvn4YzJVNdtGtSIz7%2Fkvj%2F8GtrT4eLnMuwydLCTd%2B1%2BnOrn7LaTUlafnLbqdWpiE1Lx%2BVkXdl0WJbqZ1rXOHd3CStYs4IGrmL72uRKFSyU8ag6aiilO8QGa7IIhtECSOxOeFSJ1M0addR0x9k0SOieoI0pAKTiN7FJPLKG5JjBOWyUJJwmTedgr2rY1QYbO6oymW2Tz9xNIPL6ai1m79U4CwxbVH1SsuZXBgi4TubGD1mAWp8g5QTxMklPBM74qtjVWcv%2B3tK8Zb%2BluiIYacy5qkjDFR40OiCcn2%2FrqQLR%2B5dl9n%2BvWK5Ir2dUfg4Epx6BeYm7gwdxUYNETkgepNQsV17sKhJWDJvuWsHXiZxS15I4JQps%2B1pS0TJNDvU2OEt8%2F7cU2H96O3vmqTDhWCoYTgCW6scfo2TuUh6pzK4aRFMipCYvivyVq7bOBvAYrjGl59icuIp28BCygvo1KhJ0%2Bfo20yHPrIlE0086Ks0SzdYK0dcDdaeq%2BDUB0P5HVIV7XPxiCnlQSFo7RB8nqfki0seGjfupopgwR39; PHPSESSID=trst6fsfs4udd2q2itqp7gjdd3";}s:10:"connection";a:1:{i:0;s:10:"keep-alive";}s:14:"x-php-ob-level";a:1:{i:0;i:1;}}s:14:"request_server";a:39:{s:4:"BASE";s:13:"/sisconee/web";s:9:"HTTP_HOST";s:14:"localhost:8080";s:15:"HTTP_USER_AGENT";s:72:"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0";s:11:"HTTP_ACCEPT";s:3:"*/*";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.5";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:21:"HTTP_X_REQUESTED_WITH";s:14:"XMLHttpRequest";s:12:"HTTP_REFERER";s:74:"http://localhost:8080/sisconee/web/app_dev.php/reporte/inicio/plan_mensual";s:11:"HTTP_COOKIE";s:1011:"crud_page_ff8643db3e238d3b985b205a71c25581=1; per_page_ff8643db3e238d3b985b205a71c25581=15; hidden_ordering_ff8643db3e238d3b985b205a71c25581=; hidden_sorting_ff8643db3e238d3b985b205a71c25581=; search_text_ff8643db3e238d3b985b205a71c25581=; search_field_ff8643db3e238d3b985b205a71c25581=; ci_session=ersduR17JwRIGPiYR53P4V3dNBjXXa7YSUmYf%2F2UUFWa4cgoNWUrd2SgYIpOymDdTjJ%2FqykfE5ytiLUspu%2Bc40hTru3qvn4YzJVNdtGtSIz7%2Fkvj%2F8GtrT4eLnMuwydLCTd%2B1%2BnOrn7LaTUlafnLbqdWpiE1Lx%2BVkXdl0WJbqZ1rXOHd3CStYs4IGrmL72uRKFSyU8ag6aiilO8QGa7IIhtECSOxOeFSJ1M0addR0x9k0SOieoI0pAKTiN7FJPLKG5JjBOWyUJJwmTedgr2rY1QYbO6oymW2Tz9xNIPL6ai1m79U4CwxbVH1SsuZXBgi4TubGD1mAWp8g5QTxMklPBM74qtjVWcv%2B3tK8Zb%2BluiIYacy5qkjDFR40OiCcn2%2FrqQLR%2B5dl9n%2BvWK5Ir2dUfg4Epx6BeYm7gwdxUYNETkgepNQsV17sKhJWDJvuWsHXiZxS15I4JQps%2B1pS0TJNDvU2OEt8%2F7cU2H96O3vmqTDhWCoYTgCW6scfo2TuUh6pzK4aRFMipCYvivyVq7bOBvAYrjGl59icuIp28BCygvo1KhJ0%2Bfo20yHPrIlE0086Ks0SzdYK0dcDdaeq%2BDUB0P5HVIV7XPxiCnlQSFo7RB8nqfki0seGjfupopgwR39; PHPSESSID=trst6fsfs4udd2q2itqp7gjdd3";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:4:"PATH";s:243:"C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;"C:\Program Files (x86)\Zend\ZendServer\bin";"C:\Program Files (x86)\Zend\ZendServer\share\ZendFramework\bin";";s:10:"SystemRoot";s:10:"C:\Windows";s:7:"COMSPEC";s:27:"C:\Windows\system32\cmd.exe";s:7:"PATHEXT";s:53:".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC";s:6:"WINDIR";s:10:"C:\Windows";s:16:"SERVER_SIGNATURE";s:81:"<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at localhost Port 8080</address>
+";s:15:"SERVER_SOFTWARE";s:31:"Apache/2.4.9 (Win64) PHP/5.5.12";s:11:"SERVER_NAME";s:9:"localhost";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:4:"8080";s:11:"REMOTE_ADDR";s:9:"127.0.0.1";s:13:"DOCUMENT_ROOT";s:12:"C:/wamp/www/";s:14:"REQUEST_SCHEME";s:4:"http";s:14:"CONTEXT_PREFIX";s:0:"";s:21:"CONTEXT_DOCUMENT_ROOT";s:12:"C:/wamp/www/";s:12:"SERVER_ADMIN";s:17:"admin@example.com";s:15:"SCRIPT_FILENAME";s:36:"C:/wamp/www/sisconee/web/app_dev.php";s:11:"REMOTE_PORT";s:5:"11462";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:3:"GET";s:12:"QUERY_STRING";s:93:"id_provincia=4&id_entidad=&periodo=2013&mostrar_entidad=true&mostrar_servicio=false&pdf=false";s:11:"REQUEST_URI";s:140:"/sisconee/web/app_dev.php/reporte/plan_mensual?id_provincia=4&id_entidad=&periodo=2013&mostrar_entidad=true&mostrar_servicio=false&pdf=false";s:11:"SCRIPT_NAME";s:25:"/sisconee/web/app_dev.php";s:9:"PATH_INFO";s:21:"/reporte/plan_mensual";s:15:"PATH_TRANSLATED";s:32:"C:\wamp\www\reporte\plan_mensual";s:8:"PHP_SELF";s:46:"/sisconee/web/app_dev.php/reporte/plan_mensual";s:18:"REQUEST_TIME_FLOAT";d:1427392016.023;s:12:"REQUEST_TIME";i:1427392016;}s:15:"request_cookies";a:8:{s:42:"crud_page_ff8643db3e238d3b985b205a71c25581";s:1:"1";s:41:"per_page_ff8643db3e238d3b985b205a71c25581";s:2:"15";s:48:"hidden_ordering_ff8643db3e238d3b985b205a71c25581";s:0:"";s:47:"hidden_sorting_ff8643db3e238d3b985b205a71c25581";s:0:"";s:44:"search_text_ff8643db3e238d3b985b205a71c25581";s:0:"";s:45:"search_field_ff8643db3e238d3b985b205a71c25581";s:0:"";s:10:"ci_session";s:640:"ersduR17JwRIGPiYR53P4V3dNBjXXa7YSUmYf/2UUFWa4cgoNWUrd2SgYIpOymDdTjJ/qykfE5ytiLUspu+c40hTru3qvn4YzJVNdtGtSIz7/kvj/8GtrT4eLnMuwydLCTd+1+nOrn7LaTUlafnLbqdWpiE1Lx+VkXdl0WJbqZ1rXOHd3CStYs4IGrmL72uRKFSyU8ag6aiilO8QGa7IIhtECSOxOeFSJ1M0addR0x9k0SOieoI0pAKTiN7FJPLKG5JjBOWyUJJwmTedgr2rY1QYbO6oymW2Tz9xNIPL6ai1m79U4CwxbVH1SsuZXBgi4TubGD1mAWp8g5QTxMklPBM74qtjVWcv+3tK8Zb+luiIYacy5qkjDFR40OiCcn2/rqQLR+5dl9n+vWK5Ir2dUfg4Epx6BeYm7gwdxUYNETkgepNQsV17sKhJWDJvuWsHXiZxS15I4JQps+1pS0TJNDvU2OEt8/7cU2H96O3vmqTDhWCoYTgCW6scfo2TuUh6pzK4aRFMipCYvivyVq7bOBvAYrjGl59icuIp28BCygvo1KhJ0+fo20yHPrIlE0086Ks0SzdYK0dcDdaeq+DUB0P5HVIV7XPxiCnlQSFo7RB8nqfki0seGjfupopgwR39";s:9:"PHPSESSID";s:26:"trst6fsfs4udd2q2itqp7gjdd3";}s:18:"request_attributes";a:3:{s:11:"_controller";s:69:"sisconee\AppBundle\Controller\ReportController::Get_PlanMensualAction";s:6:"_route";s:20:"reporte_plan_mensual";s:13:"_route_params";a:0:{}}s:16:"response_headers";a:4:{s:13:"cache-control";a:1:{i:0;s:8:"no-cache";}s:4:"date";a:1:{i:0;s:29:"Thu, 26 Mar 2015 17:46:57 GMT";}s:12:"content-type";a:1:{i:0;s:24:"text/html; charset=UTF-8";}s:13:"x-debug-token";a:1:{i:0;s:6:"cd2c92";}}s:16:"session_metadata";a:3:{s:7:"Created";s:29:"Thu, 26 Mar 15 15:21:23 +0100";s:9:"Last used";s:29:"Thu, 26 Mar 15 18:46:54 +0100";s:8:"Lifetime";s:1:"0";}s:18:"session_attributes";a:28:{s:17:"_security_general";s:491:"C:74:"Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken":403:{a:3:{i:0;N;i:1;s:7:"general";i:2;s:360:"a:4:{i:0;C:33:"sisconee\AppBundle\Entity\Usuario":134:{a:3:{i:0;i:1;i:1;s:9:"psuperior";i:2;s:88:"eRMjUT36NS9p4WsTjwucEyPNQTon42CdWDc0xL3UV93dZPaUmbOiaT4HIMNQwAV6x4mas/8AM9fliC4Zqkq1bQ==";}}i:1;b:1;i:2;a:1:{i:0;O:41:"Symfony\Component\Security\Core\Role\Role":1:{s:47:" Symfony\Component\Security\Core\Role\Role role";s:21:"ROLE_PLANIFICADOR_SUP";}}i:3;a:0:{}}";}}";s:38:"_csrf/sisconee_appbundle_configuracion";s:43:"LUTmAJqOdVvKFGixXMCjRZ3jPVP4wsWV0vMljTVi6Bw";s:14:"session_prefix";s:27:"administracion_tiposervicio";s:29:"administracion_usuario_column";s:6:"nombre";s:28:"administracion_usuario_order";s:3:"ASC";s:27:"administracion_usuario_page";i:1;s:29:"administracion_entidad_column";s:8:"codReeup";s:28:"administracion_entidad_order";s:3:"ASC";s:27:"administracion_entidad_page";i:1;s:32:"_csrf/sisconee_appbundle_usuario";s:43:"BlNtpRkWiYYM1MBvqWUFl1fokyZQNej4g8t8-B81g6I";s:32:"_csrf/sisconee_appbundle_entidad";s:43:"C4eUA7Y3hfZCT8j9ZTyt1PVg8n6L0DiNvvzoTEKfMkk";s:34:"administracion_tiposervicio_column";s:11:"descripcion";s:33:"administracion_tiposervicio_order";s:3:"ASC";s:32:"administracion_tiposervicio_page";i:1;s:37:"_csrf/sisconee_appbundle_tiposervicio";s:43:"t345RPV1c59VemCECzs52T-ZEGV20A89ouWP_10aHYA";s:30:"administracion_servicio_column";s:6:"nombre";s:29:"administracion_servicio_order";s:3:"ASC";s:28:"administracion_servicio_page";i:1;s:33:"_csrf/sisconee_appbundle_servicio";s:43:"7kcctd46ZurUPT49sv98gbrD-uEMozfrajRN0LrYkJo";s:41:"_csrf/sisconee_appbundle_plananualentidad";s:43:"AC57HBNFHw8yGmKAEcIrzOrB4lzT3XD_U6JiJIkGd1w";s:42:"_csrf/sisconee_appbundle_plananualservicio";s:43:"xmkgCQjIxM0Gd6b2EpU7FhMvV1HUOFsyABTqh6luX68";s:40:"_csrf/sisconee_appbundle_planesmensuales";s:43:"FmrjPyHONucBILcq4I51CiAutJgCbyB2NvGKOeu48dM";s:46:"administracion_tiposervicio_configuration_year";s:4:"2015";s:46:"_csrf/sisconee_appbundle_lecturadiariaservicio";s:43:"5OqM0p4XSWzlYpk0m2ItNeZDKVwlx318jDWBOhdUmyQ";s:46:"_csrf/sisconee_appbundle_editplananualservicio";s:43:"7HSRMUeQE-haDS2sYXv46vnkTHDhcDy2tLrQMEBqdjw";s:10:"_csrf/form";s:43:"dTrG0pYUAQSndn3RFmBmkBC1p1W7RK8HGB1AR96S9Ik";s:3:"pdf";s:52336:"                                                                                                                
+        <h1>Organismo:Ministerio de Ciencia,Tecnología y Medio Ambiente</h1>
+        <br>
+        <h1>Plan de Energ&iacute;a El&eacute;ctrica  2013 (KWh)</h1>
+        <br>
+        <br>
+        <table class="table table-bordered table-hover table-striped" style="border: 1px solid #000000">
+
+            
+                                                        <tr style="border: 1px solid #000000">
+                        <th colspan="16" style="border: 1px solid #000000">
+                           LA HABANA </th>
+                        </tr>
+                    <tr style="border: 1px solid #000000">
+                        <th style="border: 1px solid #000000">Reuup</th>
+                        <th style="border: 1px solid #000000">Entidad</th>
+                        <th style="border: 1px solid #000000">Ene</th>
+                        <th style="border: 1px solid #000000">Feb</th>
+                        <th style="border: 1px solid #000000">Mar</th>
+                        <th style="border: 1px solid #000000">Abr</th>
+                        <th style="border: 1px solid #000000">May</th>
+                        <th style="border: 1px solid #000000">Jun</th>
+                        <th style="border: 1px solid #000000">Jul</th>
+                        <th style="border: 1px solid #000000">Ago</th>
+                        <th style="border: 1px solid #000000">Sep</th>
+                        <th style="border: 1px solid #000000">Oct</th>
+                        <th style="border: 1px solid #000000">Nov</th>
+                        <th style="border: 1px solid #000000">Dic</th>
+                        <th style="border: 1px solid #000000">Total</th>
+                    </tr>
+                                                                                                                                                                                                                                                                
+                <tr>
+                    <td style="border: 1px solid #000000">08078</td>
+                    <td style="border: 1px solid #000000">ACUARIO NACIONAL CUBA</td>
+                    <td style="border: 1px solid #000000">130500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">109900</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">124000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">133000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">116100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 613500</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">12526</td>
+                    <td style="border: 1px solid #000000">AGENCIA DE ENERGIA NUCLEAR Y TECNOLOGIAS DE AVANZADA</td>
+                    <td style="border: 1px solid #000000">11300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">14300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">17600</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">17700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">11500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 72400</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">11801</td>
+                    <td style="border: 1px solid #000000">AGENCIA DE MEDIO AMBIENTE</td>
+                    <td style="border: 1px solid #000000">8000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">11800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">14000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">14900</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">11000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 59700</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">08025</td>
+                    <td style="border: 1px solid #000000">ARCHIVO NACIONAL DE LA REPUBLICA DE CUBA</td>
+                    <td style="border: 1px solid #000000">26900</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">29900</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">34750</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">31400</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">30900</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 153850</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06746</td>
+                    <td style="border: 1px solid #000000">CENTRO DE APLICACIONES TECNOLOGICAS Y DESARROLLO NUCLEAR</td>
+                    <td style="border: 1px solid #000000">21000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">23000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">27000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">30000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">23000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 124000</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">12965</td>
+                    <td style="border: 1px solid #000000">CENTRO DE BIOPRODUCTOS MARINOS</td>
+                    <td style="border: 1px solid #000000">3000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">3100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">3200</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">4560</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">3145</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 17005</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">13925</td>
+                    <td style="border: 1px solid #000000">CENTRO DE ESTUDIOS AVANZADOS DE CUBA</td>
+                    <td style="border: 1px solid #000000">26701</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">26600</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">48100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">56490</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">72163</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 230054</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06798</td>
+                    <td style="border: 1px solid #000000">CENTRO DE GESTION DE LA INFORMACION Y DESARROLLO DE LA ENERGIA</td>
+                    <td style="border: 1px solid #000000">14050</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">15000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">16650</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">16400</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">15700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 77800</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06730</td>
+                    <td style="border: 1px solid #000000">CENTRO DE GESTION Y DESARROLLO DE LA CALIDAD</td>
+                    <td style="border: 1px solid #000000">7300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">7800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">9300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">9400</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">9300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 43100</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">04821</td>
+                    <td style="border: 1px solid #000000">CENTRO DE INVESTIGACIONES DE LA ECONOMIA MUNDIAL</td>
+                    <td style="border: 1px solid #000000">4300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">6000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">6000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 27800</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">07369</td>
+                    <td style="border: 1px solid #000000">CENTRO DE INVESTIGACIONES PSICOLOGICAS Y SOCIOLOGICAS</td>
+                    <td style="border: 1px solid #000000">4000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">4500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5309</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">4500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 23309</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">11782</td>
+                    <td style="border: 1px solid #000000">CENTRO DE PROTECCION E HIGIENE DE RADIACIONES</td>
+                    <td style="border: 1px solid #000000">17000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">18000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">20000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">22000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">22000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 99000</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">11964</td>
+                    <td style="border: 1px solid #000000">DELEGACION PROVINCIAL DEL MINISTERIO DE CIENCIA, TECNOLOGIA Y MEDIO AMBIENTE DE LA HABANA</td>
+                    <td style="border: 1px solid #000000">2000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2400</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">3200</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">3600</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2600</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 13800</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">12170</td>
+                    <td style="border: 1px solid #000000">EMPRESA DE GESTION DEL CONOCIMIENTO Y LA TECNOLOGIA</td>
+                    <td style="border: 1px solid #000000">4200</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">4300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5600</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">6200</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5200</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 25500</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">07753</td>
+                    <td style="border: 1px solid #000000">EMPRESA DE SERVICIOS A LA CIENCIA, TECNOLOGIA Y MEDIO AMBIENTE</td>
+                    <td style="border: 1px solid #000000">15100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">15700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">15940</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">18000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">17800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 82540</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">12071</td>
+                    <td style="border: 1px solid #000000">EMPRESA DE TECNOLOGIA DE LA INFORMACION Y SERVICIOS TELEMATICOS AVANZADOS</td>
+                    <td style="border: 1px solid #000000">28000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">25700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">32535</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">34000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">28000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 148235</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">05978</td>
+                    <td style="border: 1px solid #000000">EMPRESA ESPECIALIZADA IMPORTADORA, EXPORTADORA Y DISTRIBUIDORA PARA LA CIENCIA Y LA TECNICA</td>
+                    <td style="border: 1px solid #000000">1595</td>
+                    <td style="border: 1px solid #000000">1600</td>
+                    <td style="border: 1px solid #000000">2145</td>
+                    <td style="border: 1px solid #000000">1200</td>
+                    <td style="border: 1px solid #000000">2095</td>
+                    <td style="border: 1px solid #000000">2000</td>
+                    <td style="border: 1px solid #000000">2195</td>
+                    <td style="border: 1px solid #000000">5000</td>
+                    <td style="border: 1px solid #000000">1560</td>
+                    <td style="border: 1px solid #000000">300</td>
+                    <td style="border: 1px solid #000000">1595</td>
+                    <td style="border: 1px solid #000000">1000</td>
+                    <td style="border: 1px solid #000000"> 22285</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">12714</td>
+                    <td style="border: 1px solid #000000">GRUPO EMPRESARIAL DE LA CIENCIA, LA TECNOLOGIA Y EL MEDIO AMBIENTE</td>
+                    <td style="border: 1px solid #000000">1398</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2062</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2838</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2880</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2132</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 11310</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06765</td>
+                    <td style="border: 1px solid #000000">INSTITUTO CUBANO DE ANTROPOLOGIA</td>
+                    <td style="border: 1px solid #000000">2555</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2555</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2555</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2555</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2555</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 12775</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06678</td>
+                    <td style="border: 1px solid #000000">INSTITUTO DE CIBERNETICA, MATEMATICA Y FISICA</td>
+                    <td style="border: 1px solid #000000">8000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">8900</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">9700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">8000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">7100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 41700</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06679</td>
+                    <td style="border: 1px solid #000000">INSTITUTO DE ECOLOGIA Y SISTEMATICA</td>
+                    <td style="border: 1px solid #000000">10500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">15500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">16242</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">19100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">24100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 85442</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06670</td>
+                    <td style="border: 1px solid #000000">INSTITUTO DE FILOSOFIA</td>
+                    <td style="border: 1px solid #000000">2000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 11200</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06740</td>
+                    <td style="border: 1px solid #000000">INSTITUTO DE GEOFISICA Y ASTRONOMIA</td>
+                    <td style="border: 1px solid #000000">1900</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 5100</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06759</td>
+                    <td style="border: 1px solid #000000">INSTITUTO DE GEOGRAFIA TROPICAL</td>
+                    <td style="border: 1px solid #000000">3200</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">1700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 13000</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06761</td>
+                    <td style="border: 1px solid #000000">INSTITUTO DE INFORMACION CIENTIFICA Y TECNOLOGICA</td>
+                    <td style="border: 1px solid #000000">5100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5130</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5850</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">6000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 27180</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06632</td>
+                    <td style="border: 1px solid #000000">INSTITUTO DE LITERATURA Y LINGUISTICA &quot;DR. JOSE ANTONIO PORTUONDO VALDOR&quot;</td>
+                    <td style="border: 1px solid #000000">2200</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">3000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">3000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 13500</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06749</td>
+                    <td style="border: 1px solid #000000">INSTITUTO DE METEOROLOGIA</td>
+                    <td style="border: 1px solid #000000">39700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">46250</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">54210</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">56900</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">51650</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 248710</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06744</td>
+                    <td style="border: 1px solid #000000">INSTITUTO DE OCEANOLOGIA</td>
+                    <td style="border: 1px solid #000000">5500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5200</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5700</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5600</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">5500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 27500</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06729</td>
+                    <td style="border: 1px solid #000000">INSTITUTO NACIONAL DE INVESTIGACIONES EN METROLOGIA</td>
+                    <td style="border: 1px solid #000000">13625</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">19160</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">24540</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">25670</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">23205</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 106200</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">00211</td>
+                    <td style="border: 1px solid #000000">MINISTERIO DE CIENCIA, TECNOLOGIA Y MEDIO AMBIENTE</td>
+                    <td style="border: 1px solid #000000">27760</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">9189</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">10000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">9800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">9800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 66549</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">08140</td>
+                    <td style="border: 1px solid #000000">MUSEO NACIONAL DE HISTORIA NATURAL DE CUBA</td>
+                    <td style="border: 1px solid #000000">23500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">26000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">38000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">50200</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">30000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 167700</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">12652</td>
+                    <td style="border: 1px solid #000000">OFICINA DE REGULACION AMBIENTAL Y SEGURIDAD NUCLEAR</td>
+                    <td style="border: 1px solid #000000">6500</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">8000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">10000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">11670</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">7210</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 43380</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">06127</td>
+                    <td style="border: 1px solid #000000">OFICINA NACIONAL DE NORMALIZACION</td>
+                    <td style="border: 1px solid #000000">6300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">6300</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">6550</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">6610</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">8650</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 34410</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">12373</td>
+                    <td style="border: 1px solid #000000">OFICINA TERRITORIAL DE NORMALIZACION ARTEMISA-MAYABEQUE</td>
+                    <td style="border: 1px solid #000000">760</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">820</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">1000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">1000</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 4380</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                
+                <tr>
+                    <td style="border: 1px solid #000000">09255</td>
+                    <td style="border: 1px solid #000000">OFICINA TERRITORIAL DE NORMALIZACION DE LA HABANA</td>
+                    <td style="border: 1px solid #000000">1800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">1800</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2406</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2400</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000">2100</td>
+                    <td style="border: 1px solid #000000">0</td>
+                    <td style="border: 1px solid #000000"> 10506</td>
+                                                                                                                                                                                                                                                                                        
+                </tr>
+
+
+            
+                            <tr style="border: 1px solid #000000">
+                    <th colspan="2" align="right" style="border: 1px solid #000000">Total Mensual por Provincia </th>
+                    <td style="border: 1px solid #000000">487244</td>
+                    <td style="border: 1px solid #000000">1600</td>
+                    <td style="border: 1px solid #000000">486381</td>
+                    <td style="border: 1px solid #000000">1200</td>
+                    <td style="border: 1px solid #000000">582150</td>
+                    <td style="border: 1px solid #000000">2000</td>
+                    <td style="border: 1px solid #000000">627580</td>
+                    <td style="border: 1px solid #000000">5000</td>
+                    <td style="border: 1px solid #000000">1560</td>
+                    <td style="border: 1px solid #000000">300</td>
+                    <td style="border: 1px solid #000000">568405</td>
+                    <td style="border: 1px solid #000000">1000</td>
+                    <td style="border: 1px solid #000000">2764420</td>
+                </tr>
+                    </table>
+";s:9:"graphData";a:35:{i:0;a:19:{s:9:"planEnero";s:6:"130500";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:6:"109900";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:6:"124000";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:6:"133000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:6:"116100";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:21:"ACUARIO NACIONAL CUBA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2050";s:8:"codreeup";s:5:"08078";}i:1;a:19:{s:9:"planEnero";s:5:"11300";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"14300";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"17600";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"17700";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"11500";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:52:"AGENCIA DE ENERGIA NUCLEAR Y TECNOLOGIAS DE AVANZADA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"12526";}i:2;a:19:{s:9:"planEnero";s:4:"8000";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"11800";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"14000";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"14900";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"11000";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:25:"AGENCIA DE MEDIO AMBIENTE";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"11801";}i:3;a:19:{s:9:"planEnero";s:5:"26900";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"29900";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"34750";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"31400";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"30900";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:40:"ARCHIVO NACIONAL DE LA REPUBLICA DE CUBA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"08025";}i:4;a:19:{s:9:"planEnero";s:5:"21000";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"23000";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"27000";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"30000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"23000";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:56:"CENTRO DE APLICACIONES TECNOLOGICAS Y DESARROLLO NUCLEAR";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2069";s:8:"codreeup";s:5:"06746";}i:5;a:19:{s:9:"planEnero";s:4:"3000";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"3100";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"3200";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"4560";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"3145";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:30:"CENTRO DE BIOPRODUCTOS MARINOS";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2050";s:8:"codreeup";s:5:"12965";}i:6;a:19:{s:9:"planEnero";s:5:"26701";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"26600";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"48100";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"56490";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"72163";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:36:"CENTRO DE ESTUDIOS AVANZADOS DE CUBA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"13925";}i:7;a:19:{s:9:"planEnero";s:5:"14050";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"15000";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"16650";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"16400";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"15700";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:62:"CENTRO DE GESTION DE LA INFORMACION Y DESARROLLO DE LA ENERGIA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2069";s:8:"codreeup";s:5:"06798";}i:8;a:19:{s:9:"planEnero";s:4:"7300";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"7800";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"9300";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"9400";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"9300";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:44:"CENTRO DE GESTION Y DESARROLLO DE LA CALIDAD";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2003";s:8:"codreeup";s:5:"06730";}i:9;a:19:{s:9:"planEnero";s:4:"4300";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"5800";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"5700";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"6000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"6000";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:48:"CENTRO DE INVESTIGACIONES DE LA ECONOMIA MUNDIAL";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"04821";}i:10;a:19:{s:9:"planEnero";s:4:"4000";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"4500";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"5309";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"5000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"4500";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:53:"CENTRO DE INVESTIGACIONES PSICOLOGICAS Y SOCIOLOGICAS";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"07369";}i:11;a:19:{s:9:"planEnero";s:5:"17000";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"18000";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"20000";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"22000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"22000";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:45:"CENTRO DE PROTECCION E HIGIENE DE RADIACIONES";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2069";s:8:"codreeup";s:5:"11782";}i:12;a:19:{s:9:"planEnero";s:4:"2000";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"2400";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"3200";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"3600";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"2600";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:89:"DELEGACION PROVINCIAL DEL MINISTERIO DE CIENCIA, TECNOLOGIA Y MEDIO AMBIENTE DE LA HABANA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"11964";}i:13;a:19:{s:9:"planEnero";s:4:"4200";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"4300";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"5600";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"6200";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"5200";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:51:"EMPRESA DE GESTION DEL CONOCIMIENTO Y LA TECNOLOGIA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2071";s:8:"codreeup";s:5:"12170";}i:14;a:19:{s:9:"planEnero";s:5:"15100";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"15700";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"15940";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"18000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"17800";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:62:"EMPRESA DE SERVICIOS A LA CIENCIA, TECNOLOGIA Y MEDIO AMBIENTE";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2071";s:8:"codreeup";s:5:"07753";}i:15;a:19:{s:9:"planEnero";s:5:"28000";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"25700";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"32535";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"34000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"28000";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:73:"EMPRESA DE TECNOLOGIA DE LA INFORMACION Y SERVICIOS TELEMATICOS AVANZADOS";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2071";s:8:"codreeup";s:5:"12071";}i:16;a:19:{s:9:"planEnero";s:4:"1595";s:11:"planFebrero";s:4:"1600";s:9:"planMarzo";s:4:"2145";s:9:"planAbril";s:4:"1200";s:8:"planMayo";s:4:"2095";s:9:"planJunio";s:4:"2000";s:9:"planJulio";s:4:"2195";s:10:"planAgosto";s:4:"5000";s:14:"planSeptiembre";s:4:"1560";s:11:"planOctubre";s:3:"300";s:13:"planNoviembre";s:4:"1595";s:13:"planDiciembre";s:4:"1000";s:13:"nombreEntidad";s:91:"EMPRESA ESPECIALIZADA IMPORTADORA, EXPORTADORA Y DISTRIBUIDORA PARA LA CIENCIA Y LA TECNICA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2071";s:8:"codreeup";s:5:"05978";}i:17;a:19:{s:9:"planEnero";s:4:"1398";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"2062";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"2838";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"2880";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"2132";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:66:"GRUPO EMPRESARIAL DE LA CIENCIA, LA TECNOLOGIA Y EL MEDIO AMBIENTE";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"12714";}i:18;a:19:{s:9:"planEnero";s:4:"2555";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"2555";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"2555";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"2555";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"2555";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:32:"INSTITUTO CUBANO DE ANTROPOLOGIA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"06765";}i:19;a:19:{s:9:"planEnero";s:4:"8000";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"8900";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"9700";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"8000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"7100";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:45:"INSTITUTO DE CIBERNETICA, MATEMATICA Y FISICA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2069";s:8:"codreeup";s:5:"06678";}i:20;a:19:{s:9:"planEnero";s:5:"10500";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"15500";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"16242";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"19100";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"24100";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:35:"INSTITUTO DE ECOLOGIA Y SISTEMATICA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2050";s:8:"codreeup";s:5:"06679";}i:21;a:19:{s:9:"planEnero";s:4:"2000";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"2100";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"2300";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"2500";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"2300";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:22:"INSTITUTO DE FILOSOFIA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"06670";}i:22;a:19:{s:9:"planEnero";s:4:"1900";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"2300";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:3:"300";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:3:"300";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:3:"300";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:35:"INSTITUTO DE GEOFISICA Y ASTRONOMIA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2050";s:8:"codreeup";s:5:"06740";}i:23;a:19:{s:9:"planEnero";s:4:"3200";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"2700";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"2700";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"2700";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"1700";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:31:"INSTITUTO DE GEOGRAFIA TROPICAL";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2050";s:8:"codreeup";s:5:"06759";}i:24;a:19:{s:9:"planEnero";s:4:"5100";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"5100";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"5130";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"5850";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"6000";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:49:"INSTITUTO DE INFORMACION CIENTIFICA Y TECNOLOGICA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"06761";}i:25;a:19:{s:9:"planEnero";s:4:"2200";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"2500";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"3000";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"3000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"2800";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:73:"INSTITUTO DE LITERATURA Y LINGUISTICA "DR. JOSE ANTONIO PORTUONDO VALDOR"";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"06632";}i:26;a:19:{s:9:"planEnero";s:5:"39700";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"46250";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"54210";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"56900";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"51650";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:25:"INSTITUTO DE METEOROLOGIA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2050";s:8:"codreeup";s:5:"06749";}i:27;a:19:{s:9:"planEnero";s:4:"5500";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"5200";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"5700";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"5600";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"5500";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:24:"INSTITUTO DE OCEANOLOGIA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2050";s:8:"codreeup";s:5:"06744";}i:28;a:19:{s:9:"planEnero";s:5:"13625";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"19160";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"24540";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"25670";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"23205";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:51:"INSTITUTO NACIONAL DE INVESTIGACIONES EN METROLOGIA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2003";s:8:"codreeup";s:5:"06729";}i:29;a:19:{s:9:"planEnero";s:5:"27760";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"9189";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"10000";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"9800";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"9800";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:50:"MINISTERIO DE CIENCIA, TECNOLOGIA Y MEDIO AMBIENTE";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";N;s:8:"codreeup";s:5:"00211";}i:30;a:19:{s:9:"planEnero";s:5:"23500";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:5:"26000";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"38000";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"50200";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:5:"30000";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:42:"MUSEO NACIONAL DE HISTORIA NATURAL DE CUBA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2050";s:8:"codreeup";s:5:"08140";}i:31;a:19:{s:9:"planEnero";s:4:"6500";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"8000";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:5:"10000";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:5:"11670";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"7210";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:51:"OFICINA DE REGULACION AMBIENTAL Y SEGURIDAD NUCLEAR";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"12652";}i:32;a:19:{s:9:"planEnero";s:4:"6300";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"6300";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"6550";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"6610";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"8650";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:33:"OFICINA NACIONAL DE NORMALIZACION";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2000";s:8:"codreeup";s:5:"06127";}i:33;a:19:{s:9:"planEnero";s:3:"760";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:3:"820";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"1000";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"1000";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:3:"800";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:55:"OFICINA TERRITORIAL DE NORMALIZACION ARTEMISA-MAYABEQUE";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2003";s:8:"codreeup";s:5:"12373";}i:34;a:19:{s:9:"planEnero";s:4:"1800";s:11:"planFebrero";s:1:"0";s:9:"planMarzo";s:4:"1800";s:9:"planAbril";s:1:"0";s:8:"planMayo";s:4:"2406";s:9:"planJunio";s:1:"0";s:9:"planJulio";s:4:"2400";s:10:"planAgosto";s:1:"0";s:14:"planSeptiembre";s:1:"0";s:11:"planOctubre";s:1:"0";s:13:"planNoviembre";s:4:"2100";s:13:"planDiciembre";s:1:"0";s:13:"nombreEntidad";s:49:"OFICINA TERRITORIAL DE NORMALIZACION DE LA HABANA";s:12:"id_organismo";s:2:"24";s:6:"activo";s:1:"1";s:11:"idProvincia";s:1:"4";s:11:"descripcion";s:9:"LA HABANA";s:10:"id_entidad";s:4:"2003";s:8:"codreeup";s:5:"09255";}}}s:7:"flashes";a:0:{}s:9:"path_info";s:21:"/reporte/plan_mensual";s:10:"controller";a:4:{s:5:"class";s:46:"sisconee\AppBundle\Controller\ReportController";s:6:"method";s:21:"Get_PlanMensualAction";s:4:"file";s:75:"C:\wamp\www\sisconee\src\sisconee\AppBundle\Controller\ReportController.php";s:4:"line";i:129;}s:6:"locale";s:2:"en";}}s:9:"exception";C:65:"Symfony\Component\HttpKernel\DataCollector\ExceptionDataCollector":2:{N;}s:6:"events";C:61:"Symfony\Component\HttpKernel\DataCollector\EventDataCollector":17173:{a:2:{s:16:"called_listeners";a:27:{s:92:"kernel.request.Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener::injectLogger";a:7:{s:5:"event";s:14:"kernel.request";s:4:"type";s:6:"Method";s:5:"class";s:63:"Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener";s:6:"method";s:12:"injectLogger";s:4:"file";s:115:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener.php";s:4:"line";i:37;s:6:"pretty";s:77:"Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener::injectLogger";}s:90:"kernel.request.Symfony\Component\HttpKernel\EventListener\DebugHandlersListener::configure";a:7:{s:5:"event";s:14:"kernel.request";s:4:"type";s:6:"Method";s:5:"class";s:64:"Symfony\Component\HttpKernel\EventListener\DebugHandlersListener";s:6:"method";s:9:"configure";s:4:"file";s:116:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\DebugHandlersListener.php";s:4:"line";i:34;s:6:"pretty";s:75:"Symfony\Component\HttpKernel\EventListener\DebugHandlersListener::configure";}s:91:"kernel.request.Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelRequest";a:7:{s:5:"event";s:14:"kernel.request";s:4:"type";s:6:"Method";s:5:"class";s:59:"Symfony\Component\HttpKernel\EventListener\ProfilerListener";s:6:"method";s:15:"onKernelRequest";s:4:"file";s:111:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\ProfilerListener.php";s:4:"line";i:78;s:6:"pretty";s:76:"Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelRequest";}s:92:"kernel.request.Symfony\Bundle\FrameworkBundle\EventListener\SessionListener::onKernelRequest";a:7:{s:5:"event";s:14:"kernel.request";s:4:"type";s:6:"Method";s:5:"class";s:60:"Symfony\Bundle\FrameworkBundle\EventListener\SessionListener";s:6:"method";s:15:"onKernelRequest";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:17;s:6:"pretty";s:77:"Symfony\Bundle\FrameworkBundle\EventListener\SessionListener::onKernelRequest";}s:91:"kernel.request.Symfony\Component\HttpKernel\EventListener\FragmentListener::onKernelRequest";a:7:{s:5:"event";s:14:"kernel.request";s:4:"type";s:6:"Method";s:5:"class";s:59:"Symfony\Component\HttpKernel\EventListener\FragmentListener";s:6:"method";s:15:"onKernelRequest";s:4:"file";s:111:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\FragmentListener.php";s:4:"line";i:57;s:6:"pretty";s:76:"Symfony\Component\HttpKernel\EventListener\FragmentListener::onKernelRequest";}s:89:"kernel.request.Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelRequest";a:7:{s:5:"event";s:14:"kernel.request";s:4:"type";s:6:"Method";s:5:"class";s:57:"Symfony\Component\HttpKernel\EventListener\RouterListener";s:6:"method";s:15:"onKernelRequest";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:1950;s:6:"pretty";s:74:"Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelRequest";}s:89:"kernel.request.Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelRequest";a:7:{s:5:"event";s:14:"kernel.request";s:4:"type";s:6:"Method";s:5:"class";s:57:"Symfony\Component\HttpKernel\EventListener\LocaleListener";s:6:"method";s:15:"onKernelRequest";s:4:"file";s:109:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\LocaleListener.php";s:4:"line";i:69;s:6:"pretty";s:74:"Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelRequest";}s:72:"kernel.request.Symfony\Component\Security\Http\Firewall::onKernelRequest";a:7:{s:5:"event";s:14:"kernel.request";s:4:"type";s:6:"Method";s:5:"class";s:40:"Symfony\Component\Security\Http\Firewall";s:6:"method";s:15:"onKernelRequest";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:2449;s:6:"pretty";s:57:"Symfony\Component\Security\Http\Firewall::onKernelRequest";}s:90:"kernel.request.Symfony\Bundle\AsseticBundle\EventListener\RequestListener::onKernelRequest";a:7:{s:5:"event";s:14:"kernel.request";s:4:"type";s:6:"Method";s:5:"class";s:58:"Symfony\Bundle\AsseticBundle\EventListener\RequestListener";s:6:"method";s:15:"onKernelRequest";s:4:"file";s:113:"C:\wamp\www\sisconee\vendor\symfony\assetic-bundle\Symfony\Bundle\AsseticBundle\EventListener\RequestListener.php";s:4:"line";i:23;s:6:"pretty";s:75:"Symfony\Bundle\AsseticBundle\EventListener\RequestListener::onKernelRequest";}s:102:"kernel.controller.Symfony\Bundle\FrameworkBundle\DataCollector\RouterDataCollector::onKernelController";a:7:{s:5:"event";s:17:"kernel.controller";s:4:"type";s:6:"Method";s:5:"class";s:64:"Symfony\Bundle\FrameworkBundle\DataCollector\RouterDataCollector";s:6:"method";s:18:"onKernelController";s:4:"file";s:114:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\DataCollector\RouterDataCollector.php";s:4:"line";i:66;s:6:"pretty";s:84:"Symfony\Bundle\FrameworkBundle\DataCollector\RouterDataCollector::onKernelController";}s:86:"kernel.controller.Acme\DemoBundle\EventListener\ControllerListener::onKernelController";a:7:{s:5:"event";s:17:"kernel.controller";s:4:"type";s:6:"Method";s:5:"class";s:48:"Acme\DemoBundle\EventListener\ControllerListener";s:6:"method";s:18:"onKernelController";s:4:"file";s:77:"C:\wamp\www\sisconee\src\Acme\DemoBundle\EventListener\ControllerListener.php";s:4:"line";i:18;s:6:"pretty";s:68:"Acme\DemoBundle\EventListener\ControllerListener::onKernelController";}s:101:"kernel.controller.Symfony\Component\HttpKernel\DataCollector\RequestDataCollector::onKernelController";a:7:{s:5:"event";s:17:"kernel.controller";s:4:"type";s:6:"Method";s:5:"class";s:63:"Symfony\Component\HttpKernel\DataCollector\RequestDataCollector";s:6:"method";s:18:"onKernelController";s:4:"file";s:115:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\DataCollector\RequestDataCollector.php";s:4:"line";i:276;s:6:"pretty";s:83:"Symfony\Component\HttpKernel\DataCollector\RequestDataCollector::onKernelController";}s:105:"kernel.controller.Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener::onKernelController";a:7:{s:5:"event";s:17:"kernel.controller";s:4:"type";s:6:"Method";s:5:"class";s:67:"Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener";s:6:"method";s:18:"onKernelController";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:5933;s:6:"pretty";s:87:"Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener::onKernelController";}s:109:"kernel.controller.Sensio\Bundle\FrameworkExtraBundle\EventListener\ParamConverterListener::onKernelController";a:7:{s:5:"event";s:17:"kernel.controller";s:4:"type";s:6:"Method";s:5:"class";s:71:"Sensio\Bundle\FrameworkExtraBundle\EventListener\ParamConverterListener";s:6:"method";s:18:"onKernelController";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:6004;s:6:"pretty";s:91:"Sensio\Bundle\FrameworkExtraBundle\EventListener\ParamConverterListener::onKernelController";}s:104:"kernel.controller.Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener::onKernelController";a:7:{s:5:"event";s:17:"kernel.controller";s:4:"type";s:6:"Method";s:5:"class";s:66:"Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener";s:6:"method";s:18:"onKernelController";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:6415;s:6:"pretty";s:86:"Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener::onKernelController";}s:103:"kernel.controller.Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListener::onKernelController";a:7:{s:5:"event";s:17:"kernel.controller";s:4:"type";s:6:"Method";s:5:"class";s:65:"Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListener";s:6:"method";s:18:"onKernelController";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:6532;s:6:"pretty";s:85:"Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListener::onKernelController";}s:103:"kernel.controller.Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener::onKernelController";a:7:{s:5:"event";s:17:"kernel.controller";s:4:"type";s:6:"Method";s:5:"class";s:65:"Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener";s:6:"method";s:18:"onKernelController";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:6331;s:6:"pretty";s:85:"Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener::onKernelController";}s:90:"kernel.response.Symfony\Component\Security\Http\Firewall\ContextListener::onKernelResponse";a:7:{s:5:"event";s:15:"kernel.response";s:4:"type";s:6:"Method";s:5:"class";s:56:"Symfony\Component\Security\Http\Firewall\ContextListener";s:6:"method";s:16:"onKernelResponse";s:4:"file";s:108:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\Security\Http\Firewall\ContextListener.php";s:4:"line";i:106;s:6:"pretty";s:74:"Symfony\Component\Security\Http\Firewall\ContextListener::onKernelResponse";}s:93:"kernel.response.Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse";a:7:{s:5:"event";s:15:"kernel.response";s:4:"type";s:6:"Method";s:5:"class";s:59:"Symfony\Component\HttpKernel\EventListener\ResponseListener";s:6:"method";s:16:"onKernelResponse";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:1881;s:6:"pretty";s:77:"Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse";}s:93:"kernel.response.Symfony\Component\Security\Http\RememberMe\ResponseListener::onKernelResponse";a:7:{s:5:"event";s:15:"kernel.response";s:4:"type";s:6:"Method";s:5:"class";s:59:"Symfony\Component\Security\Http\RememberMe\ResponseListener";s:6:"method";s:16:"onKernelResponse";s:4:"file";s:111:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\Security\Http\RememberMe\ResponseListener.php";s:4:"line";i:28;s:6:"pretty";s:77:"Symfony\Component\Security\Http\RememberMe\ResponseListener::onKernelResponse";}s:100:"kernel.response.Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener::onKernelResponse";a:7:{s:5:"event";s:15:"kernel.response";s:4:"type";s:6:"Method";s:5:"class";s:66:"Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener";s:6:"method";s:16:"onKernelResponse";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:6445;s:6:"pretty";s:84:"Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener::onKernelResponse";}s:93:"kernel.response.Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelResponse";a:7:{s:5:"event";s:15:"kernel.response";s:4:"type";s:6:"Method";s:5:"class";s:59:"Symfony\Component\HttpKernel\EventListener\ProfilerListener";s:6:"method";s:16:"onKernelResponse";s:4:"file";s:111:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\ProfilerListener.php";s:4:"line";i:90;s:6:"pretty";s:77:"Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelResponse";}s:104:"kernel.response.Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener::onKernelResponse";a:7:{s:5:"event";s:15:"kernel.response";s:4:"type";s:6:"Method";s:5:"class";s:70:"Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener";s:6:"method";s:16:"onKernelResponse";s:4:"file";s:122:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener.php";s:4:"line";i:56;s:6:"pretty";s:88:"Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener::onKernelResponse";}s:101:"kernel.response.Symfony\Component\HttpKernel\EventListener\StreamedResponseListener::onKernelResponse";a:7:{s:5:"event";s:15:"kernel.response";s:4:"type";s:6:"Method";s:5:"class";s:67:"Symfony\Component\HttpKernel\EventListener\StreamedResponseListener";s:6:"method";s:16:"onKernelResponse";s:4:"file";s:119:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\StreamedResponseListener.php";s:4:"line";i:32;s:6:"pretty";s:85:"Symfony\Component\HttpKernel\EventListener\StreamedResponseListener::onKernelResponse";}s:102:"kernel.finish_request.Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelFinishRequest";a:7:{s:5:"event";s:21:"kernel.finish_request";s:4:"type";s:6:"Method";s:5:"class";s:57:"Symfony\Component\HttpKernel\EventListener\LocaleListener";s:6:"method";s:21:"onKernelFinishRequest";s:4:"file";s:109:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\LocaleListener.php";s:4:"line";i:78;s:6:"pretty";s:80:"Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelFinishRequest";}s:102:"kernel.finish_request.Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelFinishRequest";a:7:{s:5:"event";s:21:"kernel.finish_request";s:4:"type";s:6:"Method";s:5:"class";s:57:"Symfony\Component\HttpKernel\EventListener\RouterListener";s:6:"method";s:21:"onKernelFinishRequest";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:1944;s:6:"pretty";s:80:"Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelFinishRequest";}s:85:"kernel.finish_request.Symfony\Component\Security\Http\Firewall::onKernelFinishRequest";a:7:{s:5:"event";s:21:"kernel.finish_request";s:4:"type";s:6:"Method";s:5:"class";s:40:"Symfony\Component\Security\Http\Firewall";s:6:"method";s:21:"onKernelFinishRequest";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:2466;s:6:"pretty";s:63:"Symfony\Component\Security\Http\Firewall::onKernelFinishRequest";}}s:20:"not_called_listeners";a:7:{s:82:"kernel.terminate.Symfony\Component\EventDispatcher\Debug\WrappedListener::__invoke";a:7:{s:5:"event";s:16:"kernel.terminate";s:4:"type";s:6:"Method";s:5:"class";s:55:"Symfony\Component\EventDispatcher\Debug\WrappedListener";s:6:"method";s:8:"__invoke";s:4:"file";s:107:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\EventDispatcher\Debug\WrappedListener.php";s:4:"line";i:53;s:6:"pretty";s:65:"Symfony\Component\EventDispatcher\Debug\WrappedListener::__invoke";}s:95:"kernel.exception.Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelException";a:7:{s:5:"event";s:16:"kernel.exception";s:4:"type";s:6:"Method";s:5:"class";s:59:"Symfony\Component\HttpKernel\EventListener\ProfilerListener";s:6:"method";s:17:"onKernelException";s:4:"file";s:111:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\ProfilerListener.php";s:4:"line";i:66;s:6:"pretty";s:78:"Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelException";}s:96:"kernel.exception.Symfony\Component\HttpKernel\EventListener\ExceptionListener::onKernelException";a:7:{s:5:"event";s:16:"kernel.exception";s:4:"type";s:6:"Method";s:5:"class";s:60:"Symfony\Component\HttpKernel\EventListener\ExceptionListener";s:6:"method";s:17:"onKernelException";s:4:"file";s:112:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Component\HttpKernel\EventListener\ExceptionListener.php";s:4:"line";i:40;s:6:"pretty";s:79:"Symfony\Component\HttpKernel\EventListener\ExceptionListener::onKernelException";}s:72:"console.command.Symfony\Bridge\Monolog\Handler\ConsoleHandler::onCommand";a:7:{s:5:"event";s:15:"console.command";s:4:"type";s:6:"Method";s:5:"class";s:45:"Symfony\Bridge\Monolog\Handler\ConsoleHandler";s:6:"method";s:9:"onCommand";s:4:"file";s:97:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Bridge\Monolog\Handler\ConsoleHandler.php";s:4:"line";i:121;s:6:"pretty";s:56:"Symfony\Bridge\Monolog\Handler\ConsoleHandler::onCommand";}s:97:"console.terminate.Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener::onTerminate";a:7:{s:5:"event";s:17:"console.terminate";s:4:"type";s:6:"Method";s:5:"class";s:66:"Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener";s:6:"method";s:11:"onTerminate";s:4:"file";s:125:"C:\wamp\www\sisconee\vendor\symfony\swiftmailer-bundle\Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener.php";s:4:"line";i:36;s:6:"pretty";s:79:"Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener::onTerminate";}s:76:"console.terminate.Symfony\Bridge\Monolog\Handler\ConsoleHandler::onTerminate";a:7:{s:5:"event";s:17:"console.terminate";s:4:"type";s:6:"Method";s:5:"class";s:45:"Symfony\Bridge\Monolog\Handler\ConsoleHandler";s:6:"method";s:11:"onTerminate";s:4:"file";s:97:"C:\wamp\www\sisconee\vendor\symfony\symfony\src\Symfony\Bridge\Monolog\Handler\ConsoleHandler.php";s:4:"line";i:131;s:6:"pretty";s:58:"Symfony\Bridge\Monolog\Handler\ConsoleHandler::onTerminate";}s:91:"kernel.view.Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener::onKernelView";a:7:{s:5:"event";s:11:"kernel.view";s:4:"type";s:6:"Method";s:5:"class";s:65:"Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener";s:6:"method";s:12:"onKernelView";s:4:"file";s:46:"C:\wamp\www\sisconee\app\cache\dev\classes.php";s:4:"line";i:6356;s:6:"pretty";s:79:"Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener::onKernelView";}}}}s:6:"logger";C:62:"Symfony\Component\HttpKernel\DataCollector\LoggerDataCollector":17557:{a:5:{s:11:"error_count";i:0;s:17:"deprecation_count";i:0;s:12:"scream_count";i:0;s:10:"priorities";a:2:{i:100;a:2:{s:5:"count";i:37;s:4:"name";s:5:"DEBUG";}i:200;a:2:{s:5:"count";i:1;s:4:"name";s:4:"INFO";}}s:4:"logs";a:38:{i:0;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:171:"Matched route "reporte_plan_mensual" (parameters: "_controller": "sisconee\AppBundle\Controller\ReportController::Get_PlanMensualAction", "_route": "reporte_plan_mensual")";s:8:"priority";i:200;s:12:"priorityName";s:4:"INFO";s:7:"context";a:0:{}}i:1;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:37:"Read SecurityContext from the session";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:2;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:34:"Reloading user from user provider.";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:3;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:209:"SELECT t0.id AS id1, t0.login AS login2, t0.nombre AS nombre3, t0.password AS password4, t0.correo AS correo5, t0.activo AS activo6, t0.rol AS rol7, t0.id_entidad AS id_entidad8 FROM usuario t0 WHERE t0.id = ?";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:1:{i:0;i:1;}}i:4;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:53:"Username "psuperior" was reloaded from user provider.";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:5;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:124:"Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener::injectLogger".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:6;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:124:"Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener::injectLogger".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:7;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:124:"Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener::injectLogger".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:8;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:122:"Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\DebugHandlersListener::configure".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:9;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:123:"Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:10;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:124:"Notified event "kernel.request" to listener "Symfony\Bundle\FrameworkBundle\EventListener\SessionListener::onKernelRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:11;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:123:"Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\FragmentListener::onKernelRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:12;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:121:"Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:13;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:121:"Notified event "kernel.request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:14;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:104:"Notified event "kernel.request" to listener "Symfony\Component\Security\Http\Firewall::onKernelRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:15;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:122:"Notified event "kernel.request" to listener "Symfony\Bundle\AsseticBundle\EventListener\RequestListener::onKernelRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:16;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:134:"Notified event "kernel.controller" to listener "Symfony\Bundle\FrameworkBundle\DataCollector\RouterDataCollector::onKernelController".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:17;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:118:"Notified event "kernel.controller" to listener "Acme\DemoBundle\EventListener\ControllerListener::onKernelController".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:18;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:133:"Notified event "kernel.controller" to listener "Symfony\Component\HttpKernel\DataCollector\RequestDataCollector::onKernelController".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:19;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:137:"Notified event "kernel.controller" to listener "Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener::onKernelController".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:20;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:141:"Notified event "kernel.controller" to listener "Sensio\Bundle\FrameworkExtraBundle\EventListener\ParamConverterListener::onKernelController".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:21;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:136:"Notified event "kernel.controller" to listener "Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener::onKernelController".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:22;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:135:"Notified event "kernel.controller" to listener "Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListener::onKernelController".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:23;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:135:"Notified event "kernel.controller" to listener "Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener::onKernelController".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:24;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:342:"SELECT t0.id AS id1, t0.codreeup AS codreeup2, t0.nombre AS nombre3, t0.siglas AS siglas4, t0.correo AS correo5, t0.direccion AS direccion6, t0.telefono AS telefono7, t0.activo AS activo8, t0.id_organismo AS id_organismo9, t0.id_entidad AS id_entidad10, t0.id_nae AS id_nae11, t0.id_provincia AS id_provincia12 FROM entidad t0 WHERE t0.id = ?";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:1:{i:0;i:16;}}i:25;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:141:"SELECT t0.id AS id1, t0.codigo AS codigo2, t0.nombre AS nombre3, t0.siglas AS siglas4, t0.activo AS activo5 FROM organismo t0 WHERE t0.id = ?";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:1:{i:0;i:24;}}i:26;a:5:{s:9:"timestamp";i:1427392016;s:7:"message";s:7444:"SELECT   SUM(plamMensualServicio.planEnero) AS planEnero, SUM(plamMensualServicio.planFebrero) AS planFebrero,
+                              SUM(plamMensualServicio.planMarzo) AS planMarzo, SUM(plamMensualServicio.planAbril) AS planAbril, SUM(plamMensualServicio.planMayo) AS planMayo,
+                              SUM(plamMensualServicio.planJunio) AS planJunio, SUM(plamMensualServicio.planJulio) AS planJulio,
+                              SUM(plamMensualServicio.planAgosto) AS planAgosto, SUM(plamMensualServicio.planSeptiembre) AS planSeptiembre,
+                              SUM(plamMensualServicio.planOctubre) AS planOctubre, SUM(plamMensualServicio.planNoviembre) AS planNoviembre,
+                              SUM(plamMensualServicio.planDiciembre) AS planDiciembre, entidad.id as idEntidad, entidad.nombre as nombreEntidad, entidad.id_organismo, entidad.activo, provincia.id AS idProvincia,
+                              provincia.descripcion, entidad.id_entidad,  entidad.codreeup
+                        FROM  entidad INNER JOIN
+                              servicio ON entidad.id = servicio.id_entidad INNER JOIN
+                              (SELECT   id_servicio, plan AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio
+                               WHERE    (mes = 1) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, plan AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_11
+                               WHERE    (mes = 2) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, plan AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_10
+                               WHERE    (mes = 3) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, plan AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_9
+                               WHERE    (mes = 4) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, plan AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_8
+                               WHERE    (mes = 5) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, plan AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_7
+                               WHERE    (mes = 6) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, plan AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_6
+                               WHERE    (mes = 7) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        plan AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_5
+                               WHERE    (mes = 8) and (anno =2013)
+                               UNION
+                               SELECT    id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                         0 AS planAgosto, plan AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM      plan_mensual_servicio AS plan_mensual_servicio_4
+                               WHERE     (mes = 9) and (anno =2013)
+                               UNION
+                               SELECT    id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                         0 AS planAgosto, 0 AS planSeptiembre, plan AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM      plan_mensual_servicio AS plan_mensual_servicio_3
+                               WHERE     (mes = 10) and (anno =2013)
+                               UNION
+                               SELECT    id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                         0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, plan AS planNoviembre, 0 AS planDiciembre
+                               FROM      plan_mensual_servicio AS plan_mensual_servicio_2
+                               WHERE     (mes = 11) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, plan AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_1
+                               WHERE    (mes = 12) and (anno =2013)) AS plamMensualServicio ON servicio.id = plamMensualServicio.id_servicio INNER JOIN
+                              provincia ON entidad.id_provincia = provincia.id
+                        GROUP BY idEntidad
+                        HAVING   (entidad.id_organismo =24) and (provincia.id = 4) ORDER BY idProvincia, nombreEntidad ";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:27;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:36:"Write SecurityContext in the session";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:28;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:122:"Notified event "kernel.response" to listener "Symfony\Component\Security\Http\Firewall\ContextListener::onKernelResponse".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:29;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:125:"Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ResponseListener::onKernelResponse".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:30;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:125:"Notified event "kernel.response" to listener "Symfony\Component\Security\Http\RememberMe\ResponseListener::onKernelResponse".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:31;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:132:"Notified event "kernel.response" to listener "Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener::onKernelResponse".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:32;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:125:"Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\ProfilerListener::onKernelResponse".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:33;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:136:"Notified event "kernel.response" to listener "Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener::onKernelResponse".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:34;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:133:"Notified event "kernel.response" to listener "Symfony\Component\HttpKernel\EventListener\StreamedResponseListener::onKernelResponse".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:35;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:134:"Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\LocaleListener::onKernelFinishRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:36;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:134:"Notified event "kernel.finish_request" to listener "Symfony\Component\HttpKernel\EventListener\RouterListener::onKernelFinishRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}i:37;a:5:{s:9:"timestamp";i:1427392017;s:7:"message";s:117:"Notified event "kernel.finish_request" to listener "Symfony\Component\Security\Http\Firewall::onKernelFinishRequest".";s:8:"priority";i:100;s:12:"priorityName";s:5:"DEBUG";s:7:"context";a:0:{}}}}}s:4:"time";C:60:"Symfony\Component\HttpKernel\DataCollector\TimeDataCollector":25243:{a:2:{s:10:"start_time";d:1427392016052.8879;s:6:"events";a:35:{s:11:"__section__";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:2:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:0;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:607;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31719424;}i:1;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:626;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:635;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31981568;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:7:"default";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:14:"kernel.request";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:0;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:150;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:15728640;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:7:"section";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:63:"Symfony\Component\HttpKernel\EventListener\ErrorsLoggerListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:3:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:1;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:1;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:12582912;}i:1;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:2;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:2;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:12582912;}i:2;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:2;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:2;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:12582912;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:64:"Symfony\Component\HttpKernel\EventListener\DebugHandlersListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:2;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:2;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:12582912;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:59:"Symfony\Component\HttpKernel\EventListener\ProfilerListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:3:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:2;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:2;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:12582912;}i:1;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:568;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:586;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31195136;}i:2;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:627;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:635;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31981568;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:60:"Symfony\Bundle\FrameworkBundle\EventListener\SessionListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:2;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:9;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:12845056;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:59:"Symfony\Component\HttpKernel\EventListener\FragmentListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:9;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:9;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:12845056;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:57:"Symfony\Component\HttpKernel\EventListener\RouterListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:9;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:48;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:13369344;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:57:"Symfony\Component\HttpKernel\EventListener\LocaleListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:48;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:49;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:13369344;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:40:"Symfony\Component\Security\Http\Firewall";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:49;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:149;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:15728640;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:8:"doctrine";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:4:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:121;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:125;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:14680064;}i:1;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:310;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:312;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:28049408;}i:2;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:348;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:350;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:28573696;}i:3;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:361;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:371;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:29097984;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:8:"doctrine";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:31:"security.authentication.success";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:149;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:149;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:15728640;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:7:"section";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:58:"Symfony\Bundle\AsseticBundle\EventListener\RequestListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:150;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:150;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:15728640;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:23:"controller.get_callable";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:164;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:263;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:7:"default";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:17:"kernel.controller";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:276;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:280;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:7:"section";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:64:"Symfony\Bundle\FrameworkBundle\DataCollector\RouterDataCollector";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:277;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:277;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:48:"Acme\DemoBundle\EventListener\ControllerListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:277;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:277;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:63:"Symfony\Component\HttpKernel\DataCollector\RequestDataCollector";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:277;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:277;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:67:"Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:277;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:279;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:71:"Sensio\Bundle\FrameworkExtraBundle\EventListener\ParamConverterListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:279;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:279;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:66:"Sensio\Bundle\FrameworkExtraBundle\EventListener\HttpCacheListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:2:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:279;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:280;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}i:1;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:568;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:568;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31195136;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:65:"Sensio\Bundle\FrameworkExtraBundle\EventListener\SecurityListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:280;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:280;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:65:"Sensio\Bundle\FrameworkExtraBundle\EventListener\TemplateListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:280;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:280;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:10:"controller";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:280;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:564;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31195136;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:7:"section";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:24:"controller.get_arguments";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:290;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:290;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:27787264;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:7:"default";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:83:"template.twig (sisconeeAppBundle:Reports:listado_plan_mensual_entidadPDF.html.twig)";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:439;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:502;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:30932992;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:8:"template";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:80:"template.twig (sisconeeAppBundle:Reports:listado_plan_mensual_entidad.html.twig)";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:503;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:562;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31195136;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:8:"template";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:15:"kernel.response";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:564;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:607;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31719424;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:7:"section";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:56:"Symfony\Component\Security\Http\Firewall\ContextListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:565;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:566;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31195136;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:59:"Symfony\Component\HttpKernel\EventListener\ResponseListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:566;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:567;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31195136;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:59:"Symfony\Component\Security\Http\RememberMe\ResponseListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:567;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:568;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31195136;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:70:"Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:586;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:606;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31719424;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:67:"Symfony\Component\HttpKernel\EventListener\StreamedResponseListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:606;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:606;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31719424;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:16:"kernel.terminate";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:627;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:635;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31981568;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:7:"section";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}s:66:"Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener";O:42:"Symfony\Component\Stopwatch\StopwatchEvent":4:{s:51:" Symfony\Component\Stopwatch\StopwatchEvent periods";a:1:{i:0;O:43:"Symfony\Component\Stopwatch\StopwatchPeriod":3:{s:50:" Symfony\Component\Stopwatch\StopwatchPeriod start";i:627;s:48:" Symfony\Component\Stopwatch\StopwatchPeriod end";i:627;s:51:" Symfony\Component\Stopwatch\StopwatchPeriod memory";i:31719424;}}s:50:" Symfony\Component\Stopwatch\StopwatchEvent origin";d:1427392016539.8999;s:52:" Symfony\Component\Stopwatch\StopwatchEvent category";s:14:"event_listener";s:51:" Symfony\Component\Stopwatch\StopwatchEvent started";a:0:{}}}}}s:6:"memory";C:62:"Symfony\Component\HttpKernel\DataCollector\MemoryDataCollector":62:{a:2:{s:6:"memory";i:31981568;s:12:"memory_limit";i:134217728;}}s:6:"router";C:64:"Symfony\Bundle\FrameworkBundle\DataCollector\RouterDataCollector":51:{a:3:{s:8:"redirect";b:0;s:3:"url";N;s:5:"route";N;}}s:4:"form";C:64:"Symfony\Component\Form\Extension\DataCollector\FormDataCollector":71:{a:3:{s:5:"forms";a:0:{}s:13:"forms_by_hash";a:0:{}s:9:"nb_errors";i:0;}}s:8:"security";C:65:"Symfony\Bundle\SecurityBundle\DataCollector\SecurityDataCollector":228:{a:5:{s:7:"enabled";b:1;s:13:"authenticated";b:1;s:11:"token_class";s:74:"Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken";s:4:"user";s:9:"psuperior";s:5:"roles";a:1:{i:0;s:21:"ROLE_PLANIFICADOR_SUP";}}}s:11:"swiftmailer";C:67:"Symfony\Bundle\SwiftmailerBundle\DataCollector\MessageDataCollector":77:{a:3:{s:6:"mailer";a:0:{}s:12:"messageCount";i:0;s:13:"defaultMailer";s:0:"";}}s:2:"db";C:66:"Doctrine\Bundle\DoctrineBundle\DataCollector\DoctrineDataCollector":9977:{a:5:{s:7:"queries";a:1:{s:7:"default";a:4:{i:1;a:5:{s:3:"sql";s:209:"SELECT t0.id AS id1, t0.login AS login2, t0.nombre AS nombre3, t0.password AS password4, t0.correo AS correo5, t0.activo AS activo6, t0.rol AS rol7, t0.id_entidad AS id_entidad8 FROM usuario t0 WHERE t0.id = ?";s:6:"params";a:1:{i:0;i:1;}s:5:"types";a:1:{i:0;i:1;}s:11:"executionMS";d:0.0019998550415039062;s:11:"explainable";b:1;}i:2;a:5:{s:3:"sql";s:342:"SELECT t0.id AS id1, t0.codreeup AS codreeup2, t0.nombre AS nombre3, t0.siglas AS siglas4, t0.correo AS correo5, t0.direccion AS direccion6, t0.telefono AS telefono7, t0.activo AS activo8, t0.id_organismo AS id_organismo9, t0.id_entidad AS id_entidad10, t0.id_nae AS id_nae11, t0.id_provincia AS id_provincia12 FROM entidad t0 WHERE t0.id = ?";s:6:"params";a:1:{i:0;i:16;}s:5:"types";a:1:{i:0;i:1;}s:11:"executionMS";d:0;s:11:"explainable";b:1;}i:3;a:5:{s:3:"sql";s:141:"SELECT t0.id AS id1, t0.codigo AS codigo2, t0.nombre AS nombre3, t0.siglas AS siglas4, t0.activo AS activo5 FROM organismo t0 WHERE t0.id = ?";s:6:"params";a:1:{i:0;i:24;}s:5:"types";a:1:{i:0;i:1;}s:11:"executionMS";d:0;s:11:"explainable";b:1;}i:4;a:5:{s:3:"sql";s:7444:"SELECT   SUM(plamMensualServicio.planEnero) AS planEnero, SUM(plamMensualServicio.planFebrero) AS planFebrero,
+                              SUM(plamMensualServicio.planMarzo) AS planMarzo, SUM(plamMensualServicio.planAbril) AS planAbril, SUM(plamMensualServicio.planMayo) AS planMayo,
+                              SUM(plamMensualServicio.planJunio) AS planJunio, SUM(plamMensualServicio.planJulio) AS planJulio,
+                              SUM(plamMensualServicio.planAgosto) AS planAgosto, SUM(plamMensualServicio.planSeptiembre) AS planSeptiembre,
+                              SUM(plamMensualServicio.planOctubre) AS planOctubre, SUM(plamMensualServicio.planNoviembre) AS planNoviembre,
+                              SUM(plamMensualServicio.planDiciembre) AS planDiciembre, entidad.id as idEntidad, entidad.nombre as nombreEntidad, entidad.id_organismo, entidad.activo, provincia.id AS idProvincia,
+                              provincia.descripcion, entidad.id_entidad,  entidad.codreeup
+                        FROM  entidad INNER JOIN
+                              servicio ON entidad.id = servicio.id_entidad INNER JOIN
+                              (SELECT   id_servicio, plan AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio
+                               WHERE    (mes = 1) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, plan AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_11
+                               WHERE    (mes = 2) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, plan AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_10
+                               WHERE    (mes = 3) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, plan AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_9
+                               WHERE    (mes = 4) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, plan AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_8
+                               WHERE    (mes = 5) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, plan AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_7
+                               WHERE    (mes = 6) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, plan AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_6
+                               WHERE    (mes = 7) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        plan AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_5
+                               WHERE    (mes = 8) and (anno =2013)
+                               UNION
+                               SELECT    id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                         0 AS planAgosto, plan AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM      plan_mensual_servicio AS plan_mensual_servicio_4
+                               WHERE     (mes = 9) and (anno =2013)
+                               UNION
+                               SELECT    id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                         0 AS planAgosto, 0 AS planSeptiembre, plan AS planOctubre, 0 AS planNoviembre, 0 AS planDiciembre
+                               FROM      plan_mensual_servicio AS plan_mensual_servicio_3
+                               WHERE     (mes = 10) and (anno =2013)
+                               UNION
+                               SELECT    id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                         0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, plan AS planNoviembre, 0 AS planDiciembre
+                               FROM      plan_mensual_servicio AS plan_mensual_servicio_2
+                               WHERE     (mes = 11) and (anno =2013)
+                               UNION
+                               SELECT   id_servicio, 0 AS planEnero, 0 AS planFebrero, 0 AS planMarzo, 0 AS planAbril, 0 AS planMayo, 0 AS planJunio, 0 AS planJulio,
+                                        0 AS planAgosto, 0 AS planSeptiembre, 0 AS planOctubre, 0 AS planNoviembre, plan AS planDiciembre
+                               FROM     plan_mensual_servicio AS plan_mensual_servicio_1
+                               WHERE    (mes = 12) and (anno =2013)) AS plamMensualServicio ON servicio.id = plamMensualServicio.id_servicio INNER JOIN
+                              provincia ON entidad.id_provincia = provincia.id
+                        GROUP BY idEntidad
+                        HAVING   (entidad.id_organismo =24) and (provincia.id = 4) ORDER BY idProvincia, nombreEntidad ";s:6:"params";a:0:{}s:5:"types";a:0:{}s:11:"executionMS";d:0.0079998970031738281;s:11:"explainable";b:1;}}}s:11:"connections";a:1:{s:7:"default";s:32:"doctrine.dbal.default_connection";}s:8:"managers";a:1:{s:7:"default";s:35:"doctrine.orm.default_entity_manager";}s:8:"entities";a:1:{s:7:"default";a:10:{i:0;s:33:"sisconee\AppBundle\Entity\Usuario";i:1;s:33:"sisconee\AppBundle\Entity\Entidad";i:2;s:35:"sisconee\AppBundle\Entity\Organismo";i:3;s:29:"sisconee\AppBundle\Entity\Nae";i:4;s:35:"sisconee\AppBundle\Entity\Provincia";i:5;s:33:"sisconee\AppBundle\Entity\Entidad";i:6;s:34:"sisconee\AppBundle\Entity\Servicio";i:7;s:35:"sisconee\AppBundle\Entity\Organismo";i:8;s:43:"sisconee\AppBundle\Entity\PlanAnualServicio";i:9;s:43:"sisconee\AppBundle\Entity\PlanAnualServicio";}}s:6:"errors";a:1:{s:7:"default";a:2:{s:33:"sisconee\AppBundle\Entity\Entidad";a:1:{i:0;s:277:"The field sisconee\AppBundle\Entity\Entidad#servicios is on the inverse side of a bi-directional relationship, but the specified mappedBy association on the target-entity sisconee\AppBundle\Entity\Servicio#entidad does not contain the required 'inversedBy=servicios' attribute.";}s:34:"sisconee\AppBundle\Entity\Servicio";a:1:{i:0;s:147:"The mappings sisconee\AppBundle\Entity\Servicio#tipoServicio and sisconee\AppBundle\Entity\TipoServicio#servicios are inconsistent with each other.";}}}}}}s:2:"ip";s:9:"127.0.0.1";s:6:"method";s:3:"GET";s:3:"url";s:161:"http://localhost:8080/sisconee/web/app_dev.php/reporte/plan_mensual?id_entidad=&id_provincia=4&mostrar_entidad=true&mostrar_servicio=false&pdf=false&periodo=2013";s:4:"time";i:1427392017;}

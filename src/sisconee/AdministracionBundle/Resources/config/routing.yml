@@ -1,0 +1,24 @@
+administracion:
+    path:     /
+    defaults: { _controller: "sisconeeAdministracionBundle:Default:index" }
+    
+configuracion:
+    resource: "@sisconeeAdministracionBundle/Resources/config/routing/configuracion.yml"
+    prefix:   /configuracion
+
+administracion_tiposervicio:
+    resource: "@sisconeeAdministracionBundle/Resources/config/routing/tiposervicio.yml"
+    prefix:   /tiposervicio
+
+administracion_entidad:
+    resource: "@sisconeeAdministracionBundle/Resources/config/routing/entidad.yml"
+    prefix:   /entidad
+    
+administracion_servicio:
+    resource: "@sisconeeAdministracionBundle/Resources/config/routing/servicio.yml"
+    prefix:   /servicio
+
+administracion_usuario:
+    resource: "@sisconeeAdministracionBundle/Resources/config/routing/usuario.yml"
+    prefix:   /usuario
+

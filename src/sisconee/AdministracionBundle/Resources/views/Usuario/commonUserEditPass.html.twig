@@ -1,0 +1,35 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_edituser.html.twig' %}
+
+{% block content %}
+
+    <h1>Editar contraseña{#{{ entity.nombre }}#} </h1>
+
+
+    {{ form_start(edit_form) }}
+
+    {{ form_row(edit_form.oldPass) }}
+    {{ form_row(edit_form.newPass) }}
+
+
+    <div class="form-actions">
+
+        {{ form_widget(edit_form.submit) }}
+
+        <a class="btn btn-danger" href="{{ path('administracion_usuario') }}">Cancelar</a>
+
+    </div>
+
+    {{ form_row(edit_form._token) }}
+
+    {{ form_end(edit_form, {'render_rest':false}) }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('layoutadmin/admin-list.js') }}"></script>
+    <script src="{{ asset('jquery/jquery-validate/jquery.validate.js') }}"></script>
+{% endblock %}
+
+
+
+

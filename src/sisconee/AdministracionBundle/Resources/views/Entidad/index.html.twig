@@ -1,0 +1,126 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+
+
+{% block content %}
+
+    <style>
+        @media (min-width: 768px) {
+            .table {
+                width: 50%;
+            }
+
+            .admin-list-actions.autosize {
+                width: 50%;
+            }
+        }
+    </style>
+    <h1>Gestionar Entidades</h1>
+
+    {% include "::flashmessages.html.twig" %}
+    {% include "::modal-delete.html.twig" %}
+
+
+    <div class="admin-list-actions autosize">
+
+        {#Busqueda...#}
+        <form id="admin-search-form" action="{{ path('administracion_entidad') }}" method="post">
+            <div id="admin-search-layout" class="input-group" style="float: right;">
+                <input id="admin-search-text" name="filter" type="text" class="form-control" placeholder="Buscar..." value="{{filter}}">
+                <span id="admin-search-button" title="Buscar..." class="input-group-addon glyphicon glyphicon-search"></span>
+            </div>
+        </form>
+
+        {#Adicionar...#}
+        <div class="vinculo-add">
+            <a class="btn btn-default" href="{{ path('administracion_entidad_new') }}">
+                <span class="glyphicon glyphicon-plus-sign"></span>Adicionar
+            </a>
+        </div>
+    </div>
+
+    {% if (entities) %}
+        <table class="table table-striped table-bordered table-hover">
+            {#Header de la tabla#}
+            <thead>
+            <tr>
+                <th style="width: 18%;">
+                    {% include "sisconeeAdministracionBundle::link-orden.html.twig" with { url:'administracion_entidad', column_name:'codReeup', caption:'CODREEUP' } %}
+                </th>
+
+                <th style="width: 15%;">
+                    {% include "sisconeeAdministracionBundle::link-orden.html.twig" with { url:'administracion_entidad', column_name:'siglas', caption:'Siglas' } %}
+                </th>
+
+                <th style="width: 20%;">
+                    {% include "sisconeeAdministracionBundle::link-orden.html.twig" with { url:'administracion_entidad', column_name:'nombre', caption:'Nombre' } %}
+                </th>
+
+               {#<th style="width: 15%;">
+                    {% include "sisconeeAdministracionBundle::link-orden.html.twig" with { url:'administracion_entidad', column_name:'organismo', caption:'Organismo' } %}
+                </th>#}
+
+                <th style="width: 25%;">
+                    {% include "sisconeeAdministracionBundle::link-orden.html.twig" with { url:'administracion_entidad', column_name:'entidadPadre', caption:'Entidad Padre' } %}
+                </th>
+                <th style="width: 25%;">
+                    Acciones
+                </th>
+            </tr>
+            </thead>
+
+            {#Cada fila con las entidades#}
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td>
+                        {{entity.getCodReeup}}
+                    </td>
+                    <td>
+                        {{ entity.getSiglas }}
+                    </td>
+                    <td>
+                        {{ entity.getNombre }}
+                    </td>
+                   {# <td>
+                        {{ entity.getOrganismo}}
+                    </td>#}
+                    <td>
+                        {{ entity.getEntidadPadre }}
+                    </td>
+                    <td>
+                        <a href="{{ path('administracion_entidad_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil"></span>Editar</a>
+                        <a class="link-eliminar" href="javascript:void(0);"
+                           data-url = "{{ path('administracion_entidad_delete', { 'id': entity.id }) }}"
+                           data-descripcion="{{ entity.siglas }}"
+                           data-toggle="modal" data-target="#modal-delete">
+                            <span class="glyphicon glyphicon-trash"></span>Eliminar
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+
+            {#Paginador en el footer#}
+            <tfoot>
+            <tr>
+                <td colspan="6" style="vertical-align:middle;">
+                    {% include "sisconeeAdministracionBundle::form-paginacion.html.twig" with { url:'administracion_entidad' } %}
+                </td>
+            </tr>
+            </tfoot>
+
+        </table>
+    {% else %}
+        <p>No se encontraron registros...</p>
+    {% endif %}
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('layoutadmin/admin-list.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,62 @@
+sisconee_app_reportes:
+   path: /inicio/{Nomb_Report}
+   defaults: {_controller:sisconeeAppBundle:Report:index}
+
+registro_entidades:
+       path: /entidades/por/provincia/
+       defaults: { _controller: "sisconeeAppBundle:Report:GetEntidadByProvincia" }
+       requirements: { _method: get }
+
+registro_TipoServicio:
+       path: /TipoServicio/
+       defaults: { _controller: "sisconeeAppBundle:Report:GetTipoServicio" }
+       requirements: { _method: get }
+
+registro_provincias:
+       path: /provincias/
+       defaults: {_controller:sisconeeAppBundle:Report:provincias}
+       requirements: { _method: get }
+
+reporte_plan_mensual:
+       path: /plan_mensual
+       defaults: {_controller:sisconeeAppBundle:Report:Get_PlanMensual}
+       requirements: { _method: get }
+
+reporte_comportamiento_diario:
+       path: /comportamiento_diario
+       defaults: {_controller:sisconeeAppBundle:Report:Get_ComportamientoDiarioEnUnMes}
+       requirements: { _method: get }
+
+reporte_parte_diario:
+       path: /parte_diario
+       defaults: {_controller:sisconeeAppBundle:Report:Get_ParteDiario}
+       requirements: { _method: get }
+
+reporte_parte_consumo:
+       path: /parte_consumo
+       defaults: {_controller:sisconeeAppBundle:Report:Get_ParteConsumo}
+       requirements: { _method: get }
+
+reporte_consumo_acumulado:
+       path: /consumo_acumulado
+       defaults: {_controller:sisconeeAppBundle:Report:Get_ConsumoAcumuladoGeneral}
+       requirements: { _method: get }
+
+reporte_consumo_acumulado_hp:
+       path: /consumo_acumulado_hp
+       defaults: {_controller:sisconeeAppBundle:Report:Get_ConsumoAcumuladoHP}
+       requirements: { _method: get }
+       
+index_reportes:
+    path:     /
+    defaults: { _controller: sisconeeAppBundle:Report:indexReports }
+
+reporte_pdf:
+       path: /reporte_to_pdf
+       defaults: {_controller:sisconeeAppBundle:Report:pdfReport}
+       requirements: { _method: get }
+
+reporte_grafico:
+       path: /reporte_to_graph
+       defaults: {_controller:sisconeeAppBundle:Report:graphReport}
+       requirements: { _method: get }

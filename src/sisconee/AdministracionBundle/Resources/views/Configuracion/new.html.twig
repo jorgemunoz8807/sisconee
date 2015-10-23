@@ -1,0 +1,14 @@
+{% extends 'sisconeeAdministracionBundle:Default:layout_admin.html.twig' %}
+
+{% block content %}
+    <h1>Nueva Configuración General</h1>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="form-actions">
+        <input type="submit" class="btn btn-primary" value="Crear" />
+        <a class="btn btn-default" href="{{ path('configuracion_edit') }}">Cancelar</a>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}
